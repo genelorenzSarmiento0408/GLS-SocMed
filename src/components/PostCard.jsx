@@ -24,36 +24,34 @@ export default function PostCard({
   const { user } = useContext(AuthContext);
   return (
     <Grid mobile={16} tablet={8} computer={4}>
-      <Grid.Column width={700}>
-        <Card fluid>
-          <Card.Content>
-            <Image
-              floated="left"
-              size="mini"
-              src="https://react.semantic-ui.com/images/avatar/large/molly.png"
-            />
-            <Card.Header>{username}</Card.Header>
-            <Card.Meta as={Link} to={`/posts/${id}`}>
-              {moment(createdAt).fromNow(true)}
-            </Card.Meta>
-            <Card.Description>{title}</Card.Description>
-          </Card.Content>
-          <Card.Content extra>
-            <LikeButton user={user} post={{ id, likes, likeCount }} />
-            <PopupGlobal content="Comment on post">
-              <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
-                <Button color="red" basic>
-                  <Icon name="comments" />
-                </Button>
-                <Label basic color="red" pointing="left">
-                  {commentCount}
-                </Label>
+      <Grid.Column width={15} className="ui centered card">
+        <Card.Content>
+          <Image
+            floated="left"
+            size="mini"
+            src="https://react.semantic-ui.com/images/avatar/large/molly.png"
+          />
+          <Card.Header>{username}</Card.Header>
+          <Card.Meta as={Link} to={`/posts/${id}`}>
+            {moment(createdAt).fromNow(true)}
+          </Card.Meta>
+          <Card.Description>{title}</Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <LikeButton user={user} post={{ id, likes, likeCount }} />
+          <PopupGlobal content="Comment on post">
+            <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
+              <Button color="red" basic>
+                <Icon name="comments" />
               </Button>
-            </PopupGlobal>
+              <Label basic color="red" pointing="left">
+                {commentCount}
+              </Label>
+            </Button>
+          </PopupGlobal>
 
-            {user && user.username === username && <DeleteButton postId={id} />}
-          </Card.Content>
-        </Card>
+          {user && user.username === username && <DeleteButton postId={id} />}
+        </Card.Content>
       </Grid.Column>
     </Grid>
   );

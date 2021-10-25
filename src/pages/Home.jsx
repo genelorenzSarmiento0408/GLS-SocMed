@@ -12,8 +12,11 @@ export default function Home() {
   const { user } = useContext(AuthContext);
   const { loading, data: { getPosts: posts } = {} } =
     useQuery(FETCH_POSTS_QUERY);
-  if (posts === {}) {
-    console.log("te");
+  //if the environment is prod
+  var environment = process.env.NODE_ENV;
+  if (environment !== "development") {
+    console.log("not in dev");
+    return <h1>IN DEVELOPMENT</h1>;
   }
   return (
     <Grid columns={3}>
@@ -34,7 +37,7 @@ export default function Home() {
                 <Grid.Column
                   key={post.id}
                   style={{ marginBottom: 20 }}
-                  width={15}
+                  width={13}
                 >
                   <PostCard post={post} />
                 </Grid.Column>

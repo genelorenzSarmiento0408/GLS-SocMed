@@ -15,19 +15,37 @@ import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
 
 function App() {
-  return (
-    <AuthProvider>
-      <Router>
-        <Container>
-          <Navbar />
-          <Route exact path="/" component={Home} />
-          <AuthRoute exact path="/register" component={Register} />
-          <AuthRoute exact path="/login" component={Login} />
-          <Route exact path="/posts/:postId" component={SinglePost} />
-        </Container>
-      </Router>
-    </AuthProvider>
-  );
+  var environment = process.env.NODE_ENV;
+  console.log(environment);
+  if (environment === "development") {
+    return (
+      <AuthProvider>
+        <Router>
+          <Container>
+            <Navbar />
+            <Route exact path="/" component={Home} />
+            <AuthRoute exact path="/register" component={Register} />
+            <AuthRoute exact path="/login" component={Login} />
+            <Route exact path="/posts/:postId" component={SinglePost} />
+          </Container>
+        </Router>
+      </AuthProvider>
+    );
+  } else {
+    return (
+      <AuthProvider>
+        <Router>
+          <Container>
+            <Navbar />
+            {/* <Route exact path="/" component={Home} />
+            <AuthRoute exact path="/register" component={Register} />
+            <AuthRoute exact path="/login" component={Login} />
+            <Route exact path="/posts/:postId" component={SinglePost} /> */}
+          </Container>
+        </Router>
+      </AuthProvider>
+    );
+  }
 }
 
 export default App;
