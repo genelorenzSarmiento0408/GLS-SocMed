@@ -29,7 +29,6 @@
     "start": "react-scripts start",
     "build": "node server/server.js",
     "test": "react-scripts test",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
