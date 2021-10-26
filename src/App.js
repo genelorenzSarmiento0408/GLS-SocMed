@@ -16,7 +16,7 @@ import "./App.scss";
 
 function App() {
   var environment = process.env.NODE_ENV;
-  console.log(environment);
+
   if (environment === "development") {
     return (
       <AuthProvider>
@@ -37,8 +37,8 @@ function App() {
         <Router>
           <Container>
             <Navbar />
-            {/* <Route exact path="/" component={Home} />
-            <AuthRoute exact path="/register" component={Register} />
+            <Route exact path="/" component={Home} />
+            {/*   <AuthRoute exact path="/register" component={Register} />
             <AuthRoute exact path="/login" component={Login} />
             <Route exact path="/posts/:postId" component={SinglePost} /> */}
           </Container>

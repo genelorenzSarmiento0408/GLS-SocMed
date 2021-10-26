@@ -12,7 +12,7 @@ export default function Home() {
   const { user } = useContext(AuthContext);
   const { loading, data: { getPosts: posts } = {} } =
     useQuery(FETCH_POSTS_QUERY);
-  //if the environment is prod
+  //if the environment is not dev
   var environment = process.env.NODE_ENV;
   if (environment !== "development") {
     console.log("not in dev");
@@ -25,7 +25,7 @@ export default function Home() {
       </Grid.Row>
       <Grid.Row>
         {user && (
-          <Grid.Column>
+          <Grid.Column width={15}>
             <PostForm />
           </Grid.Column>
         )}
