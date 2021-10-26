@@ -37,7 +37,11 @@ export default function PostForm() {
   return (
     <>
       <Grid mobile={16} tablet={8} computer={4}>
-        <Grid.Column width={15} className="ui centered card">
+        <Grid.Column
+          width={15}
+          className="ui centered card"
+          style={{ marginBottom: 30 }}
+        >
           <Form onSubmit={onSubmit}>
             <h2>Create a Post</h2>
             <Form.Field>

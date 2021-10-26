@@ -8,6 +8,8 @@ import {
   Button,
   Label,
   Form,
+  Loader,
+  Dimmer,
 } from "semantic-ui-react";
 import moment from "moment";
 
@@ -47,7 +49,11 @@ function SinglePost(props, args = {}) {
 
   let postMarkup;
   if (!getPost) {
-    postMarkup = loading && <h1>Loading posts..</h1>;
+    postMarkup = loading && (
+      <Dimmer active>
+        <Loader content="Loading post..." />
+      </Dimmer>
+    );
   } else {
     const {
       id,
@@ -66,7 +72,7 @@ function SinglePost(props, args = {}) {
         <Grid.Row>
           <Grid.Column width={2}>
             <Image
-              src="https://react.semantic-ui.com/images/avatar/large/molly.png"
+              src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
               size="small"
               float="right"
             />

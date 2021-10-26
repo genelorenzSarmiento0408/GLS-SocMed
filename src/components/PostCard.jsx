@@ -29,7 +29,7 @@ export default function PostCard({
           <Image
             floated="left"
             size="mini"
-            src="https://react.semantic-ui.com/images/avatar/large/molly.png"
+            src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
           />
           <Card.Header>{username}</Card.Header>
           <Card.Meta as={Link} to={`/posts/${id}`}>
