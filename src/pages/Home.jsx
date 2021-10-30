@@ -9,13 +9,9 @@ import PostForm from "../components/PostForm.jsx";
 import "../App.scss";
 
 export default function Home() {
-  const FETCH_ALL = () => {
-    const FETCH_POST = useQuery(FETCH_POSTS_QUERY);
-
-    return [FETCH_POST];
-  };
   const { user } = useContext(AuthContext);
-  const { loading, data: { getPosts: posts } = {} } = FETCH_ALL();
+  const { loading, data: { getPosts: posts, getUsers: users } = {} } =
+    useQuery(FETCH_POSTS_QUERY);
   //if the environment is not dev
   var environment = process.env.NODE_ENV;
   if (environment !== "development") {
@@ -37,13 +33,13 @@ export default function Home() {
         {
           <Transition.Group>
             {posts &&
-              posts.map((post, user) => (
+              posts.map((post) => (
                 <Grid.Column
                   key={post.id}
                   style={{ marginBottom: 20 }}
                   width={15}
                 >
-                  <PostCard post={post} user={user} />
+                  <PostCard post={post} />
                 </Grid.Column>
               ))}
           </Transition.Group>
