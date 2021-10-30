@@ -10,7 +10,7 @@ import "../App.scss";
 
 export default function Home() {
   const { user } = useContext(AuthContext);
-  const { loading, data: { getPosts: posts, getUsers: users } = {} } =
+  const { loading, data: { getPosts: posts } = {} } =
     useQuery(FETCH_POSTS_QUERY);
   //if the environment is not dev
   var environment = process.env.NODE_ENV;
