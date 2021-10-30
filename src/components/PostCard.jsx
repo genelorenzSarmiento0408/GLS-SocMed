@@ -46,9 +46,7 @@ export default function PostCard({
             </Button>
           </PopupGlobal>
 
-          {user && user.username === username && (
-            <DeleteButton postId={{ id }} />
-          )}
+          {user && user.username === username && <DeleteButton postId={id} />}
         </Card.Content>
       </Grid.Column>
     </Grid>
