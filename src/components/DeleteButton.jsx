@@ -18,10 +18,12 @@ export default function DeleteButton({ postId, callback, commentId }) {
           query: FETCH_POSTS_QUERY,
         });
         data.getPosts = data.getPosts.filter((p) => p.id !== postId);
+        let newData = [...data.getPosts];
+        newData = [result.data.deletePost, ...newData];
         proxy.writeQuery({
           query: FETCH_POSTS_QUERY,
           data: {
-            getPosts: [result.data.createPost, ...data.getPosts],
+            getPosts: [result.data.deletePost, ...data.getPosts],
           },
         });
       }
