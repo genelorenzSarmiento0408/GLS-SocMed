@@ -44,7 +44,7 @@ export default function Home() {
                   style={{ marginBottom: 20 }}
                   width={15}
                 >
-                  <PostCard post={post} />
+                  <PostCard post={post} user={user} />
                 </Grid.Column>
               ))}
           </Transition.Group>
