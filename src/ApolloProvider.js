@@ -9,7 +9,8 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: "https://lorenz-react-app-server.herokuapp.com/",
+  // uri: "https://lorenz-react-app-server.herokuapp.com/",
+  uri: "http://localhost:5000/",
 });
 const authLink = setContext(() => {
   const token = localStorage.getItem("jwtToken");
