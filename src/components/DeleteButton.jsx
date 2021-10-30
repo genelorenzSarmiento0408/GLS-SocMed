@@ -51,8 +51,8 @@ export default function DeleteButton({ postId, callback, commentId }) {
 
 const DELETE_POST_MUTATION = gql`
   mutation deletePost($postId: ID!) {
-    deletePost(postId: $postId){
-        
+    deletePost(postId: $postId) {
+      postId
     }
   }
 `;
