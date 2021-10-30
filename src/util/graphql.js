@@ -26,7 +26,6 @@ export const FETCH_USERS_QUERY = gql`
   {
     getUsers {
       id
-      username
       role
       Bio
     }
