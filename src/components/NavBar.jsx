@@ -13,11 +13,18 @@ export default function NavBar() {
   const handleItemClick = (e, { name }) => setActiveItem(name);
   const NavBar = user ? (
     <Menu pointing secondary size="large" color="teal">
-      <Menu.Item name="Home" active={activeItem === "home"} as={Link} to="/" />
+      <Menu.Item
+        name="Home"
+        active={activeItem === "home"}
+        onClick={handleItemClick}
+        as={Link}
+        to="/"
+      />
 
       <Menu.Menu position="right">
         <Menu.Item
           name={user.username}
+          onClick={handleItemClick}
           active={activeItem === user.username}
           as={Link}
           to="/profile"
