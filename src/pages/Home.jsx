@@ -29,7 +29,7 @@ export default function Home() {
             <PostForm />
           </Grid.Column>
         )}
-        {loading && <h1>Loading posts..</h1>}
+        {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
             {posts &&
