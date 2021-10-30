@@ -10,16 +10,7 @@ import DeleteButton from "./DeleteButton";
 import PopupGlobal from "../util/PopupGlobal";
 
 export default function PostCard({
-  post: {
-    title,
-    body,
-    createdAt,
-    id,
-    username,
-    likeCount,
-    commentCount,
-    likes,
-  },
+  post: { title, createdAt, id, username, likeCount, commentCount, likes },
 }) {
   const { user } = useContext(AuthContext);
   const datetostr = createdAt.substring(0, 10);
