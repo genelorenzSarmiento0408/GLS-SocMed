@@ -18,7 +18,12 @@ export default function DeleteButton({ postId, callback, commentId }) {
           query: FETCH_POSTS_QUERY,
         });
         data.getPosts = data.getPosts.filter((p) => p.id !== postId);
-        proxy.writeQuery({ query: FETCH_POSTS_QUERY, data });
+        proxy.writeQuery({
+          query: FETCH_POSTS_QUERY,
+          data: {
+            getPosts: [result.data.createPost, ...data.getPosts],
+          },
+        });
       }
       if (callback) callback();
     },
