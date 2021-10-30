@@ -26,12 +26,13 @@ export default function PostCard({
     <Grid mobile={16} tablet={8} computer={4}>
       <Grid.Column width={15} className="ui centered card">
         <Card.Content>
+           
           <Image
             floated="left"
             size="mini"
             src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
           />
-          <Card.Header>{username}</Card.Header>
+          <PopupGlobal content={}><Card.Header>{username}</Card.Header></PopupGlobal>
           <Card.Meta as={Link} to={`/posts/${id}`}>
             {moment(createdAt).fromNow(true)}
           </Card.Meta>
