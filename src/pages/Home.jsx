@@ -37,7 +37,7 @@ export default function Home() {
                 <Grid.Column
                   key={post.id}
                   style={{ marginBottom: 20 }}
-                  width={13}
+                  width={15}
                 >
                   <PostCard post={post} />
                 </Grid.Column>
