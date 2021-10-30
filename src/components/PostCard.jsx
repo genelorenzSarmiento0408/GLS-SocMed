@@ -11,10 +11,11 @@ import PopupGlobal from "../util/PopupGlobal";
 
 export default function PostCard({
   post: { title, createdAt, id, username, likeCount, commentCount, likes },
-  user: { bio },
+  user: { bio, createdAt },
 }) {
   const { user } = useContext(AuthContext);
   const datetostr = createdAt.substring(0, 10);
+  const contentpopup = bio + "        " + "created at" + createdAt;
   return (
     <Grid mobile={16} tablet={8} computer={4}>
       <Grid.Column width={15} className="ui centered card">
