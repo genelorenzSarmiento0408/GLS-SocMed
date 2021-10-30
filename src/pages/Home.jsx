@@ -16,7 +16,7 @@ export default function Home() {
   };
   const { user } = useContext(AuthContext);
   const { loading, data: { getPosts: posts, getUsers: users } = {} } =
-    useQuery(FETCH_POSTS_QUERY);
+    FETCH_ALL();
   //if the environment is not dev
   var environment = process.env.NODE_ENV;
   if (environment !== "development") {
