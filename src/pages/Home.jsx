@@ -10,6 +10,10 @@ import "../App.scss";
 
 export default function Home() {
   const { user } = useContext(AuthContext);
+  const FETCH_ALL = () => {
+    const FETCH_POSTS = useQuery(FETCH_POSTS_QUERY);
+    const FETCH_USERS = useQuery(FETCH_USERS_QUERY);
+  };
   const { loading, data: { getPosts: posts } = {} } =
     useQuery(FETCH_POSTS_QUERY);
   //if the environment is not dev
