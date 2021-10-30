@@ -24,9 +24,9 @@ export default function NavBar() {
 
       <Menu.Menu position="right">
         <Menu.Item
-          name={user.username}
+          name="Profile"
           onClick={handleItemClick}
-          active={activeItem === user.username}
+          active={activeItem === "Profile"}
           as={Link}
           to="/profile"
         />
