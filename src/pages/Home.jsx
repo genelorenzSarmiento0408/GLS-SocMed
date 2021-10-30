@@ -15,8 +15,12 @@ export default function Home() {
     return [FETCH_POST, FETCH_USER];
   };
   const { user } = useContext(AuthContext);
-  const [{ loading, data: { getPosts: posts, getUsers: users } = {} }] =
-    FETCH_ALL();
+  const [
+    {
+      loading,
+      data: { getPosts: posts },
+    },
+  ] = FETCH_ALL();
   //if the environment is not dev
   var environment = process.env.NODE_ENV;
   if (environment !== "development") {
