@@ -11,7 +11,7 @@ import "../App.scss";
 export default function Home() {
   const FETCH_ALL = () => {
     const FETCH_POST = useQuery(FETCH_POSTS_QUERY);
-    const FETCH_USER = useQuery(FETCH_USER_QUERY);
+    const FETCH_USER = useQuery(FETCH_USERS_QUERY);
     return [FETCH_POST, FETCH_USER];
   };
   const { user } = useContext(AuthContext);
