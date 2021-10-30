@@ -15,7 +15,7 @@ export default function NavBar() {
     <Menu pointing secondary size="large" color="teal">
       <Menu.Item
         name="Home"
-        // onClick={handleItemClick}
+        onClick={handleItemClick}
         // active={activeItem === "home"}
         as={Link}
         to="/"
