@@ -28,6 +28,7 @@ export const FETCH_USERS_QUERY = gql`
       id
       username
       role
+      Bio
     }
   }
 `;
