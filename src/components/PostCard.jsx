@@ -22,6 +22,7 @@ export default function PostCard({
   },
 }) {
   const { user } = useContext(AuthContext);
+  createdAt.toISOString().substring(0, 10);
   return (
     <Grid mobile={16} tablet={8} computer={4}>
       <Grid.Column width={15} className="ui centered card">
