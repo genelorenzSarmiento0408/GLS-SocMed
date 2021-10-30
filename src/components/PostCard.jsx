@@ -11,11 +11,11 @@ import PopupGlobal from "../util/PopupGlobal";
 
 export default function PostCard({
   post: { title, createdAt, id, username, likeCount, commentCount, likes },
-  user: { Bio },
+  // user: { Bio },
 }) {
   const { user } = useContext(AuthContext);
   const datetostr = createdAt.substring(0, 10);
-  const contentpopup = Bio + "        " + "created at " + datetostr;
+  // const contentpopup = Bio + "        " + "created at " + datetostr;
   return (
     <Grid mobile={16} tablet={8} computer={4}>
       <Grid.Column width={15} className="ui centered card">
@@ -25,7 +25,7 @@ export default function PostCard({
             size="mini"
             src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
           />
-          <PopupGlobal content={contentpopup} header={username}>
+          <PopupGlobal content={datetostr} header={username}>
             <Card.Header>{username}</Card.Header>
           </PopupGlobal>
           <Card.Meta as={Link} to={`/posts/${id}`}>
