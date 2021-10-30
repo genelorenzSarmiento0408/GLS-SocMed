@@ -19,8 +19,8 @@ export default function PostCard({
     likeCount,
     commentCount,
     likes,
-    Bio,
   },
+  user: { Bio },
 }) {
   const { user } = useContext(AuthContext);
   const datetostr = createdAt.substring(0, 10);
