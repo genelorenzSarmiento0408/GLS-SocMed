@@ -16,7 +16,8 @@ export default function NavBar() {
       <Menu.Item
         name="Home"
         // onClick={handleItemClick}
-        active={activeItem === "Home"}
+        active
+        // ={activeItem === "Home"}
         as={Link}
         to="/"
       />
