@@ -17,7 +17,7 @@ export default function DeleteButton({ postId, callback, commentId }) {
         const data = proxy.readQuery({
           query: FETCH_POSTS_QUERY,
         });
-        data.getPosts = data.getPosts.find();
+        data.getPosts = data.getPosts.filter((p) => p.id !== postId);
         proxy.writeQuery({ query: FETCH_POSTS_QUERY, data });
       }
       if (callback) callback();
