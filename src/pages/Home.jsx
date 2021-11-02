@@ -33,7 +33,6 @@ export default function Home() {
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
-            {" "}
             <Grid.Row className="page-title">
               <h1>Recent Posts</h1>
             </Grid.Row>
