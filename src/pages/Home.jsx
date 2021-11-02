@@ -45,7 +45,9 @@ export default function Home() {
                   key={user.id}
                   style={{ marginBottom: 10 }}
                   width={11}
-                ></Grid.Column>
+                >
+                  <PostCard user={user} />
+                </Grid.Column>
               ))}
             {posts &&
               posts.map((post) => (
