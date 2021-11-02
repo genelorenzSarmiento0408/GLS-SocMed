@@ -25,6 +25,7 @@ export default function Home() {
     console.log("not in dev");
     return <h1>IN DEVELOPMENT</h1>;
   }
+  console.log(users);
   return (
     <Grid columns={3}>
       <Grid.Row>
