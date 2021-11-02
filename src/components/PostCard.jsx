@@ -16,6 +16,7 @@ export default function PostCard({
   const { user } = useContext(AuthContext);
   const datetostr = createdAt.substring(0, 10);
   // const contentpopup = Bio + "        " + "created at " + datetostr;
+  console.log(Bio);
   return (
     <Grid mobile={16} tablet={8} computer={4}>
       <Grid.Column width={15} className="ui centered card">
