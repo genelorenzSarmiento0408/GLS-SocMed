@@ -24,15 +24,15 @@ export default function Home() {
   }
   return (
     <Grid columns={3}>
-      <Grid.Row className="page-title">
-        <h1>Recent Posts</h1>
-      </Grid.Row>
       <Grid.Row>
         {user && (
           <Grid.Column width={11}>
             <PostForm />
           </Grid.Column>
         )}
+        <Grid.Row className="page-title">
+          <h1>Recent Posts</h1>
+        </Grid.Row>
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
