@@ -39,14 +39,15 @@ export default function Home() {
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
+            {users && users.map((user) => <Grid.Column></Grid.Column>)}
             {posts &&
-              posts.map((post, user) => (
+              posts.map((post) => (
                 <Grid.Column
                   key={post.id}
                   style={{ marginBottom: 10 }}
                   width={11}
                 >
-                  <PostCard post={post} user={user} />
+                  <PostCard post={post} />
                 </Grid.Column>
               ))}
           </Transition.Group>
