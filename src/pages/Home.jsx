@@ -29,7 +29,7 @@ export default function Home() {
       </Grid.Row>
       <Grid.Row>
         {user && (
-          <Grid.Column width={13}>
+          <Grid.Column width={11}>
             <PostForm />
           </Grid.Column>
         )}
