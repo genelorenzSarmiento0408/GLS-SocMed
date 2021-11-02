@@ -21,13 +21,13 @@ function App() {
     return (
       <AuthProvider>
         <Router>
-          <Container>
-            <Navbar />
-            <Route exact path="/" component={Home} />
-            <AuthRoute exact path="/register" component={Register} />
-            <AuthRoute exact path="/login" component={Login} />
-            <Route exact path="/posts/:postId" component={SinglePost} />
-          </Container>
+          {/* <Container> */}
+          <Navbar />
+          <Route exact path="/" component={Home} />
+          <AuthRoute exact path="/register" component={Register} />
+          <AuthRoute exact path="/login" component={Login} />
+          <Route exact path="/posts/:postId" component={SinglePost} />
+          {/* </Container> */}
         </Router>
       </AuthProvider>
     );
