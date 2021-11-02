@@ -27,15 +27,15 @@ export default function Home() {
       <Grid.Row>
         {user && (
           <Grid.Column width={11}>
-            <PostForm />
+            <PostForm />{" "}
+            <Grid.Row className="page-title">
+              <h1>Recent Posts</h1>
+            </Grid.Row>
           </Grid.Column>
         )}
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
-            <Grid.Row className="page-title">
-              <h1>Recent Posts</h1>
-            </Grid.Row>
             {posts &&
               posts.map((post) => (
                 <Grid.Column
