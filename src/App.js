@@ -11,6 +11,7 @@ import SinglePost from "./pages/SinglePost";
 import { AuthProvider } from "./context/auth";
 import AuthRoute from "./util/AuthRoute";
 
+import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
 
 function App() {
