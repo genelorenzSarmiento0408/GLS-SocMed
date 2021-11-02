@@ -41,13 +41,13 @@ export default function Home() {
         {
           <Transition.Group>
             {posts &&
-              posts.map((post) => (
+              posts.map((post, user) => (
                 <Grid.Column
                   key={post.id}
                   style={{ marginBottom: 10 }}
                   width={11}
                 >
-                  <PostCard post={post} />
+                  <PostCard post={post} user={user} />
                 </Grid.Column>
               ))}
           </Transition.Group>
