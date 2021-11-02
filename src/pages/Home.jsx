@@ -40,7 +40,7 @@ export default function Home() {
         {
           <Transition.Group>
             {posts &&
-              posts.map((post) => (
+              posts.map((post, user) => (
                 <Grid.Column
                   key={post.id}
                   style={{ marginBottom: 10 }}
