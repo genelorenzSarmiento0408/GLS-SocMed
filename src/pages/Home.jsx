@@ -40,7 +40,7 @@ export default function Home() {
               posts.map((post) => (
                 <Grid.Column
                   key={post.id}
-                  style={{ marginBottom: 20 }}
+                  style={{ marginBottom: 10 }}
                   width={11}
                 >
                   <PostCard post={post} />
