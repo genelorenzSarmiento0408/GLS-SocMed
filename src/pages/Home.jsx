@@ -15,7 +15,7 @@ export default function Home() {
     const FETCH_USERS = useQuery(FETCH_USERS_QUERY);
     return [FETCH_POSTS];
   };
-  const [{ loading, data: { getPosts: posts } = {} }] = useQuery(FETCH_ALL);
+  const [{ loading, data: { getPosts: posts } = {} }] = FETCH_ALL();
   //if the environment is not dev
   var environment = process.env.NODE_ENV;
   if (environment !== "development") {
