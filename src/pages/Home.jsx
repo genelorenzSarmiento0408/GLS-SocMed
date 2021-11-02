@@ -39,16 +39,6 @@ export default function Home() {
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
-            {users &&
-              users.map((user) => (
-                <Grid.Column
-                  key={user.id}
-                  style={{ marginBottom: 10 }}
-                  width={11}
-                >
-                  <PostCard user={user} />
-                </Grid.Column>
-              ))}
             {posts &&
               posts.map((post) => (
                 <Grid.Column
