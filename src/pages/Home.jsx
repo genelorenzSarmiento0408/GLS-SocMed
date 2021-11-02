@@ -15,7 +15,10 @@ export default function Home() {
     const FETCH_USERS = useQuery(FETCH_USERS_QUERY);
     return [FETCH_POSTS, FETCH_USERS];
   };
-  const [{ loading, data: { getPosts: posts } = {} }] = FETCH_ALL();
+  const [
+    { loading, data: { getPosts: posts } = {} },
+    { data: { getUsers: users } = {} },
+  ] = FETCH_ALL();
   //if the environment is not dev
   var environment = process.env.NODE_ENV;
   if (environment !== "development") {
@@ -43,7 +46,7 @@ export default function Home() {
                   style={{ marginBottom: 10 }}
                   width={11}
                 >
-                  <PostCard post={post} />
+                  <PostCard post={post} user={user} />
                 </Grid.Column>
               ))}
           </Transition.Group>
