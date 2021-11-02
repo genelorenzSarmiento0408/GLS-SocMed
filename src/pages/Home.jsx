@@ -13,7 +13,7 @@ export default function Home() {
   const FETCH_ALL = () => {
     const FETCH_POSTS = useQuery(FETCH_POSTS_QUERY);
     const FETCH_USERS = useQuery(FETCH_USERS_QUERY);
-    return [FETCH_POSTS];
+    return [FETCH_POSTS, FETCH_USERS];
   };
   const [{ loading, data: { getPosts: posts } = {} }] = FETCH_ALL();
   //if the environment is not dev
