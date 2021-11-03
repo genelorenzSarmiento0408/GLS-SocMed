@@ -42,7 +42,9 @@ const OtherProfile = (props, args = {}) => {
       //     likeCount,
       //     commentCount,
     } = getUser;
-    console.table(createdAt);
+    if (Bio === null) {
+      console.log("Bio none");
+    }
     userMarkup = (
       <Grid>
         <Grid.Row>
