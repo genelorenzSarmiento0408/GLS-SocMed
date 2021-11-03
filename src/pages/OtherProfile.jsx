@@ -60,7 +60,9 @@ const OtherProfile = (props, args = {}) => {
               <Card.Content>
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${createdAt}`}</Card.Meta>
-                <Card.Description>{Bio}</Card.Description>
+                <Card.Description>
+                  {Bio != null && console.log("not null")}
+                </Card.Description>
               </Card.Content>
               <hr />{" "}
             </Card>
