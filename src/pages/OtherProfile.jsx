@@ -140,7 +140,6 @@ export const FETCH_USER_QUERY = gql`
       username
       Bio
       role
-      createdAt
     }
   }
 `;
