@@ -139,9 +139,6 @@ const FETCH_USER_QUERY = gql`
     getUser(id: $id) {
       id
       username
-      Bio
-      role
-      createdAt
     }
   }
 `;
