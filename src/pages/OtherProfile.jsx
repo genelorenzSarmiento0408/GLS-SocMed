@@ -32,6 +32,7 @@ const OtherProfile = (props, args = {}) => {
       </Dimmer>
     );
   } else {
+    console.log(getUser);
     const {
       //   id,
       //   title,
@@ -43,7 +44,7 @@ const OtherProfile = (props, args = {}) => {
       //     likeCount,
       //     commentCount,
     } = getUser;
-    console.log(getUser);
+
     userMarkup = (
       <Grid>
         <Grid.Row>
