@@ -60,7 +60,7 @@ const OtherProfile = (props, args = {}) => {
                 <Card.Meta>
                   {moment(createdAt).fromNow()} • by {username}
                 </Card.Meta>
-                <Card.Description>{"test biosa"}</Card.Description>
+                {/* <Card.Description>{"test biosa"}</Card.Description> */}
               </Card.Content>
               <hr />{" "}
             </Card>
