@@ -70,8 +70,9 @@ const OtherProfile = (props, args = {}) => {
         </Grid.Row>
       </Grid>
     );
+    return userMarkup;
   }
-  return userMarkup;
+
   {
     /* <Card.Content extra> */
   }
