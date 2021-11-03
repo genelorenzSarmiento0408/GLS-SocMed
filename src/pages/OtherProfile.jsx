@@ -26,9 +26,9 @@ const OtherProfile = (props, args = {}) => {
     },
   });
   if (!getUser) {
-    postMarkup = loading && (
+    userMarkup = loading && (
       <Dimmer active>
-        <Loader content="Loading post..." />
+        <Loader content="Loading user..." />
       </Dimmer>
     );
   } else {
@@ -38,10 +38,10 @@ const OtherProfile = (props, args = {}) => {
       body,
       createdAt,
       username,
-      comments,
-      //   likes,
-      //   likeCount,
-      //   commentCount,
+      //   comments,
+      //     likes,
+      //     likeCount,
+      //     commentCount,
     } = getUser;
 
     userMarkup = (
@@ -57,11 +57,11 @@ const OtherProfile = (props, args = {}) => {
           <Grid.Column width={10}>
             <Card fluid>
               <Card.Content>
-                <Card.Header>{title}</Card.Header>
+                <Card.Header>{username}</Card.Header>
                 <Card.Meta>
                   {moment(createdAt).fromNow()} • by {username}
                 </Card.Meta>
-                <Card.Description>{body}</Card.Description>
+                <Card.Description>{"test biosa"}</Card.Description>
               </Card.Content>
               <hr />
               <Card.Content extra>
@@ -130,7 +130,7 @@ const OtherProfile = (props, args = {}) => {
       </Grid>
     );
   }
-  return postMarkup;
+  return userMarkup;
 };
 
 export const FETCH_USER_QUERY = gql`
