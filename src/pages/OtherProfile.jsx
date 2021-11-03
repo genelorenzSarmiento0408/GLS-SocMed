@@ -69,16 +69,7 @@ const OtherProfile = (props, args = {}) => {
       </Grid>
     );
   }
-  const test = (
-    <Grid>
-      <Grid.Column>
-        <Card>
-          {" "}
-          <Card.Content width={10}>ds</Card.Content>
-        </Card>
-      </Grid.Column>
-    </Grid>
-  );
+
   return test;
 };
 
