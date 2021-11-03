@@ -44,8 +44,7 @@ const OtherProfile = (props, args = {}) => {
       //     likeCount,
       //     commentCount,
     } = getUser;
-
-    const userMarkup = (
+    userMarkup = (
       <Grid>
         <Grid.Row>
           <Grid.Column width={2}>
@@ -71,7 +70,7 @@ const OtherProfile = (props, args = {}) => {
       </Grid>
     );
   }
-  return (
+  test = (
     <Grid>
       <Grid.Column>
         <Card>
@@ -81,6 +80,7 @@ const OtherProfile = (props, args = {}) => {
       </Grid.Column>
     </Grid>
   );
+  return test;
 };
 
 const FETCH_USER_QUERY = gql`
