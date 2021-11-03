@@ -26,13 +26,10 @@ export default function PostCard({
             size="mini"
             src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
           />
-          <PopupGlobal
-            content={datetostr}
-            header={"Written by " + username}
-            as={Link}
-            to={`/users/${id}`}
-          >
-            <Card.Header>{username}</Card.Header>
+          <PopupGlobal content={datetostr} header={"Written by " + username}>
+            <Card.Header as={Link} to={`/users/${id}`}>
+              {username}
+            </Card.Header>
           </PopupGlobal>
           <Card.Meta as={Link} to={`/posts/${id}`}>
             {moment(createdAt).fromNow(true)}
