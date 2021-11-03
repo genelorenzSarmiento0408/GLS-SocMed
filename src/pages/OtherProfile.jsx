@@ -47,11 +47,11 @@ const OtherProfile = (props, args = {}) => {
       <Grid>
         <Grid.Row>
           <Grid.Column width={2}>
-            <Image
+            {/* <Image
               src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
               size="small"
               float="right"
-            />
+            /> */}
           </Grid.Column>
           <Grid.Column width={10}>
             <Card fluid>
