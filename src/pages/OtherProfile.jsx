@@ -32,7 +32,7 @@ const OtherProfile = (props, args = {}) => {
       </Dimmer>
     );
   } else {
-    console.info(result);
+    console.info("result");
     userMarkup = <h1>username</h1>;
     const {
       //   id,
