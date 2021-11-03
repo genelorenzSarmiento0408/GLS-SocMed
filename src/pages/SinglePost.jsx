@@ -31,7 +31,6 @@ function SinglePost(props, args = {}) {
       postId,
     },
   });
-
   const [submitComment] = useMutation(SUBMIT_COMMENT_MUTATION, {
     update() {
       setComment("");
