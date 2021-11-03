@@ -74,7 +74,10 @@ const OtherProfile = (props, args = {}) => {
   return (
     <Grid>
       <Grid.Column>
-        <Card.Content width={10}>ds</Card.Content>
+        <Card>
+          {" "}
+          <Card.Content width={10}>ds</Card.Content>
+        </Card>
       </Grid.Column>
     </Grid>
   );
