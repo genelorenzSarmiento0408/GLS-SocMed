@@ -70,7 +70,7 @@ const OtherProfile = (props, args = {}) => {
       </Grid>
     );
   }
-  test = (
+  const test = (
     <Grid>
       <Grid.Column>
         <Card>
