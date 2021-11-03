@@ -1,5 +1,5 @@
-import React, { useContext, useState, useRef } from "react";
-import { gql, useQuery, useMutation } from "@apollo/client";
+import React, { useContext} from "react";
+import { gql, useQuery} from "@apollo/client";
 import {
   Card,
   Grid,
@@ -11,13 +11,13 @@ import {
   Loader,
   Dimmer,
 } from "semantic-ui-react";
-import moment from "moment";
+
 
 import { AuthContext } from "../context/auth";
 
 const OtherProfile = (props, args = {}) => {
   const username = props.match.params.username;
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
