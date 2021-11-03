@@ -23,7 +23,6 @@ const OtherProfile = (props, args = {}) => {
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
       id,
-      username,
     },
   });
   if (!getUser) {
