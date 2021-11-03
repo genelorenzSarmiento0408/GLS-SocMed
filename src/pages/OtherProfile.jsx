@@ -65,8 +65,8 @@ const OtherProfile = (props, args = {}) => {
                 <Card.Description>{"test biosa"}</Card.Description>
               </Card.Content>
               <hr />
-              <Card.Content extra>
-                {/* <LikeButton user={user} post={{ id, likes, likeCount }} />
+              {/* <Card.Content extra> */}
+              {/* <LikeButton user={user} post={{ id, likes, likeCount }} />
                 <PopupGlobal content="Comment on Post">
                   <Button
                     as="div"
@@ -82,10 +82,10 @@ const OtherProfile = (props, args = {}) => {
                   </Button>
                 </PopupGlobal> */}
 
-                {/* {user && user.username === username && (
+              {/* {user && user.username === username && (
                   <DeleteButton id={id} callback={deletePostCallbaxk} />
                 )} */}
-              </Card.Content>
+              {/* </Card.Content> */}
             </Card>
             {/* {user && (
               <Card fluid>
