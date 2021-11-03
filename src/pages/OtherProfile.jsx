@@ -8,4 +8,13 @@ const OtherProfile = (props, args = {}) => {
   return <div></div>;
 };
 
+export const FETCH_USERS_QUERY = gql`
+  {
+    getUsers {
+      id
+      role
+      Bio
+    }
+  }
+`;
 export default OtherProfile;
