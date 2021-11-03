@@ -70,7 +70,7 @@ const OtherProfile = (props, args = {}) => {
     );
   }
 
-  return test;
+  return userMarkup;
 };
 
 const FETCH_USER_QUERY = gql`
