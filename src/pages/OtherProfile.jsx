@@ -17,7 +17,7 @@ import { AuthContext } from "../context/auth";
 
 const OtherProfile = (props, args = {}) => {
   const id = props.match.params.id;
-  console.log(id);
+  //   console.log(id);
   const { user } = useContext(AuthContext);
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
