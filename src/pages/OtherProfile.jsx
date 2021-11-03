@@ -7,7 +7,7 @@ const OtherProfile = (props, args = {}) => {
   const id = props.match.params.id;
   console.log(id);
   const { user } = useContext(AuthContext);
-  return <div></div>;
+  return <div>test</div>;
 };
 
 export const FETCH_USER_QUERY = gql`
