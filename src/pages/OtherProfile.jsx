@@ -27,9 +27,9 @@ const OtherProfile = (props, args = {}) => {
       createdAt,
       username,
       comments,
-      likes,
-      likeCount,
-      commentCount,
+      //   likes,
+      //   likeCount,
+      //   commentCount,
     } = getUser;
 
     userMarkup = (
