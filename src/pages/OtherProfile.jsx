@@ -1,6 +1,6 @@
 import React from "react";
 
-const OtherProfile = () => {
+const OtherProfile = (props, args = {}) => {
   return <div></div>;
 };
 
