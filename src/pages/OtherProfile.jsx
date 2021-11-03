@@ -36,7 +36,7 @@ const OtherProfile = (props, args = {}) => {
       //   id,
       //   title,
       //   body,
-      createdAt,
+      //   createdAt,
       username,
       //   comments,
       //     likes,
