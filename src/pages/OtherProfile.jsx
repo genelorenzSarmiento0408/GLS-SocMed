@@ -22,7 +22,7 @@ const OtherProfile = (props, args = {}) => {
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
-      postId,
+      id,
     },
   });
   if (!getUser) {
