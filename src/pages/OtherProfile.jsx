@@ -45,7 +45,7 @@ const OtherProfile = (props, args = {}) => {
       //     commentCount,
     } = getUser;
 
-    userMarkup = (
+    const userMarkup = (
       <Grid>
         <Grid.Row>
           <Grid.Column width={2}>
@@ -71,80 +71,6 @@ const OtherProfile = (props, args = {}) => {
       </Grid>
     );
     return userMarkup;
-  }
-
-  {
-    /* <Card.Content extra> */
-  }
-  {
-    /* <LikeButton user={user} post={{ id, likes, likeCount }} />
-                <PopupGlobal content="Comment on Post">
-                  <Button
-                    as="div"
-                    labelPosition="right"
-                    onClick={() => console.log("Commenty")}
-                  >
-                    <Button color="blue" basic>
-                      <Icon name="comments" />
-                    </Button>
-                    <Label basic color="blue" pointing="left">
-                      {commentCount}
-                    </Label>
-                  </Button>
-                </PopupGlobal> */
-  }
-
-  {
-    /* {user && user.username === username && (
-                  <DeleteButton id={id} callback={deletePostCallbaxk} />
-                )} */
-  }
-  {
-    /* </Card.Content> */
-  }
-
-  {
-    /* {user && (
-              <Card fluid>
-                <Card.Content>
-                  <p>Post a Comment</p>
-                  <Form>
-                    <div className="ui action input fluid">
-                      <input
-                        type="text"
-                        placeholder="Comment..."
-                        name="Comment"
-                        value={comment}
-                        onChange={(event) => setComment(event.target.value)}
-                        ref={commentInputRef}
-                      />
-                      <button
-                        type="submit"
-                        className="ui button teal"
-                        disabled={comment.trim() === ""}
-                        onClick={submitComment}
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </Form>
-                </Card.Content>
-              </Card>
-            )} */
-  }
-  {
-    /* {comments.map((comment) => (
-              <Card fluid key={comment.id}>
-                <Card.Content>
-                  {user && user.username === comment.username && (
-                    <DeleteButton postId={id} commentId={comment.id} />
-                  )}
-                  <Card.Header>{comment.username}</Card.Header>
-                  <Card.Meta>{moment(comment.createdAt).fromNow()}</Card.Meta>
-                  <Card.Description>{comment.body}</Card.Description>
-                </Card.Content>
-              </Card>
-            ))} */
   }
 };
 
