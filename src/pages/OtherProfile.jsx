@@ -44,7 +44,7 @@ const OtherProfile = (props, args = {}) => {
       //     commentCount,
     } = getUser;
     userMarkup = (
-      <div>{username}</div>
+      <div>username</div>
       //   <Grid>
       //     <Grid.Row>
       //       <Grid.Column width={2}>
