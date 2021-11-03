@@ -43,7 +43,7 @@ const OtherProfile = (props, args = {}) => {
       //     likeCount,
       //     commentCount,
     } = getUser;
-
+    console.log(getUser);
     userMarkup = (
       <Grid>
         <Grid.Row>
