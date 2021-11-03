@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 
 import Navbar from "./components/NavBar";
-import Home from "./pages/Home.jsx";
+import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import SinglePost from "./pages/SinglePost";
