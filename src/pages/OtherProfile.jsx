@@ -1,9 +1,11 @@
 import React, { useContext, useState, useRef } from "react";
 import { gql, useQuery, useMutation } from "@apollo/client";
 
+import { AuthContext } from "../context/auth";
+
 const OtherProfile = (props, args = {}) => {
   const id = props.match.params.id;
-  console.log(postId);
+  console.log(id);
   const { user } = useContext(AuthContext);
   return <div></div>;
 };
