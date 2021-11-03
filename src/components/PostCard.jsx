@@ -27,6 +27,11 @@ export default function PostCard({
             src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
           />
           <PopupGlobal content={datetostr} header={"Written by " + username}>
+            <Image
+              floated="left"
+              size="mini"
+              src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
+            />
             <Card.Header as={Link} to={`/users/${id}`}>
               {username}
             </Card.Header>
