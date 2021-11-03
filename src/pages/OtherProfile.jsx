@@ -130,7 +130,7 @@ const OtherProfile = (props, args = {}) => {
       </Grid>
     );
   }
-  return userMarkup;
+  return <div>hug</div>;
 };
 
 export const FETCH_USER_QUERY = gql`
