@@ -12,8 +12,7 @@ export const FETCH_USER_QUERY = gql`
   query getUser($id: ID!) {
     getUser(id: $id) {
       id
-      role
-      Bio
+      username
     }
   }
 `;
