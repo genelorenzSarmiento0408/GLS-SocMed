@@ -43,7 +43,7 @@ const OtherProfile = (props, args = {}) => {
       //     likeCount,
       //     commentCount,
     } = getUser;
-    userMarkup = (
+    let userMarkup = (
       <h1>username</h1>
       //   <Grid>
       //     <Grid.Row>
