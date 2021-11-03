@@ -26,12 +26,19 @@ export default function PostCard({
             size="mini"
             src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
           />
-          <PopupGlobal content={datetostr} header={"Written by " + username}>
-            <Image
-              floated="left"
-              size="mini"
-              src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
-            />
+          <PopupGlobal
+            content={
+              datetostr +
+              (
+                <Image
+                  floated="left"
+                  size="mini"
+                  src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
+                />
+              )
+            }
+            header={"Written by " + username}
+          >
             <Card.Header as={Link} to={`/users/${id}`}>
               {username}
             </Card.Header>
