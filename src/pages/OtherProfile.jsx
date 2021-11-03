@@ -32,7 +32,6 @@ const OtherProfile = (props, args = {}) => {
       </Dimmer>
     );
   } else {
-    console.log(getUser);
     const {
       //   id,
       //   title,
