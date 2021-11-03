@@ -57,9 +57,9 @@ const OtherProfile = (props, args = {}) => {
             <Card fluid>
               <Card.Content>
                 <Card.Header>{username}</Card.Header>
-                <Card.Meta>
+                {/* <Card.Meta>
                   {moment(createdAt).fromNow()} • by {username}
-                </Card.Meta>
+                </Card.Meta> */}
                 {/* <Card.Description>{"test biosa"}</Card.Description> */}
               </Card.Content>
               {/* <hr />{" "} */}
