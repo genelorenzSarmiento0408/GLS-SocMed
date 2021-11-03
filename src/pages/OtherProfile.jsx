@@ -7,8 +7,8 @@ const OtherProfile = (props, args = {}) => {
   const id = props.match.params.id;
   console.log(id);
   const { user } = useContext(AuthContext);
-  let postMarkup;
-  if (!getPost) {
+  let userMarkup;
+  if (!getUser) {
     postMarkup = loading && (
       <Dimmer active>
         <Loader content="Loading post..." />
