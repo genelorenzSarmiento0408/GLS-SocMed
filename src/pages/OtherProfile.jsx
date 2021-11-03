@@ -33,9 +33,9 @@ const OtherProfile = (props, args = {}) => {
     );
   } else {
     const {
-      id,
-      title,
-      body,
+      //   id,
+      //   title,
+      //   body,
       createdAt,
       username,
       //   comments,
