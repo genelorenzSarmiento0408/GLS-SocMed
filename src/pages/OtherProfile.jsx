@@ -32,9 +32,6 @@ const OtherProfile = (props, args = {}) => {
       </Dimmer>
     );
   } else {
-    console.info("result");
-    userMarkup = <h1>username</h1>;
-
     const {
       //   id,
       //   title,
@@ -46,30 +43,31 @@ const OtherProfile = (props, args = {}) => {
       //     likeCount,
       //     commentCount,
     } = getUser;
-
-    //   <Grid>
-    //     <Grid.Row>
-    //       <Grid.Column width={2}>
-    //         {/* <Image
-    //           src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
-    //           size="small"
-    //           float="right"
-    //         /> */}
-    //       </Grid.Column>
-    //       <Grid.Column width={10}>
-    //         <Card fluid>
-    //           <Card.Content>
-    //             <Card.Header>{username}</Card.Header>
-    //             {/* <Card.Meta>
-    //               {moment(createdAt).fromNow()} • by {username}
-    //             </Card.Meta> */}
-    //             {/* <Card.Description>{"test biosa"}</Card.Description> */}
-    //           </Card.Content>
-    //           {/* <hr />{" "} */}
-    //         </Card>
-    //       </Grid.Column>
-    //     </Grid.Row>
-    //   </Grid>
+    userMarkup = (
+      <Grid>
+        <Grid.Row>
+          <Grid.Column width={2}>
+            <Image
+              src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
+              size="small"
+              float="right"
+            />
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <Card fluid>
+              <Card.Content>
+                <Card.Header>{username}</Card.Header>
+                <Card.Meta>
+                  {moment(createdAt).fromNow()} • by {username}
+                </Card.Meta>
+                <Card.Description>{"test biosa"}</Card.Description>
+              </Card.Content>
+              <hr />{" "}
+            </Card>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    );
   }
 
   return userMarkup;
