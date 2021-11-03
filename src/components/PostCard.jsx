@@ -29,6 +29,7 @@ export default function PostCard({
           <PopupGlobal
             content={
               datetostr +
+              "" +
               (
                 <Image
                   floated="left"
