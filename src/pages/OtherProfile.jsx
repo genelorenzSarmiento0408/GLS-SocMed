@@ -70,8 +70,8 @@ const OtherProfile = (props, args = {}) => {
         </Grid.Row>
       </Grid>
     );
-    return userMarkup;
   }
+  return userMarkup;
 };
 
 const FETCH_USER_QUERY = gql`
