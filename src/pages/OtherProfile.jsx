@@ -34,7 +34,7 @@ const OtherProfile = (props, args = {}) => {
     const {
       //   id,
       //   title,
-      //   body,
+      Bio,
       createdAt,
       username,
       //   comments,
@@ -58,7 +58,7 @@ const OtherProfile = (props, args = {}) => {
               <Card.Content>
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${createdAt}`}</Card.Meta>
-                <Card.Description>{"test biosa"}</Card.Description>
+                <Card.Description>{Bio}</Card.Description>
               </Card.Content>
               <hr />{" "}
             </Card>
@@ -77,6 +77,7 @@ const FETCH_USER_QUERY = gql`
       id
       username
       createdAt
+      Bio
     }
   }
 `;
