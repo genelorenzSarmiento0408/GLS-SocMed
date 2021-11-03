@@ -67,7 +67,7 @@ function SinglePost(props, args = {}) {
       commentCount,
     } = getPost;
 
-    return (postMarkup = (
+    postMarkup = (
       <Grid>
         <Grid.Row>
           <Grid.Column width={2}>
@@ -151,9 +151,9 @@ function SinglePost(props, args = {}) {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-    ));
+    );
   }
-  return <div>daasasad</div>;
+  return postMarkup;
 }
 
 const SUBMIT_COMMENT_MUTATION = gql`
