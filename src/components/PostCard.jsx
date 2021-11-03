@@ -41,7 +41,7 @@ export default function PostCard({
             }
             header={"Written by " + username}
           >
-            <Card.Header as={Link} to={`/users/${id}`}>
+            <Card.Header as={Link} to={`/users/${username}`}>
               {username}
             </Card.Header>
           </PopupGlobal>
