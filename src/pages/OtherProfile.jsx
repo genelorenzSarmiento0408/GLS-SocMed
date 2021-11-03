@@ -34,6 +34,7 @@ const OtherProfile = (props, args = {}) => {
   } else {
     console.info("result");
     userMarkup = <h1>username</h1>;
+
     const {
       //   id,
       //   title,
