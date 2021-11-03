@@ -8,6 +8,11 @@ const OtherProfile = (props, args = {}) => {
   console.log(id);
   const { user } = useContext(AuthContext);
   let userMarkup;
+  const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
+    variables: {
+      postId,
+    },
+  });
   if (!getUser) {
     postMarkup = loading && (
       <Dimmer active>
@@ -25,9 +30,9 @@ const OtherProfile = (props, args = {}) => {
       likes,
       likeCount,
       commentCount,
-    } = getPost;
+    } = getUser;
 
-    postMarkup = (
+    userMarkup = (
       <Grid>
         <Grid.Row>
           <Grid.Column width={2}>
