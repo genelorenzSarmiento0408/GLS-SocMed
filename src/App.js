@@ -27,6 +27,7 @@ function App() {
             <AuthRoute exact path="/register" component={Register} />
             <AuthRoute exact path="/login" component={Login} />
             <Route exact path="/posts/:postId" component={SinglePost} />
+            <Route exact path="/users/:id" component={} />
           </Container>
         </Router>
       </AuthProvider>
