@@ -62,6 +62,7 @@ const OtherProfile = (props, args = {}) => {
                 </Card.Meta> */}
                 {/* <Card.Description>{"test biosa"}</Card.Description> */}
               </Card.Content>
+              sdsa
               {/* <hr />{" "} */}
             </Card>
           </Grid.Column>
