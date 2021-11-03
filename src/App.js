@@ -13,6 +13,7 @@ import AuthRoute from "./util/AuthRoute";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
+import OtherProfile from "./pages/OtherProfile";
 
 function App() {
   var environment = process.env.NODE_ENV;
@@ -27,7 +28,7 @@ function App() {
             <AuthRoute exact path="/register" component={Register} />
             <AuthRoute exact path="/login" component={Login} />
             <Route exact path="/posts/:postId" component={SinglePost} />
-            <Route exact path="/users/:id" component={} />
+            <Route exact path="/users/:id" component={OtherProfile} />
           </Container>
         </Router>
       </AuthProvider>
