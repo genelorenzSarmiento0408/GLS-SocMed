@@ -134,7 +134,7 @@ const OtherProfile = (props, args = {}) => {
   return userMarkup;
 };
 
-export const FETCH_USER_QUERY = gql`
+const FETCH_USER_QUERY = gql`
   query ($id: ID!) {
     getUser(id: $id) {
       id
