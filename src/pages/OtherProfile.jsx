@@ -74,7 +74,7 @@ const OtherProfile = (props, args = {}) => {
 };
 
 const FETCH_USER_QUERY = gql`
-  query ($id: ID!) {
+  query ($username: String!) {
     getUser(id: $id) {
       id
       username
