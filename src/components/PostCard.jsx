@@ -39,10 +39,11 @@ export default function PostCard({
               )
             }
             header={"Written by " + username}
-          ></PopupGlobal>
-          <Card.Header as={Link} to={`/users/${id}`}>
-            {username}
-          </Card.Header>
+          >
+            <Card.Header as={Link} to={`/users/${id}`}>
+              {username}
+            </Card.Header>
+          </PopupGlobal>
           <Card.Meta as={Link} to={`/posts/${id}`}>
             {moment(createdAt).fromNow(true)}
           </Card.Meta>
