@@ -30,7 +30,7 @@ export default function PostCard({
             content={datetostr}
             header={"Written by " + username}
             as={Link}
-            to={`/posts/${id}`}
+            to={`/users/${id}`}
           >
             <Card.Header>{username}</Card.Header>
           </PopupGlobal>
