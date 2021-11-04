@@ -28,6 +28,7 @@ export default function PostCard({
             content={
               datetostr +
               " " +
+              <Rating icon="star" defaultRating={3} maxRating={4} /> +
               (
                 <Image
                   floated="left"
