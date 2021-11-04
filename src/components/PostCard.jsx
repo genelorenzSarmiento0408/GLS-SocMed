@@ -36,7 +36,7 @@ export default function PostCard({
                 />
               )
             }
-            header={"Written by " + username}
+            header={`Written by ${username}`}
           >
             <Card.Header as={Link} to={`/users/${username}`}>
               {username}
