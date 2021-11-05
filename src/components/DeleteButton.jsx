@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
 import { Button, Confirm, Icon } from "semantic-ui-react";
 
-import { FETCH_POSTS_QUERY } from "../util/graphql";
 import PopupGlobal from "../util/PopupGlobal";
 
 export default function DeleteButton({ postId, callback, commentId }) {
