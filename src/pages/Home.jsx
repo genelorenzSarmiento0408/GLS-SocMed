@@ -9,11 +9,10 @@ import PostForm from "../components/PostForm.jsx";
 import "../App.scss";
 
 export default function Home() {
-  const { user } = useContext(AuthContext);
   const FETCH_ALL = () => {
     const FETCH_POSTS = useQuery(FETCH_POSTS_QUERY);
-    const FETCH_USERS = useQuery(FETCH_USERS_QUERY);
-    return [FETCH_POSTS, FETCH_USERS];
+
+    return [FETCH_POSTS];
   };
   const [{ loading, data: { getPosts: posts } = {} }] = FETCH_ALL();
   //if the environment is not dev
