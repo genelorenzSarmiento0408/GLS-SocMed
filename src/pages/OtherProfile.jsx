@@ -44,7 +44,7 @@ const OtherProfile = (props, args = {}) => {
     const datetostr = createdAt.substring(0, 10);
     if (Bio === null) {
       console.log("Bio none");
-      let isbionull = true;
+      isbionull = true;
     }
     userMarkup = (
       <Grid>
