@@ -4,7 +4,7 @@ import { Grid, Transition } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 import PostCard from "../components/PostCard";
-import { FETCH_POSTS_QUERY, FETCH_USERS_QUERY } from "../util/graphql";
+import { FETCH_POSTS_QUERY } from "../util/graphql";
 import PostForm from "../components/PostForm.jsx";
 import "../App.scss";
 
@@ -12,8 +12,8 @@ export default function Home() {
   const { user } = useContext(AuthContext);
   const FETCH_ALL = () => {
     const FETCH_POSTS = useQuery(FETCH_POSTS_QUERY);
-    const FETCH_USERS = useQuery(FETCH_USERS_QUERY);
-    return [FETCH_POSTS, FETCH_USERS];
+
+    return [FETCH_POSTS];
   };
   const [{ loading, data: { getPosts: posts } = {} }] = FETCH_ALL();
   //if the environment is not dev
