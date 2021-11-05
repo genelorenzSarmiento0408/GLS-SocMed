@@ -13,7 +13,6 @@ export default function PostCard({
   post: { title, createdAt, id, username, likeCount, commentCount, likes },
 }) {
   const { user } = useContext(AuthContext);
-  const datetostr = createdAt.substring(0, 10);
 
   return (
     <Grid mobile={16} tablet={8} computer={4}>
