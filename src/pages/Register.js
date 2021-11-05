@@ -22,7 +22,7 @@ export default function Register(props) {
     },
     onError(err) {
       console.log(err.graphQLErrors[0].extensions.errors);
-      setErrors(err.graphQLErrors[0].extensions.errors); // should be err.graphQLErrors[0].errors
+      setErrors(err.graphQLErrors[0].extensions.errors);
     },
     variables: values,
   });
