@@ -1,16 +1,6 @@
 import React, { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
-import {
-  Card,
-  Grid,
-  Image,
-  //   Icon,
-  //   Button,
-  //   Label,
-  //   Form,
-  Loader,
-  Dimmer,
-} from "semantic-ui-react";
+import { Card, Grid, Image, Loader, Dimmer } from "semantic-ui-react";
 
 const OtherProfile = (props, args = {}) => {
   const username = props.match.params.username;
