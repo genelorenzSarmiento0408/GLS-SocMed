@@ -10,7 +10,7 @@ export default function DeleteButton({ postId, callback, commentId }) {
   const mutation = commentId ? DELETE_COMMENT_MUTATION : DELETE_POST_MUTATION;
 
   const [deletePostOrMutation] = useMutation(mutation, {
-    update(proxy) {
+    update() {
       setConfirmOpen(false);
       if (!commentId) {
         window.location.reload(false);
