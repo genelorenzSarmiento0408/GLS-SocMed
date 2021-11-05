@@ -1,5 +1,5 @@
-import React, { useContext} from "react";
-import { gql, useQuery} from "@apollo/client";
+import React, { useContext } from "react";
+import { gql, useQuery } from "@apollo/client";
 import {
   Card,
   Grid,
@@ -11,7 +11,6 @@ import {
   Loader,
   Dimmer,
 } from "semantic-ui-react";
-
 
 import { AuthContext } from "../context/auth";
 
@@ -42,6 +41,7 @@ const OtherProfile = (props, args = {}) => {
       //     likeCount,
       //     commentCount,
     } = getUser;
+    const datetostr = createdAt.substring(0, 10);
     if (Bio === null) {
       console.log("Bio none");
     }
@@ -59,7 +59,7 @@ const OtherProfile = (props, args = {}) => {
             <Card fluid>
               <Card.Content>
                 <Card.Header>{username}</Card.Header>
-                <Card.Meta>{`user created at: ${createdAt}`}</Card.Meta>
+                <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>{Bio != null && Bio} </Card.Description>
               </Card.Content>
               <hr />{" "}
