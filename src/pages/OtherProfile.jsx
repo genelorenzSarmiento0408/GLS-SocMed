@@ -12,11 +12,9 @@ import {
   Dimmer,
 } from "semantic-ui-react";
 
-import { AuthContext } from "../context/auth";
-
 const OtherProfile = (props, args = {}) => {
   const username = props.match.params.username;
-  // const { user } = useContext(AuthContext);
+
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
