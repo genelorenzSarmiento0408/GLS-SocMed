@@ -30,7 +30,7 @@ const OtherProfile = (props, args = {}) => {
       </Dimmer>
     );
   } else {
-    const isbionull = false;
+    let isbionull = false;
     const {
       //   id,
       //   title,
