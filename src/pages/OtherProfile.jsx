@@ -29,17 +29,7 @@ const OtherProfile = (props, args = {}) => {
     );
   } else {
     let isbionull = false;
-    const {
-      //   id,
-      //   title,
-      Bio,
-      createdAt,
-      username,
-      //   comments,
-      //     likes,
-      //     likeCount,
-      //     commentCount,
-    } = getUser;
+    const { Bio, createdAt, username } = getUser;
     const datetostr = createdAt.substring(0, 10);
     if (Bio === null) {
       isbionull = true;
