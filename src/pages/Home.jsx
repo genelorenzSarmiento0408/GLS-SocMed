@@ -17,11 +17,11 @@ export default function Home() {
   };
   const [{ loading, data: { getPosts: posts } = {} }] = FETCH_ALL();
   //if the environment is not dev
-  var environment = process.env.NODE_ENV;
-  if (environment !== "development") {
-    console.log("not in dev");
-    return <h1>IN DEVELOPMENT</h1>;
-  }
+  // var environment = process.env.NODE_ENV;
+  // if (environment !== "development") {
+  //   console.log("not in dev");
+  //   return <h1>IN DEVELOPMENT</h1>;
+  // }
 
   return (
     <Grid columns={3}>
