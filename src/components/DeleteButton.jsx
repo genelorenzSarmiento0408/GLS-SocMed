@@ -14,9 +14,6 @@ export default function DeleteButton({ postId, callback, commentId }) {
     update(proxy) {
       setConfirmOpen(false);
       if (!commentId) {
-        const data = proxy.readQuery({
-          query: FETCH_POSTS_QUERY,
-        });
         window.location.reload(false);
       }
       if (callback) callback();
