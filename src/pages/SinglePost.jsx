@@ -134,16 +134,14 @@ function SinglePost(props, args = {}) {
             )}
             {comments.map((comment) => (
               <Card fluid key={comment.id}>
-                <Card.Content>
-                  {user && user.username === comment.username && (
-                    <DeleteButton postId={id} commentId={comment.id} />
-                  )}
-                  <Comment.Author>{comment.username}</Comment.Author>
-                  <Comment.Metadata>
-                    {moment(comment.createdAt).fromNow()}
-                  </Comment.Metadata>
-                  <Comment.Text>{comment.body}</Comment.Text>
-                </Card.Content>
+                {user && user.username === comment.username && (
+                  <DeleteButton postId={id} commentId={comment.id} />
+                )}
+                <Comment.Author>{comment.username}</Comment.Author>
+                <Comment.Metadata>
+                  {moment(comment.createdAt).fromNow()}
+                </Comment.Metadata>
+                <Comment.Text>{comment.body}</Comment.Text>
               </Card>
             ))}
           </Grid.Column>
