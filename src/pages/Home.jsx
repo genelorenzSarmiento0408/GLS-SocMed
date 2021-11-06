@@ -22,11 +22,13 @@ export default function Home() {
         {user && (
           <Grid.Column width={11}>
             <PostForm />{" "}
-            <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
-              <h1>Recent Posts</h1>
-            </Grid.Row>
+            <Grid.Row
+              className="page-title"
+              style={{ marginBottom: 20 }}
+            ></Grid.Row>
           </Grid.Column>
-        )}
+        )}{" "}
+        <h1>Recent Posts</h1>
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
