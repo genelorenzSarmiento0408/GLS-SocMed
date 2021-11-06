@@ -133,7 +133,7 @@ function SinglePost(props, args = {}) {
               </Card>
             )}
             {comments.map((comment) => (
-              <Card fluid key={comment.id}>
+              <div>
                 {user && user.username === comment.username && (
                   <DeleteButton postId={id} commentId={comment.id} />
                 )}
@@ -144,7 +144,7 @@ function SinglePost(props, args = {}) {
                   </Comment.Metadata>
                   <Comment.Text>{comment.body}</Comment.Text>{" "}
                 </Comment>
-              </Card>
+              </div>
             ))}
           </Grid.Column>
         </Grid.Row>
