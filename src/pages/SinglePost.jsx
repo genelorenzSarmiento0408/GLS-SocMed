@@ -142,7 +142,7 @@ function SinglePost(props, args = {}) {
                   <Comment.Metadata>
                     {moment(comment.createdAt).fromNow()}
                   </Comment.Metadata>
-                  <Card.Text>{comment.body}</Card.Text>
+                  <Comment.Text>{comment.body}</Comment.Text>
                 </Card.Content>
               </Card>
             ))}
