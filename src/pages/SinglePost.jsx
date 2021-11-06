@@ -21,7 +21,6 @@ import PopupGlobal from "../util/PopupGlobal";
 
 function SinglePost(props, args = {}) {
   const postId = props.match.params.postId;
-  // console.log(postId);
   const { user } = useContext(AuthContext);
   const commentInputRef = useRef(null);
 
