@@ -40,9 +40,9 @@ export default function PostCard({
             </Card.Header>
           </PopupGlobal>
           <Card.Meta as={Link} to={`/posts/${id}`}>
-            {moment(createdAt).fromNow(true)}
+            {moment(createdAt).fromNow(true)} {title}
           </Card.Meta>
-          <Card.Description>{title}</Card.Description>
+          <Card.Description>{body}</Card.Description>
         </Card.Content>
         <Card.Content extra>
           <LikeButton user={user} post={{ id, likes, likeCount }} />
