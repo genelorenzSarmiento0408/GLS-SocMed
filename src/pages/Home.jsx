@@ -37,9 +37,6 @@ export default function Home() {
                   style={{ marginBottom: 10 }}
                   width={11}
                 >
-                  <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
-                    <h1>Recent Posts</h1>
-                  </Grid.Row>
                   <PostCard post={post} />
                 </Grid.Column>
               ))}
