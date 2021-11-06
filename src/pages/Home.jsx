@@ -27,14 +27,15 @@ export default function Home() {
             </Grid.Row>
           </Grid.Column>
         )}
-        { 
-            <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
-              <h1>Recent Posts</h1>}
+        {
+          <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
+            <h1>Recent Posts</h1>
+          </Grid.Row>
+        }
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
-           
-            </Grid.Row>
+            {" "}
             {posts &&
               posts.map((post) => (
                 <Grid.Column
