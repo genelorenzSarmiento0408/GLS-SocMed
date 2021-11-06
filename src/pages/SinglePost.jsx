@@ -135,7 +135,7 @@ function SinglePost(props, args = {}) {
             {comments.map((comment) => (
               <div>
                 <Comment.Group>
-                  <Card>
+                  <Card fluid>
                     {user && user.username === comment.username && (
                       <DeleteButton postId={id} commentId={comment.id} />
                     )}
