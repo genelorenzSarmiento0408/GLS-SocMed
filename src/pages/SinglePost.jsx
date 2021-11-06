@@ -136,16 +136,18 @@ function SinglePost(props, args = {}) {
               <div>
                 <Comment.Group>
                   <Card fluid key={comment.id}>
-                    {user && user.username === comment.username && (
-                      <DeleteButton postId={id} commentId={comment.id} />
-                    )}
-                    <Comment>
-                      <Comment.Author>{comment.username}</Comment.Author>
-                      <Comment.Metadata>
-                        {moment(comment.createdAt).fromNow()}
-                      </Comment.Metadata>
-                      <Comment.Text>{comment.body}</Comment.Text>{" "}
-                    </Comment>{" "}
+                    <Card.Content>
+                      {user && user.username === comment.username && (
+                        <DeleteButton postId={id} commentId={comment.id} />
+                      )}
+                      <Comment>
+                        <Comment.Author>{comment.username}</Comment.Author>
+                        <Comment.Metadata>
+                          {moment(comment.createdAt).fromNow()}
+                        </Comment.Metadata>
+                        <Comment.Text>{comment.body}</Comment.Text>{" "}
+                      </Comment>{" "}
+                    </Card.Content>
                   </Card>
                 </Comment.Group>
               </div>
