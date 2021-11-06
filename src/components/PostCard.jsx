@@ -10,7 +10,16 @@ import DeleteButton from "./DeleteButton";
 import PopupGlobal from "../util/PopupGlobal";
 
 export default function PostCard({
-  post: { title, createdAt, id, username, likeCount, commentCount, likes },
+  post: {
+    title,
+    body,
+    createdAt,
+    id,
+    username,
+    likeCount,
+    commentCount,
+    likes,
+  },
 }) {
   const { user } = useContext(AuthContext);
 
