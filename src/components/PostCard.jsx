@@ -33,7 +33,7 @@ export default function PostCard({
                 avatar
               />
             }
-            header={`${username}`}
+            header={username}
           >
             <Card.Header as={Link} to={`/users/${username}`}>
               {username}
