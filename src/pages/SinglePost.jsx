@@ -135,16 +135,18 @@ function SinglePost(props, args = {}) {
             {comments.map((comment) => (
               <div>
                 <Comment.Group>
-                  {user && user.username === comment.username && (
-                    <DeleteButton postId={id} commentId={comment.id} />
-                  )}
-                  <Comment>
-                    <Comment.Author>{comment.username}</Comment.Author>
-                    <Comment.Metadata>
-                      {moment(comment.createdAt).fromNow()}
-                    </Comment.Metadata>
-                    <Comment.Text>{comment.body}</Comment.Text>{" "}
-                  </Comment>{" "}
+                  <Card>
+                    {user && user.username === comment.username && (
+                      <DeleteButton postId={id} commentId={comment.id} />
+                    )}
+                    <Comment>
+                      <Comment.Author>{comment.username}</Comment.Author>
+                      <Comment.Metadata>
+                        {moment(comment.createdAt).fromNow()}
+                      </Comment.Metadata>
+                      <Comment.Text>{comment.body}</Comment.Text>{" "}
+                    </Comment>{" "}
+                  </Card>
                 </Comment.Group>
               </div>
             ))}
