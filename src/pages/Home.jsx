@@ -32,13 +32,12 @@ export default function Home() {
           <Transition.Group>
             {posts &&
               posts.map((post) => (
-                
-                  <Grid.Row className="page-title" style={{ marginBottom: 20 }}
-               
-                <Grid.Column   key={post.id}
+                <Grid.Column
+                  key={post.id}
                   style={{ marginBottom: 10 }}
                   width={11}
                 >
+                  <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
                     <h1>Recent Posts</h1>
                   </Grid.Row>
                   <PostCard post={post} />
