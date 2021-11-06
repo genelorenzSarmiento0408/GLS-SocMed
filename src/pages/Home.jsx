@@ -19,15 +19,13 @@ export default function Home() {
   return (
     <Grid columns={3}>
       <Grid.Row>
-        {user ? (
+        {user && (
           <Grid.Column width={11}>
             <PostForm />{" "}
             <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
               <h1>Recent Posts</h1>
             </Grid.Row>
           </Grid.Column>
-        ) : (
-          
         )}{" "}
         {loading && <h1>Loading posts...</h1>}
         {
@@ -38,9 +36,10 @@ export default function Home() {
                   key={post.id}
                   style={{ marginBottom: 10 }}
                   width={11}
-                ><Grid.Row className="page-title" style={{ marginBottom: 20 }}>
-            <h1>Recent Posts</h1>
-          </Grid.Row>
+                >
+                  <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
+                    <h1>Recent Posts</h1>
+                  </Grid.Row>
                   <PostCard post={post} />
                 </Grid.Column>
               ))}
