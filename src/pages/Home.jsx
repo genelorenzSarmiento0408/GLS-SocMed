@@ -30,7 +30,7 @@ export default function Home() {
         {loading ? (
           <h1>Loading posts...</h1>
         ) : (
-          <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
+          <Grid.Row className="page-title" style={{ marginBottom: 50 }}>
             <h1>Recent Posts</h1>
           </Grid.Row>
         )}
