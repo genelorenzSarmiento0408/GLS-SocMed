@@ -89,11 +89,7 @@ function SinglePost(props, args = {}) {
               <Card.Content extra>
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
                 <PopupGlobal content="Comment on Post">
-                  <Button
-                    as="div"
-                    labelPosition="right"
-                    onClick={() => console.log("Commenty")}
-                  >
+                  <Button as="div" labelPosition="right">
                     <Button color="blue" basic>
                       <Icon name="comments" />
                     </Button>
