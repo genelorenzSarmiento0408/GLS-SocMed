@@ -137,11 +137,13 @@ function SinglePost(props, args = {}) {
                 {user && user.username === comment.username && (
                   <DeleteButton postId={id} commentId={comment.id} />
                 )}
-                <Comment.Author>{comment.username}</Comment.Author>
-                <Comment.Metadata>
-                  {moment(comment.createdAt).fromNow()}
-                </Comment.Metadata>
-                <Comment.Text>{comment.body}</Comment.Text>
+                <Comment>
+                  <Comment.Author>{comment.username}</Comment.Author>
+                  <Comment.Metadata>
+                    {moment(comment.createdAt).fromNow()}
+                  </Comment.Metadata>
+                  <Comment.Text>{comment.body}</Comment.Text>{" "}
+                </Comment>
               </Card>
             ))}
           </Grid.Column>
