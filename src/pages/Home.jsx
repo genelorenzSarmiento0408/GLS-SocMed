@@ -28,8 +28,7 @@ export default function Home() {
           </Grid.Column>
         )}
         {
-          <Grid.Column>
-            {" "}
+          <Grid.Column width={11}>
             <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
               <h1>Recent Posts</h1>
             </Grid.Row>
@@ -38,7 +37,6 @@ export default function Home() {
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
-            {" "}
             {posts &&
               posts.map((post) => (
                 <Grid.Column
