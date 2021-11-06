@@ -10,7 +10,7 @@ import {
   Form,
   Loader,
   Dimmer,
-  Header,
+  Comment,
 } from "semantic-ui-react";
 import moment from "moment";
 
@@ -138,9 +138,11 @@ function SinglePost(props, args = {}) {
                   {user && user.username === comment.username && (
                     <DeleteButton postId={id} commentId={comment.id} />
                   )}
-                  <Card.Header>{comment.username}</Card.Header>
-                  <Card.Meta>{moment(comment.createdAt).fromNow()}</Card.Meta>
-                  <Card.Description>{comment.body}</Card.Description>
+                  <Comment.Author>{comment.username}</Comment.Author>
+                  <Comment.Metadata>
+                    {moment(comment.createdAt).fromNow()}
+                  </Comment.Metadata>
+                  <Card.Text>{comment.body}</Card.Text>
                 </Card.Content>
               </Card>
             ))}
