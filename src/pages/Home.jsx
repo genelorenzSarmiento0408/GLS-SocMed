@@ -19,15 +19,16 @@ export default function Home() {
   return (
     <Grid columns={3}>
       <Grid.Row>
-        {user && (
+        {user ? (
           <Grid.Column width={11}>
             <PostForm />{" "}
             <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
               <h1>Recent Posts</h1>
             </Grid.Row>
           </Grid.Column>
+        ) : (
+          <h1>Recent Posts</h1>
         )}{" "}
-        <h1>Recent Posts</h1>
         {loading && <h1>Loading posts...</h1>}
         {
           <Transition.Group>
