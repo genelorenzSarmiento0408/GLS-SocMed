@@ -135,10 +135,10 @@ function SinglePost(props, args = {}) {
             {comments.map((comment) => (
               <Comment.Group key={comment.id}>
                 <Card fluid>
+                  {user && user.username === comment.username && (
+                    <DeleteButton postId={id} commentId={comment.id} />
+                  )}
                   <Card.Content>
-                    {user && user.username === comment.username && (
-                      <DeleteButton postId={id} commentId={comment.id} />
-                    )}
                     <Comment>
                       <Comment.Author>{comment.username}</Comment.Author>
                       <Comment.Metadata>
