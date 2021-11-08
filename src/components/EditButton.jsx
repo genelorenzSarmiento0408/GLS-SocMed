@@ -8,8 +8,10 @@ import { AuthContext } from "../context/auth";
 const EditButton = (/*props, args = {},*/ { postId }) => {
   const { user } = useContext(AuthContext);
   const [Title, setTitle] = useState("");
+  const [open, setOpen] = useState(false);
   const titleInputRef = useRef(null);
   let render;
+
   const [editTitle] = useMutation(EDIT_TITLE, {
     update() {
       setTitle("");
