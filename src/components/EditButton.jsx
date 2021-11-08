@@ -8,9 +8,12 @@ const EditButton = () => {
 };
 
 const EDIT_TITLE = gql`
-    mutation editTitle($editTitle: String){
-
+  mutation ($editTitle: String!) {
+    editTitle(editTitle: $editTitle) {
+      postId
+      username
     }
+  }
 `;
 
 export default EditButton;
