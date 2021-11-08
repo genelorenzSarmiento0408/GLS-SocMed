@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
 import { useMutation, gql } from "@apollo/client";
-import { Button, Card, Icon, Form } from "semantic-ui-react";
+import { Button, Card, Icon, Form, Modal } from "semantic-ui-react";
 
 import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
@@ -23,11 +23,13 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
     },
   });
   render = (
-    <Button as="div" labelPosition="right" onClick={editTitleButton}>
-      <PopupGlobal content="Edit Post">
-        <Icon name="edit" />
-      </PopupGlobal>
-    </Button>
+    <Modal>
+      <Button as="div" labelPosition="right" onClick={editTitleButton}>
+        <PopupGlobal content="Edit Post">
+          <Icon name="edit" />
+        </PopupGlobal>
+      </Button>
+    </Modal>
   );
   function editTitleButton() {
     render = (
