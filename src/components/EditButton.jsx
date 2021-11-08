@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useMutation, gql, useQuery } from "@apollo/client";
 import { Button, Label, Icon } from "semantic-ui-react";
 
@@ -7,6 +7,7 @@ import PopupGlobal from "../util/PopupGlobal";
 const EditButton = (props, args = {}) => {
   const postId = props.match.params.postId;
   const { user } = useContext(AuthContext);
+  const [comment, setComment] = useState("");
 
   return (
     <>
