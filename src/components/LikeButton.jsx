@@ -26,7 +26,7 @@ export default function LikeButton({ user, post: { id, likeCount, likes } }) {
   const likeButton = user ? (
     liked ? (
       <Button color="teal">
-        <GrLike />
+        <Icon name="thumbs up outline" />
       </Button>
     ) : (
       <Button color="teal" basic>
