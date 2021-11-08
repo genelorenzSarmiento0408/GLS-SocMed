@@ -11,6 +11,7 @@ const EditButton = (props, args = {}) => {
 
   return (
     <>
+      <Button></Button>
       {user && (
         <Card fluid>
           <Card.Content>
