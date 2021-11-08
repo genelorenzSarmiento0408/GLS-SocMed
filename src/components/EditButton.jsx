@@ -4,7 +4,9 @@ import { Button, Label, Icon } from "semantic-ui-react";
 
 import PopupGlobal from "../util/PopupGlobal";
 
-const EditButton = () => {
+const EditButton = (props, args = {}) => {
+  const postId = props.match.params.postId;
+  const { user } = useContext(AuthContext);
   return <div></div>;
 };
 
