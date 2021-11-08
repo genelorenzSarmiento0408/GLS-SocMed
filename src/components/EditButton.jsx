@@ -19,14 +19,17 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       body: Title,
     },
   });
-
-  return (
-    <>
+  function editTitleButton() {
+    const render = (
       <Button as="div" labelPosition="right">
         <PopupGlobal content="Edit Post">
           <Icon name="edit" />
         </PopupGlobal>
       </Button>
+    );
+  }
+  return (
+    <>
       {user && (
         <Card fluid>
           <Card.Content>
