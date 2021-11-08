@@ -5,8 +5,8 @@ import { Button, Card, Icon, Form } from "semantic-ui-react";
 import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
 
-const EditButton = (props, args = {}) => {
-  const postId = props.match.params.postId;
+const EditButton = (props, args = {}, postId) => {
+  //   const postId = props.match.params.postId;
   const { user } = useContext(AuthContext);
   const [Title, setTitle] = useState("");
   const titleInputRef = useRef(null);
