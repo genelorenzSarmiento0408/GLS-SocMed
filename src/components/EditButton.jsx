@@ -7,7 +7,38 @@ import PopupGlobal from "../util/PopupGlobal";
 const EditButton = (props, args = {}) => {
   const postId = props.match.params.postId;
   const { user } = useContext(AuthContext);
-  return <div></div>;
+
+  return (
+    <>
+      {user && (
+        <Card fluid>
+          <Card.Content>
+            <p>Post a Comment</p>
+            <Form>
+              <div className="ui action input fluid">
+                <input
+                  type="text"
+                  placeholder="Comment..."
+                  name="Comment"
+                  value={comment}
+                  onChange={(event) => setComment(event.target.value)}
+                  ref={commentInputRef}
+                />
+                <button
+                  type="submit"
+                  className="ui button teal"
+                  disabled={comment.trim() === ""}
+                  onClick={submitComment}
+                >
+                  Submit
+                </button>
+              </div>
+            </Form>
+          </Card.Content>
+        </Card>
+      )}
+    </>
+  );
 };
 
 const EDIT_TITLE = gql`
