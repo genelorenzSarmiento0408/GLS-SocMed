@@ -1,5 +1,5 @@
 import React from "react";
-import { useMutation, gql } from "@apollo/client";
+import { useMutation, gql, useQuery } from "@apollo/client";
 import { Button, Label, Icon } from "semantic-ui-react";
 
 import PopupGlobal from "../util/PopupGlobal";
