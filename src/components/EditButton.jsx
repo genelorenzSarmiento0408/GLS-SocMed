@@ -43,7 +43,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
             <div className="ui action input fluid">
               <input
                 type="text"
-                placeholder="Edit Title"
+                placeholder="New Title"
                 name="Comment"
                 value={Title}
                 onChange={(event) => setTitle(event.target.value)}
