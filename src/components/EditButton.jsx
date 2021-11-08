@@ -1,5 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
-// eslint-disable-next-line useQuery
+// eslint-disable-next-line
 import { useMutation, gql, useQuery } from "@apollo/client";
 import { Button, Card, Icon, Form } from "semantic-ui-react";
 
