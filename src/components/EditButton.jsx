@@ -12,7 +12,9 @@ const EditButton = (props, args = {}) => {
   return (
     <>
       <Button as="div" labelPosition="right">
-        <Icon name="edit"></Icon>
+        <PopupGlobal content="">
+          <Icon name="edit" />
+        </PopupGlobal>
       </Button>
       {user && (
         <Card fluid>
