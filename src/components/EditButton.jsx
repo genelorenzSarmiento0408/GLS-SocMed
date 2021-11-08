@@ -11,11 +11,11 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
   const [open, setOpen] = useState(false);
   const titleInputRef = useRef(null);
   let render;
-  const { loading, data: { getPost } = {} } = useQuery(FETCH_POST_QUERY, {
-    variables: {
-      postId,
-    },
-  });
+  //   const { loading, data: { getPost } = {} } = useQuery(FETCH_POST_QUERY, {
+  //     variables: {
+  //       postId,
+  //     },
+  //   });
   const [editTitle] = useMutation(EDIT_TITLE, {
     update() {
       setTitle("");
