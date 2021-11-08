@@ -8,6 +8,7 @@ import LikeButton from "./LikeButton";
 import "../App.scss";
 import DeleteButton from "./DeleteButton";
 import PopupGlobal from "../util/PopupGlobal";
+import EditButton from "./EditButton";
 
 export default function PostCard({
   post: {
