@@ -20,7 +20,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
     },
   });
   let render = (
-    <Button as="div" labelPosition="right" onClick={editTitleButton()}>
+    <Button as="div" labelPosition="right" onClick={editTitleButton}>
       <PopupGlobal content="Edit Post">
         <Icon name="edit" />
       </PopupGlobal>
