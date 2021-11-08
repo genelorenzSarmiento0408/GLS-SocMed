@@ -5,7 +5,7 @@ import { Card, Grid, Image, Loader, Dimmer } from "semantic-ui-react";
 const OtherProfile = (props, args = {}) => {
   const username = props.match.params.username;
   const { user } = useContext(AuthContext);
-
+  console.log(user.username);
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
