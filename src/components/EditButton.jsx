@@ -7,7 +7,7 @@ import PopupGlobal from "../util/PopupGlobal";
 const EditButton = (props, args = {}) => {
   const postId = props.match.params.postId;
   const { user } = useContext(AuthContext);
-  const [comment, setComment] = useState("");
+  const [Title, setComment] = useState("");
 
   return (
     <>
@@ -20,14 +20,14 @@ const EditButton = (props, args = {}) => {
                   type="text"
                   placeholder="Edit Title"
                   name="Comment"
-                  value={comment}
-                  onChange={(event) => setComment(event.target.value)}
+                  value={Title}
+                  onChange={(event) => setTile(event.target.value)}
                   ref={commentInputRef}
                 />
                 <button
                   type="submit"
                   className="ui button teal"
-                  disabled={comment.trim() === ""}
+                  disabled={Title.trim() === ""}
                   onClick={submitComment}
                 >
                   Submit
