@@ -14,9 +14,7 @@ const OtherProfile = (props, args = {}) => {
       username,
     },
   });
-  if (user && user.username === username) {
-    console.log(`yes cksda ${user.username}`);
-  }
+
   if (!getUser) {
     userMarkup = loading && (
       <Dimmer active>
@@ -43,6 +41,9 @@ const OtherProfile = (props, args = {}) => {
           <Grid.Column width={10}>
             <Card fluid>
               <Card.Content>
+                {user && user.username === username && (
+                  <DeleteButton postId={id} callback={deletePostCallbaxk} />
+                )}
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>
