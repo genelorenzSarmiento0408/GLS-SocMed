@@ -34,7 +34,7 @@ const EditButton = (props, args = {}) => {
                   type="submit"
                   className="ui button teal"
                   disabled={Title.trim() === ""}
-                  onClick={submitComment}
+                  onClick={editTitle}
                 >
                   Submit
                 </button>
