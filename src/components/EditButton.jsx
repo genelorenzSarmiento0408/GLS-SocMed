@@ -23,7 +23,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
     },
     variables: {
       postId,
-      title: Title,
+      newTitle: Title,
     },
   });
   render = (
