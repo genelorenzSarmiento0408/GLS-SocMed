@@ -1,6 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
-// eslint-disable-next-line
-import { useMutation, gql, useQuery } from "@apollo/client";
+import { useMutation, gql } from "@apollo/client";
 import { Button, Card, Icon, Form } from "semantic-ui-react";
 
 import PopupGlobal from "../util/PopupGlobal";
