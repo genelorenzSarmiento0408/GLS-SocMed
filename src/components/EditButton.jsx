@@ -7,4 +7,10 @@ const EditButton = () => {
   return <div></div>;
 };
 
+const EDIT_TITLE = gql`
+    mutation editTitle($editTitle: String){
+
+    }
+`;
+
 export default EditButton;
