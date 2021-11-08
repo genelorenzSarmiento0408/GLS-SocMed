@@ -6,7 +6,7 @@ import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
 
 const EditButton = (props, args = {}) => {
-  const postId = props.match.params.postId;
+  const id = props.match.params.id;
   const { user } = useContext(AuthContext);
   const [Title, setComment] = useState("");
 
