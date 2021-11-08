@@ -27,8 +27,8 @@ const EditButton = (props, args = {}) => {
                   placeholder="Edit Title"
                   name="Comment"
                   value={Title}
-                  onChange={(event) => setTile(event.target.value)}
-                  ref={commentInputRef}
+                  // onChange={(event) => setTitle(event.target.value)}
+                  // ref={commentInputRef}
                 />
                 <button
                   type="submit"
