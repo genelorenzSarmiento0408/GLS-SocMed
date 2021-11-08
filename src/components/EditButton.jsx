@@ -13,7 +13,6 @@ const EditButton = (props, args = {}) => {
       {user && (
         <Card fluid>
           <Card.Content>
-            <p>Post a Comment</p>
             <Form>
               <div className="ui action input fluid">
                 <input
