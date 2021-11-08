@@ -19,45 +19,46 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       body: Title,
     },
   });
+  let render = (
+    <Button as="div" labelPosition="right" onClick={editTitleButton}>
+      <PopupGlobal content="Edit Post">
+        <Icon name="edit" />
+      </PopupGlobal>
+    </Button>
+  );
   function editTitleButton() {
-    const render = (
-      <Button as="div" labelPosition="right">
-        <PopupGlobal content="Edit Post">
-          <Icon name="edit" />
-        </PopupGlobal>
-      </Button>
+    render = (
+      <>
+        {user && (
+          <Card fluid>
+            <Card.Content>
+              <Form>
+                <div className="ui action input fluid">
+                  <input
+                    type="text"
+                    placeholder="Edit Title"
+                    name="Comment"
+                    value={Title}
+                    onChange={(event) => setTitle(event.target.value)}
+                    ref={titleInputRef}
+                  />
+                  <button
+                    type="submit"
+                    className="ui button teal"
+                    disabled={Title.trim() === ""}
+                    onClick={editTitle}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </Form>
+            </Card.Content>
+          </Card>
+        )}
+      </>
     );
   }
-  return (
-    <>
-      {user && (
-        <Card fluid>
-          <Card.Content>
-            <Form>
-              <div className="ui action input fluid">
-                <input
-                  type="text"
-                  placeholder="Edit Title"
-                  name="Comment"
-                  value={Title}
-                  onChange={(event) => setTitle(event.target.value)}
-                  ref={titleInputRef}
-                />
-                <button
-                  type="submit"
-                  className="ui button teal"
-                  disabled={Title.trim() === ""}
-                  onClick={editTitle}
-                >
-                  Submit
-                </button>
-              </div>
-            </Form>
-          </Card.Content>
-        </Card>
-      )}
-    </>
-  );
+  return render;
 };
 
 const EDIT_TITLE = gql`
