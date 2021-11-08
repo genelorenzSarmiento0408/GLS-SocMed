@@ -70,7 +70,7 @@ export default function PostCard({
           {user && user.username === username && (
             <>
               <DeleteButton postId={id} />
-              <EditButton {...props} postId={id} />
+              <EditButton postId={id} />
             </>
           )}
         </Card.Content>
