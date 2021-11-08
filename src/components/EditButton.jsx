@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useMutation, gql, useQuery } from "@apollo/client";
-import { Button, Label, Icon } from "semantic-ui-react";
+import { Button, Card, Icon, Form } from "semantic-ui-react";
 
 import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
