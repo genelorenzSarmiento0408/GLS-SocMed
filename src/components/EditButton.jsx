@@ -9,6 +9,7 @@ const EditButton = (props, args = {}) => {
   //const postId = props.match.params.postId;
   const { user } = useContext(AuthContext);
   const [Title, setComment] = useState("");
+  const titleInputRef = useRef(null);
 
   return (
     <>
@@ -28,7 +29,7 @@ const EditButton = (props, args = {}) => {
                   name="Comment"
                   value={Title}
                   // onChange={(event) => setTitle(event.target.value)}
-                  // ref={commentInputRef}
+                  ref={titleInputRef}
                 />
                 <button
                   type="submit"
