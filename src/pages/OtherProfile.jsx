@@ -14,6 +14,9 @@ const OtherProfile = (props, args = {}) => {
       username,
     },
   });
+  if (user.username) {
+    console.log(`yes cksda ${user.username}`);
+  }
   if (!getUser) {
     userMarkup = loading && (
       <Dimmer active>
