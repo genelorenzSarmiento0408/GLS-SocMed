@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMutation, gql } from "@apollo/client";
-import { Button, Label } from "semantic-ui-react";
+import { Button, Label, Icon } from "semantic-ui-react";
 
 import { GrLike } from "react-icons/gr";
 
@@ -30,7 +30,7 @@ export default function LikeButton({ user, post: { id, likeCount, likes } }) {
       </Button>
     ) : (
       <Button color="teal" basic>
-        <GrLike />
+        <Icon name="thumbs up outline" />
       </Button>
     )
   ) : (
