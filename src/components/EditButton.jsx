@@ -79,5 +79,27 @@ const EDIT_TITLE = gql`
     }
   }
 `;
+const FETCH_POST_QUERY = gql`
+  query ($postId: ID!) {
+    getPost(postId: $postId) {
+      id
+      title
+      body
+      createdAt
+      username
+      likeCount
+      likes {
+        username
+      }
+      commentCount
+      comments {
+        id
+        username
+        createdAt
+        body
+      }
+    }
+  }
+`;
 
 export default EditButton;
