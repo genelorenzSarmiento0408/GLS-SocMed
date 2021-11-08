@@ -18,6 +18,7 @@ import LikeButton from "../components/LikeButton";
 import { AuthContext } from "../context/auth";
 import DeleteButton from "../components/DeleteButton";
 import PopupGlobal from "../util/PopupGlobal";
+import EditButton from "../components/EditButton";
 
 function SinglePost(props, args = {}) {
   const postId = props.match.params.postId;
@@ -100,7 +101,10 @@ function SinglePost(props, args = {}) {
                 </PopupGlobal>
 
                 {user && user.username === username && (
-                  <DeleteButton postId={id} callback={deletePostCallbaxk} />
+                  <>
+                    <EditButton postId={id} />
+                    <DeleteButton postId={id} callback={deletePostCallbaxk} />
+                  </>
                 )}
               </Card.Content>
             </Card>
