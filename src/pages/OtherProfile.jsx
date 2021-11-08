@@ -49,7 +49,7 @@ const OtherProfile = (props, args = {}) => {
                   {isbionull ? "No Bio added" : Bio}
                 </Card.Description>
               </Card.Content>
-              <hr />{" "}
+              <hr />
             </Card>
           </Grid.Column>
         </Grid.Row>
