@@ -27,7 +27,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       closeIcon
       open={open}
       trigger={
-        <Button as="div" labelPosition="right" onClick={editTitleButton}>
+        <Button as="div" labelPosition="right">
           <PopupGlobal content="Edit Post">
             <Icon name="edit" />
           </PopupGlobal>
@@ -64,9 +64,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       )}
     </Modal>
   );
-  function editTitleButton() {
-    render = <></>;
-  }
+
   return render;
 };
 
