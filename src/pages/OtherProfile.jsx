@@ -42,7 +42,7 @@ const OtherProfile = (props, args = {}) => {
             <Card fluid>
               <Card.Content>
                 {user && user.username === username && (
-                  <DeleteButton postId={id} callback={deletePostCallbaxk} />
+                  <h1>username is {user.username} </h1>
                 )}
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
