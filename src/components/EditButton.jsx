@@ -37,31 +37,29 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       onOpen={() => setOpen(true)}
     >
       {user && (
-        <Card fluid>
-          <Card.Content>
-            <Header icon="edit" content="Edit Title" />
-            <Form>
-              <div className="ui action input fluid">
-                <input
-                  type="text"
-                  placeholder="Edit Title"
-                  name="Comment"
-                  value={Title}
-                  onChange={(event) => setTitle(event.target.value)}
-                  ref={titleInputRef}
-                />
-                <button
-                  type="submit"
-                  className="ui button teal"
-                  disabled={Title.trim() === ""}
-                  onClick={editTitle}
-                >
-                  Submit
-                </button>
-              </div>
-            </Form>
-          </Card.Content>
-        </Card>
+        <>
+          <Header icon="edit" content="Edit Title" />
+          <Form>
+            <div className="ui action input fluid">
+              <input
+                type="text"
+                placeholder="Edit Title"
+                name="Comment"
+                value={Title}
+                onChange={(event) => setTitle(event.target.value)}
+                ref={titleInputRef}
+              />
+              <button
+                type="submit"
+                className="ui button teal"
+                disabled={Title.trim() === ""}
+                onClick={editTitle}
+              >
+                Submit
+              </button>
+            </div>
+          </Form>
+        </>
       )}
     </Modal>
   );
