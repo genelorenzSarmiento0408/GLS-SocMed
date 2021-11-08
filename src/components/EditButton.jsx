@@ -9,6 +9,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
   const { user } = useContext(AuthContext);
   const [Title, setTitle] = useState("");
   const titleInputRef = useRef(null);
+  let render;
   const [editTitle] = useMutation(EDIT_TITLE, {
     update() {
       setTitle("");
@@ -57,7 +58,6 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
         )}
       </>
     );
-    return render;
   }
   return render;
 };
