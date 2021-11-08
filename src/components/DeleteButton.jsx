@@ -6,7 +6,7 @@ import PopupGlobal from "../util/PopupGlobal";
 
 export default function DeleteButton({ postId, callback, commentId }) {
   const [confirmOpen, setConfirmOpen] = useState(false);
-
+  console.log(postId);
   const mutation = commentId ? DELETE_COMMENT_MUTATION : DELETE_POST_MUTATION;
 
   const [deletePostOrMutation] = useMutation(mutation, {
