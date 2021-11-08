@@ -11,7 +11,7 @@ const EditButton = (props, args = {}) => {
 
   return (
     <>
-      <Button></Button>
+      <Button as="div" labelPosition="right" onClick={likePost}></Button>
       {user && (
         <Card fluid>
           <Card.Content>
