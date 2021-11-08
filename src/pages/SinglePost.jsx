@@ -102,7 +102,6 @@ function SinglePost(props, args = {}) {
 
                 {user && user.username === username && (
                   <>
-                    <EditButton postId={id} />
                     <DeleteButton postId={id} callback={deletePostCallbaxk} />
                   </>
                 )}
