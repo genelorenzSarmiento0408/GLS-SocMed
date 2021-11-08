@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { useMutation, gql } from "@apollo/client";
 import { Button, Label, Icon } from "semantic-ui-react";
 
-import { GrLike } from "react-icons/gr";
-
 import "../App.scss";
 import PopupGlobal from "../util/PopupGlobal";
 
