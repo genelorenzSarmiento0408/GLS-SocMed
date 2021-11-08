@@ -39,7 +39,7 @@ const EditButton = (props, args = {}, postId) => {
                   placeholder="Edit Title"
                   name="Comment"
                   value={Title}
-                  // onChange={(event) => setTitle(event.target.value)}
+                  onChange={(event) => setTitle(event.target.value)}
                   ref={titleInputRef}
                 />
                 <button
