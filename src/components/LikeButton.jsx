@@ -35,7 +35,7 @@ export default function LikeButton({ user, post: { id, likeCount, likes } }) {
     )
   ) : (
     <Button as={Link} to="/login" color="teal" basic>
-      <GrLike />
+      <Icon name="thumbs up outline" />
     </Button>
   );
 
