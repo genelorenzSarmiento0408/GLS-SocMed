@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
 import { Card, Grid, Image, Loader, Dimmer } from "semantic-ui-react";
 
