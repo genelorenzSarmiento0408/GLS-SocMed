@@ -11,6 +11,17 @@ const EditButton = (props, args = {}) => {
   const [Title, setComment] = useState("");
   const titleInputRef = useRef(null);
 
+  const [editTitle] = useMutation(EDIT_TITLE, {
+    update() {
+      setComment("");
+      commentInputRef.current.blur();
+    },
+    variables: {
+      postId,
+      body: comment,
+    },
+  });
+
   return (
     <>
       <Button as="div" labelPosition="right">
