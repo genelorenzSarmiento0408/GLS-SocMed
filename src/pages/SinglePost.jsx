@@ -18,7 +18,6 @@ import LikeButton from "../components/LikeButton";
 import { AuthContext } from "../context/auth";
 import DeleteButton from "../components/DeleteButton";
 import PopupGlobal from "../util/PopupGlobal";
-import EditButton from "../components/EditButton";
 
 function SinglePost(props, args = {}) {
   const postId = props.match.params.postId;
