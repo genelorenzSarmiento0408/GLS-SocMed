@@ -12,7 +12,7 @@ const EditButton = (props, args = {}) => {
   return (
     <>
       <Button as="div" labelPosition="right">
-        <PopupGlobal content="">
+        <PopupGlobal content="Edit Post">
           <Icon name="edit" />
         </PopupGlobal>
       </Button>
