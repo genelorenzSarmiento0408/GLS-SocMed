@@ -14,7 +14,7 @@ const OtherProfile = (props, args = {}) => {
       username,
     },
   });
-  if (user && user.username) {
+  if (user && user.username === username) {
     console.log(`yes cksda ${user.username}`);
   }
   if (!getUser) {
