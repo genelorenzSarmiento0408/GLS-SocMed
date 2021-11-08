@@ -48,9 +48,9 @@ const EditButton = (props, args = {}) => {
 };
 
 const EDIT_TITLE = gql`
-  mutation ($editTitle: String!) {
-    editTitle(editTitle: $editTitle) {
-      postId
+  mutation ($postId: String!, $newTitle: String!) {
+    editTitle(postId: $postId, newTitle: $newTitle) {
+      id
       username
     }
   }
