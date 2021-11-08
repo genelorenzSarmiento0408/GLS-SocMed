@@ -57,6 +57,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
         )}
       </>
     );
+    return render;
   }
   return render;
 };
