@@ -139,6 +139,7 @@ function SinglePost(props, args = {}) {
                   )}
                   <Card.Content>
                     <Comment>
+                      <Comment.Avatar src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg" />
                       <Comment.Author>{comment.username}</Comment.Author>
                       <Comment.Metadata>
                         {moment(comment.createdAt).fromNow()}
