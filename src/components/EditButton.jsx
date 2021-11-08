@@ -39,6 +39,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       {user && (
         <Card fluid>
           <Card.Content>
+            <Header icon="edit" content="Edit Title" />
             <Form>
               <div className="ui action input fluid">
                 <input
