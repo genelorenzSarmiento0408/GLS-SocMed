@@ -7,6 +7,7 @@ const PageNotFound = () => {
       Oh No! Page Not Found 💚💙 (De en ef LoL)
       <br />
       TESTING ON DEVELOPMENT
+      <br />
       <a href="/">Go back to Home</a>
     </div>
   );
