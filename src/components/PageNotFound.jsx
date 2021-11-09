@@ -5,7 +5,7 @@ const PageNotFound = () => {
     <div>
       <h1>404 HTML ERROR</h1>
       Oh No! Page Not Found 💚💙 (De en ef LoL) TESTING ON DEVELOPMENT
-      <a>Go back to Home</a>
+      <a href="/">Go back to Home</a>
     </div>
   );
 };
