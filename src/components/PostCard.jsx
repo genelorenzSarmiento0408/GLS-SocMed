@@ -54,7 +54,7 @@ export default function PostCard({
           </PopupGlobal>
           <Card.Meta as={Link} to={`/users/${username}`}>
             {moment(createdAt).fromNow(true)} ago • by {username}{" "}
-            {edited ? editedAt : ""}
+            {edited ? `Edited At: ${editedAt}` : ""}
           </Card.Meta>
           <Card.Description>{body}</Card.Description>
         </Card.Content>
