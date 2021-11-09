@@ -72,7 +72,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
 };
 
 const EDIT_TITLE = gql`
-  mutation EDIT_TITLE($postId: String!, $newTitle: String!) {
+  mutation EDIT_TITLE($postId: ID!, $newTitle: String!) {
     editTitle(postId: $postId, newTitle: $newTitle) {
       id
       username
