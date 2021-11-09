@@ -84,6 +84,7 @@ function SinglePost(props, args = {}) {
                 <Card.Header>{title}</Card.Header>
                 <Card.Meta>
                   {moment(createdAt).fromNow()} • by {username}
+                  {edited ? editedAt : ""}
                 </Card.Meta>
                 <Card.Description>{body}</Card.Description>
               </Card.Content>
