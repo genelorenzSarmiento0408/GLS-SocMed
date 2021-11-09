@@ -28,7 +28,7 @@ export default function PostCard({
   const { user } = useContext(AuthContext);
 
   return (
-    <Grid className="ui centered card">
+    <Grid>
       <Grid.Column width={17} className="ui centered card">
         <Card.Content className="ui centered card">
           <Image
