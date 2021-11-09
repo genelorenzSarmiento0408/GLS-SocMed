@@ -29,7 +29,10 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       trigger={
         <Button color="teal" labelPosition="right">
           <PopupGlobal content="Edit Post">
-            <Icon name="edit" />
+            <Button color="teal">
+              <Icon name="edit" />
+            </Button>
+            {/* <Icon name="edit" /> */}
           </PopupGlobal>
         </Button>
       }
