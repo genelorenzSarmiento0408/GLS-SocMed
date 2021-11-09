@@ -9,6 +9,7 @@ import "../App.scss";
 import DeleteButton from "./DeleteButton";
 import PopupGlobal from "../util/PopupGlobal";
 import EditButton from "./EditTitle";
+import EditBody from "./EditBody";
 
 export default function PostCard({
   post: {
@@ -58,7 +59,10 @@ export default function PostCard({
               {edited ? `• Edited` : ""}
             </Card.Meta>
           </PopupGlobal>
-          <Card.Description>{body}</Card.Description>
+          <Card.Description>
+            {body}
+            {user && user.username === username && <EditBody postId={id} />}
+          </Card.Description>
         </Card.Content>
         <Card.Content extra>
           <LikeButton user={user} post={{ id, likes, likeCount }} />
