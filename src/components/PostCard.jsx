@@ -29,7 +29,7 @@ export default function PostCard({
 
   return (
     <Grid>
-      <Grid.Column width={15} className="ui centered card">
+      <Grid.Column width={17} className="ui centered card">
         <Card.Content>
           <Image
             floated="left"
