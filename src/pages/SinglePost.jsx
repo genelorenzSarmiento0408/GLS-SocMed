@@ -87,7 +87,7 @@ function SinglePost(props, args = {}) {
                   {edited ? editedAt : ""}
                 </Card.Meta>
                 <Card.Description>{body}</Card.Description>
-                <Card.Description></Card>
+                <Card.Description></Card.Description>
               </Card.Content>
               <hr />
               <Card.Content extra>
