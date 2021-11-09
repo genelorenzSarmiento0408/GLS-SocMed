@@ -27,7 +27,7 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
       closeIcon
       open={open}
       trigger={
-        <Button as="div" labelPosition="right">
+        <Button colot="teal" labelPosition="right">
           <PopupGlobal content="Edit Post">
             <Icon name="edit" />
           </PopupGlobal>
