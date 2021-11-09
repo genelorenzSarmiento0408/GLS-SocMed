@@ -16,6 +16,7 @@ const EditBody = ({ postId }) => {
     update() {
       setBody("");
       BodyInputRef.current.blur();
+      window.location.setOpen(false);
     },
     variables: {
       postId,
