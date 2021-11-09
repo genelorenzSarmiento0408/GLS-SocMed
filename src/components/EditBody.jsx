@@ -70,8 +70,9 @@ const EditBody = ({ postId }) => {
 const EDIT_BODY = gql`
   mutation EDIT_BODY($postId: ID!, $newBody: String!) {
     editBody(postId: $postId, newBody: $newBody) {
-      id
       username
+      title
+      body
     }
   }
 `;
