@@ -50,8 +50,8 @@ export default function PostCard({
           >
             <Card.Header as={Link} to={`/posts/${id}`}>
               {title}
-              {user && user.username === username && <EditButton postId={id} />}
             </Card.Header>
+            {user && user.username === username && <EditButton postId={id} />}
           </PopupGlobal>
           <Card.Meta as={Link} to={`/users/${username}`}>
             {moment(createdAt).fromNow(true)} ago • by {username}{" "}
