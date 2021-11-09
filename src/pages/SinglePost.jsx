@@ -64,6 +64,8 @@ function SinglePost(props, args = {}) {
       likes,
       likeCount,
       commentCount,
+      edited,
+      editedAt,
     } = getPost;
 
     postMarkup = (
