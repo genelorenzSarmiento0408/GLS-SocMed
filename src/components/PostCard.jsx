@@ -53,9 +53,9 @@ export default function PostCard({
               {edited ? `Edited At: ${editedAt}` : ""}
             </Card.Meta>
           </PopupGlobal>
-          {/* <Card.Header as={Link} to={`/posts/${id}`}>
-              {title}
-            </Card.Header> */}
+          <Card.Header as={Link} to={`/posts/${id}`}>
+            {title}
+          </Card.Header>
           {user && user.username === username && <EditButton postId={id} />}
 
           <Card.Description>{body}</Card.Description>
