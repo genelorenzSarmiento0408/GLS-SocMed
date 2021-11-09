@@ -19,7 +19,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <Container textAlign="center">
+        <Container textAlign="justified">
           <Navbar />
           <Route exact path="/" component={Home} />
           <AuthRoute exact path="/register" component={Register} />
