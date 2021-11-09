@@ -24,6 +24,7 @@ export default function PostCard({
     editedAt,
   },
 }) {
+  console.log(edited, editedAt);
   const { user } = useContext(AuthContext);
 
   return (
