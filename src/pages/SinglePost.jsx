@@ -194,6 +194,8 @@ const FETCH_POST_QUERY = gql`
         createdAt
         body
       }
+      editedAt
+      edited
     }
   }
 `;
