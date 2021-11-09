@@ -32,7 +32,7 @@ const EditButton = ({ postId }) => {
             <Button color="teal">
               <Icon name="edit" />
             </Button>
-            {/* <Icon name="edit" /> */}
+            <Icon name="edit" />
           </Button>
         </PopupGlobal>
       }
