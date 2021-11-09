@@ -20,7 +20,7 @@ export default function Home() {
     <Grid columns={3}>
       <Grid.Row>
         {user ? (
-          <Grid.Column width={11}>
+          <Grid.Column width={16}>
             <PostForm />{" "}
             <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
               <h1>Recent Posts</h1>
