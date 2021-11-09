@@ -27,7 +27,7 @@ export default function Home() {
             </Grid.Row>
           </Grid.Column>
         ) : (
-          <Grid.Column width={11}>
+          <Grid.Column width={16}>
             <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
               <h1>Recent Posts</h1>
             </Grid.Row>
@@ -42,7 +42,7 @@ export default function Home() {
                 <Grid.Column
                   key={post.id}
                   style={{ marginBottom: 10 }}
-                  width={11}
+                  width={16}
                 >
                   <PostCard post={post} />
                 </Grid.Column>
