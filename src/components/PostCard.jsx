@@ -48,15 +48,16 @@ export default function PostCard({
             }
             header={username}
           >
-            <Card.Header as={Link} to={`/posts/${id}`}>
-              {title}
-            </Card.Header>
+            <Card.Meta as={Link} to={`/users/${username}`}>
+              {moment(createdAt).fromNow(true)} ago • by {username}{" "}
+              {edited ? `Edited At: ${editedAt}` : ""}
+            </Card.Meta>
           </PopupGlobal>
+          {/* <Card.Header as={Link} to={`/posts/${id}`}>
+              {title}
+            </Card.Header> */}
           {user && user.username === username && <EditButton postId={id} />}
-          <Card.Meta as={Link} to={`/users/${username}`}>
-            {moment(createdAt).fromNow(true)} ago • by {username}{" "}
-            {edited ? `Edited At: ${editedAt}` : ""}
-          </Card.Meta>
+
           <Card.Description>{body}</Card.Description>
         </Card.Content>
         <Card.Content extra>
