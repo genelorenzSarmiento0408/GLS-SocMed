@@ -12,12 +12,6 @@ const EditButton = (/*props, args = {},*/ { postId }) => {
   const titleInputRef = useRef(null);
   let render;
 
-  const { loading, data: { getPost } = {} } = useQuery(FETCH_POST_QUERY, {
-    variables: {
-      postId,
-    },
-  });
-
   const [editTitle] = useMutation(EDIT_TITLE, {
     update() {
       setTitle("");
@@ -78,28 +72,6 @@ const EDIT_TITLE = gql`
     editTitle(postId: $postId, newTitle: $newTitle) {
       id
       username
-    }
-  }
-`;
-const FETCH_POST_QUERY = gql`
-  query ($postId: ID!) {
-    getPost(postId: $postId) {
-      id
-      title
-      body
-      createdAt
-      username
-      likeCount
-      likes {
-        username
-      }
-      commentCount
-      comments {
-        id
-        username
-        createdAt
-        body
-      }
     }
   }
 `;
