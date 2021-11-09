@@ -28,7 +28,7 @@ const EditButton = ({ postId }) => {
       open={open}
       trigger={
         <PopupGlobal content="Edit Post">
-          <Button color="teal">
+          <Button as="div" color="teal">
             <Icon name="edit" />
           </Button>
           {/* <Icon name="edit" /> */}
