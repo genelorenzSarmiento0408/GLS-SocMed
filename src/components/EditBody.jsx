@@ -12,7 +12,7 @@ const EditBody = ({ postId }) => {
   const BodyInputRef = useRef(null);
   let render;
 
-  const [editBody] = useMutation(EDIT_Body, {
+  const [editBody] = useMutation(EDIT_BODY, {
     update() {
       setBody("");
       BodyInputRef.current.blur();
