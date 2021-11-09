@@ -67,7 +67,7 @@ function SinglePost(props, args = {}) {
       edited,
       editedAt,
     } = getPost;
-
+    createdAt.split("T");
     postMarkup = (
       <Grid>
         <Grid.Row>
