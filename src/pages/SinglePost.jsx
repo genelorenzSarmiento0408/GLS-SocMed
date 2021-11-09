@@ -67,7 +67,7 @@ function SinglePost(props, args = {}) {
       edited,
       editedAt,
     } = getPost;
-    createdAt.split("T");
+    let date = createdAt.split("T");
     postMarkup = (
       <Grid>
         <Grid.Row>
@@ -90,7 +90,7 @@ function SinglePost(props, args = {}) {
               </Card.Content>
               <hr />
               <Card.Content extra>
-                {edited ? editedAt : ""}
+                {edited ? `Edited At ${date}` : ""}
                 <br />
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
                 <PopupGlobal content="Comment on Post">
