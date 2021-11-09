@@ -55,8 +55,8 @@ export default function PostCard({
           </PopupGlobal>
           <Card.Header as={Link} to={`/posts/${id}`}>
             {title}
+            {user && user.username === username && <EditButton postId={id} />}
           </Card.Header>
-          {user && user.username === username && <EditButton postId={id} />}
 
           <Card.Description>{body}</Card.Description>
         </Card.Content>
