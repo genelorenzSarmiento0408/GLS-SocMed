@@ -29,7 +29,7 @@ function App({ currentUser, checkUserSession }) {
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={OtherProfile} />
             <Route component={PageNotFound} />
-          </Container>{" "}
+          </Container>
         </Switch>
       </Router>
     </AuthProvider>
