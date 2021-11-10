@@ -21,14 +21,6 @@ export const Settings = () => {
               // onChange={(event) => setComment(event.target.value)}
               // ref={commentInputRef}
             />
-            <button
-              type="submit"
-              className="ui button teal"
-              // disabled={comment.trim() === ""}
-              // onClick={submitComment}
-            >
-              Submit
-            </button>
           </div>
         </Form>
       </div>
