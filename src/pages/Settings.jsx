@@ -15,7 +15,7 @@ export const Settings = () => {
             <p>Username:</p>
             <input
               type="text"
-              placeholder="Comment..."
+              placeholder="Username"
               name="Comment"
               value={username}
               // onChange={(event) => setComment(event.target.value)}
