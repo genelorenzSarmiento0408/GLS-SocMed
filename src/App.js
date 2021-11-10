@@ -28,8 +28,8 @@ function App({ currentUser, checkUserSession }) {
             <AuthRoute exact path="/login" component={Login} />
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={OtherProfile} />
-            <Route component={PageNotFound} />
           </Container>
+          <Route component={PageNotFound} />
         </Switch>
       </Router>
     </AuthProvider>
