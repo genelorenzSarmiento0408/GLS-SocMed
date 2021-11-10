@@ -72,4 +72,4 @@ const FETCH_USER_QUERY = gql`
     }
   }
 `;
-export default OtherProfile;
+export default Profile;
