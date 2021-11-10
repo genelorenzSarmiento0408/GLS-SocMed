@@ -28,7 +28,7 @@ const Profile = (props, args = {}) => {
     if (Bio === null) {
       isbionull = true;
     }
-    console.log(user);
+
     userMarkup = (
       <Grid>
         <Grid.Row>
