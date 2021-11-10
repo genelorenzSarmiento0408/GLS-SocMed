@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
 export const Settings = () => {
-  return <div>Settings</div>;
+  return (
+    <div>
+      <h1 className="page-header">Settings</h1>{" "}
+    </div>
+  );
 };
