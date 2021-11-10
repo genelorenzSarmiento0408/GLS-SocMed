@@ -4,7 +4,7 @@ import { Card, Grid, Image, Loader, Dimmer } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 
-const OtherProfile = (props, args = {}) => {
+const Profile = (props, args = {}) => {
   const username = props.match.params.username;
   const { user } = useContext(AuthContext);
 
