@@ -22,7 +22,6 @@ export default function PostCard({
     commentCount,
     likes,
     edited,
-    editedAt,
   },
 }) {
   const { user } = useContext(AuthContext);
