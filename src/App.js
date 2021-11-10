@@ -16,7 +16,7 @@ import "./App.scss";
 import OtherProfile from "./pages/OtherProfile";
 import PageNotFound from "./pages/PageNotFound";
 
-function App() {
+function App({ currentUser, checkUserSession }) {
   return (
     <AuthProvider>
       <Router>
