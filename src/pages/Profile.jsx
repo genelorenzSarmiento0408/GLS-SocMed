@@ -42,9 +42,6 @@ const Profile = (props, args = {}) => {
           <Grid.Column width={10}>
             <Card fluid>
               <Card.Content>
-                {user && user.username === username && (
-                  <h1>username is {user.username} </h1>
-                )}
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>
@@ -52,6 +49,11 @@ const Profile = (props, args = {}) => {
                 </Card.Description>
               </Card.Content>
               <hr />
+              <Card.Content extra>
+                {user && user.username === username && (
+                  <h1>username is {user.username} </h1>
+                )}
+              </Card.Content>
             </Card>
           </Grid.Column>
         </Grid.Row>
