@@ -3,6 +3,7 @@ import { gql, useQuery } from "@apollo/client";
 import { Card, Grid, Image, Loader, Dimmer } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
+import { Link } from "react-router-dom";
 
 const Profile = (props, args = {}) => {
   const username = props.match.params.username;
@@ -51,7 +52,9 @@ const Profile = (props, args = {}) => {
               <hr />
               <Card.Content extra>
                 {user && user.username === username && (
-                  <h1>username is {user.username} </h1>
+                  <Button as={Link} to={"/settings"}>
+                    Settings for {user.username}{" "}
+                  </Button>
                 )}
               </Card.Content>
             </Card>
