@@ -15,6 +15,7 @@ import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
 import OtherProfile from "./pages/OtherProfile";
 import PageNotFound from "./pages/PageNotFound";
+import { Settings } from "./pages/Settings";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <AuthRoute exact path="/login" component={Login} />
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={OtherProfile} />
+            <Route exact path="/settings" component={Settings} />
           </Container>
           <Route component={PageNotFound} />
         </Switch>
