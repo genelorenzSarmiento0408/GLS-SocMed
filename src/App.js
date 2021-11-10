@@ -21,14 +21,15 @@ function App() {
     <AuthProvider>
       <Router>
         <Container>
-          <Swit
-          <Navbar />
-          <Route exact path="/" component={Home} />
-          <AuthRoute exact path="/register" component={Register} />
-          <AuthRoute exact path="/login" component={Login} />
-          <Route exact path="/posts/:postId" component={SinglePost} />
-          <Route exact path="/users/:username" component={OtherProfile} />
-          <Route component={PageNotFound} />
+          <Switch>
+            <Navbar />
+            <Route exact path="/" component={Home} />
+            <AuthRoute exact path="/register" component={Register} />
+            <AuthRoute exact path="/login" component={Login} />
+            <Route exact path="/posts/:postId" component={SinglePost} />
+            <Route exact path="/users/:username" component={OtherProfile} />
+            <Route component={PageNotFound} />
+          </Switch>
         </Container>
       </Router>
     </AuthProvider>
