@@ -14,8 +14,9 @@ export const Settings = () => {
             <div className="page-title">
               <h1>Settings</h1>
               <Form>
+                {" "}
+                <h3>Username:</h3>
                 <div className="ui action input fluid">
-                  <h3>Username:</h3>
                   <input
                     type="text"
                     placeholder="Username"
