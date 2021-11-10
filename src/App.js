@@ -13,7 +13,7 @@ import AuthRoute from "./util/AuthRoute";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
-import OtherProfile from "./pages/OtherProfile";
+import OtherProfile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
 import { Settings } from "./pages/Settings";
 
