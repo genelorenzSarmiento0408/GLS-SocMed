@@ -13,7 +13,7 @@ import AuthRoute from "./util/AuthRoute";
 
 import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
-import OtherProfile from "./pages/Profile";
+import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
 import { Settings } from "./pages/Settings";
 
@@ -28,7 +28,7 @@ function App() {
             <AuthRoute exact path="/register" component={Register} />
             <AuthRoute exact path="/login" component={Login} />
             <Route exact path="/posts/:postId" component={SinglePost} />
-            <Route exact path="/users/:username" component={OtherProfile} />
+            <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
           </Container>
           <Route component={PageNotFound} />
