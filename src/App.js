@@ -21,6 +21,14 @@ function App() {
     <AuthProvider>
       <Router>
         <Container>
+          switch (key) {
+            case value:
+              
+              break;
+          
+            default:
+              break;
+          }
           <Navbar />
           <Route exact path="/" component={Home} />
           <AuthRoute exact path="/register" component={Register} />
