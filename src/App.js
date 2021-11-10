@@ -27,7 +27,7 @@ function App() {
           <AuthRoute exact path="/login" component={Login} />
           <Route exact path="/posts/:postId" component={SinglePost} />
           <Route exact path="/users/:username" component={OtherProfile} />
-          <Route path="*" component={PageNotFound} />
+          <Route component={PageNotFound} />
         </Container>
       </Router>
     </AuthProvider>
