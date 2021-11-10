@@ -22,7 +22,7 @@ export const Settings = () => {
           <button
             type="submit"
             className="ui button teal"
-            disabled={comment.trim() === ""}
+            // disabled={comment.trim() === ""}
             // onClick={submitComment}
           >
             Submit
