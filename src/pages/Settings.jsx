@@ -12,6 +12,7 @@ export const Settings = () => {
         <h1>Settings</h1>
         <Form>
           <div className="ui action input fluid">
+            <p>Username:</p>
             <input
               type="text"
               placeholder="Comment..."
