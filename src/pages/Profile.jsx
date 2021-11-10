@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
-import { Card, Grid, Image, Loader, Dimmer } from "semantic-ui-react";
+import { Card, Grid, Image, Loader, Dimmer, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
