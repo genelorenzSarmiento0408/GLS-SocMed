@@ -20,8 +20,8 @@ function App({ currentUser, checkUserSession }) {
   return (
     <AuthProvider>
       <Router>
-        <Container>
-          <Switch>
+        <Switch>
+          <Container>
             <Navbar />
             <Route exact path="/" component={Home} />
             <AuthRoute exact path="/register" component={Register} />
@@ -29,8 +29,8 @@ function App({ currentUser, checkUserSession }) {
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={OtherProfile} />
             <Route component={PageNotFound} />
-          </Switch>
-        </Container>
+          </Container>{" "}
+        </Switch>
       </Router>
     </AuthProvider>
   );
