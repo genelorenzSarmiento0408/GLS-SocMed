@@ -52,7 +52,7 @@ const Profile = (props, args = {}) => {
               <hr />
               <Card.Content extra>
                 {user && user.username === username && (
-                  <Button as={Link} to={"/settings"}>
+                  <Button as={Link} to={"/settings"} color="facebook">
                     Settings
                   </Button>
                 )}
