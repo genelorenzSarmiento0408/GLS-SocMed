@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
 import { Card, Grid, Image, Loader, Dimmer } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
-import { Link } from "react-router-dom";
 
 const Profile = (props, args = {}) => {
   const username = props.match.params.username;
