@@ -53,7 +53,7 @@ const Profile = (props, args = {}) => {
               <Card.Content extra>
                 {user && user.username === username && (
                   <Button as={Link} to={"/settings"}>
-                    Settings for {user.username}{" "}
+                    Settings
                   </Button>
                 )}
               </Card.Content>
