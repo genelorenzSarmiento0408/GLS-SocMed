@@ -21,6 +21,7 @@ export const Settings = () => {
                     placeholder="Username"
                     name="Comment"
                     value={username}
+                    readOnly
                     // onChange={(event) => setComment(event.target.value)}
                     // ref={commentInputRef}
                   />
