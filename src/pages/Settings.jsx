@@ -22,8 +22,6 @@ export const Settings = () => {
                     name="Comment"
                     value={username}
                     readOnly
-                    // onChange={(event) => setComment(event.target.value)}
-                    // ref={commentInputRef}
                   />
                 </div>
               </Form>
