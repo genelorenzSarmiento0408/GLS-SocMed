@@ -23,6 +23,7 @@ export const Settings = () => {
                     value={username}
                     readOnly
                   />
+                  <br />
                   <h3>Change Password</h3>
                 </div>
               </Form>
