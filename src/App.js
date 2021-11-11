@@ -31,7 +31,7 @@ function App() {
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
           </Container>
-          <Route component={PageNotFound} />
+          <AuthRoute component={PageNotFound} />
         </Switch>
       </Router>
     </AuthProvider>
