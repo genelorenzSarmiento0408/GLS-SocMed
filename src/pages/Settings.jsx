@@ -15,7 +15,6 @@ export const Settings = () => {
               <h1>Settings</h1>
               <Form>
                 <h3>Username:</h3>
-
                 <input
                   type="text"
                   placeholder="Username"
@@ -23,6 +22,7 @@ export const Settings = () => {
                   value={username}
                   readOnly
                 />
+
                 <br />
                 <h3>Change Password</h3>
               </Form>
