@@ -7,7 +7,7 @@ export const Settings = () => {
   const { user } = useContext(AuthContext);
   const [oldPassword, setoldPassword] = useState("");
 
-  const titleInputRef = useRef(null);
+  const passwordInputRef = useRef(null);
   let username = user.username;
   return (
     <Grid>
@@ -30,13 +30,12 @@ export const Settings = () => {
                 <br />
                 <h2>Change Password</h2>
                 <Divider />
-                Old Username:
+                Old Password:
                 <input
                   type="text"
                   placeholder="Username"
                   name="Comment"
-                  value={password}
-                  readOnly
+                  value={oldPassword}
                 />
               </div>
             </Form>
