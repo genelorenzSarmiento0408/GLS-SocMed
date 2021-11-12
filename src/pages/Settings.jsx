@@ -27,6 +27,14 @@ export const Settings = () => {
                 <br />
                 <h2>Change Password</h2>
                 <Divider />
+                Old Username:
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="Comment"
+                  value={password}
+                  readOnly
+                />
               </div>
             </Form>
           </Card>
