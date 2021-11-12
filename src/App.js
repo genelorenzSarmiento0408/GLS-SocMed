@@ -19,8 +19,8 @@ import { Settings } from "./pages/Settings";
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
+    <Router>
+      <AuthProvider>
         <Switch>
           <Container>
             <Navbar />
@@ -33,8 +33,8 @@ function App() {
           </Container>
           <AuthRoute component={PageNotFound} />
         </Switch>
-      </Router>
-    </AuthProvider>
+      </AuthProvider>{" "}
+    </Router>
   );
 }
 
