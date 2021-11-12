@@ -13,8 +13,10 @@ export const Settings = () => {
           <Card fluid>
             <div className="page-title">
               <h1>Settings</h1>
-              <Form>
-                <h3>Username:</h3>
+            </div>
+            <Form>
+              <h3>Username:</h3>
+              <div className="ui action input fluid">
                 <input
                   type="text"
                   placeholder="Username"
@@ -22,11 +24,10 @@ export const Settings = () => {
                   value={username}
                   readOnly
                 />
-
                 <br />
                 <h3>Change Password</h3>
-              </Form>
-            </div>
+              </div>
+            </Form>
           </Card>
         </Grid.Column>
       </Grid.Row>
