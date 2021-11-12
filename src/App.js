@@ -16,6 +16,7 @@ import "./App.scss";
 import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
 import { Settings } from "./pages/Settings";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
-            <Route exact path="/profile" component={} />
+            <Route exact path="/profile" component={UserProfile} />
           </Container>
         </AuthProvider>
         <AuthRoute component={PageNotFound} />
