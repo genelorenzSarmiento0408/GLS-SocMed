@@ -15,17 +15,16 @@ export const Settings = () => {
               <h1>Settings</h1>
               <Form>
                 <h3>Username:</h3>
-                <div className="u">
-                  <input
-                    type="text"
-                    placeholder="Username"
-                    name="Comment"
-                    value={username}
-                    readOnly
-                  />
-                  <br />
-                  <h3>Change Password</h3>
-                </div>
+
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="Comment"
+                  value={username}
+                  readOnly
+                />
+                <br />
+                <h3>Change Password</h3>
               </Form>
             </div>
           </Card>
