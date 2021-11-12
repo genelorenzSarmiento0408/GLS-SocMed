@@ -20,7 +20,6 @@ import { Settings } from "./pages/Settings";
 function App() {
   return (
     <Router>
-      {" "}
       <Switch>
         <AuthProvider>
           <Container>
@@ -32,9 +31,9 @@ function App() {
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
           </Container>
-        </AuthProvider>{" "}
+        </AuthProvider>
         <AuthRoute component={PageNotFound} />
-      </Switch>{" "}
+      </Switch>
     </Router>
   );
 }
