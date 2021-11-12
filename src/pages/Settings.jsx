@@ -15,7 +15,7 @@ export const Settings = () => {
               <h1>Settings</h1>
               <Form>
                 <h3>Username:</h3>
-                <div className="u">
+                <div className="ui action input fluid">
                   <input
                     type="text"
                     placeholder="Username"
