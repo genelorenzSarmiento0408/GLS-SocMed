@@ -20,8 +20,9 @@ import { Settings } from "./pages/Settings";
 function App() {
   return (
     <Router>
-      <AuthProvider>
-        <Switch>
+      {" "}
+      <Switch>
+        <AuthProvider>
           <Container>
             <Navbar />
             <Route exact path="/" component={Home} />
@@ -31,9 +32,9 @@ function App() {
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
           </Container>
-          <AuthRoute component={PageNotFound} />
-        </Switch>
-      </AuthProvider>{" "}
+        </AuthProvider>{" "}
+        <AuthRoute component={PageNotFound} />
+      </Switch>{" "}
     </Router>
   );
 }
