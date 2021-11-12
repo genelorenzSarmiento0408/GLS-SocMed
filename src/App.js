@@ -23,7 +23,7 @@ function App() {
     <Router>
       <Switch>
         <AuthProvider>
-          <Container>
+          <div>
             <Navbar />
             <Route exact path="/" component={Home} />
             <AuthRoute exact path="/register" component={Register} />
@@ -32,7 +32,7 @@ function App() {
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
             <Route exact path="/profile" component={UserProfile} />
-          </Container>
+          </div>
         </AuthProvider>
         <AuthRoute component={PageNotFound} />
       </Switch>
