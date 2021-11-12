@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
 
-export const UserProfile = (args = {}) => {
+const UserProfile = (args = {}) => {
   const { user } = useContext(AuthContext);
   const username = user.username;
 
@@ -77,3 +77,4 @@ const FETCH_USER_QUERY = gql`
     }
   }
 `;
+export default UserProfile;
