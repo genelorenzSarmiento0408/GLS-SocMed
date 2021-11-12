@@ -51,11 +51,9 @@ const UserProfile = (args = {}) => {
               </Card.Content>
               <hr />
               <Card.Content extra>
-                {user && user.username === username && (
-                  <Button as={Link} to={"/settings"} color="facebook">
-                    Settings
-                  </Button>
-                )}
+                <Button as={Link} to={"/settings"} color="facebook">
+                  Settings
+                </Button>
               </Card.Content>
             </Card>
           </Grid.Column>
