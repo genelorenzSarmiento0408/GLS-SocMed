@@ -25,7 +25,7 @@ export const Settings = () => {
                   readOnly
                 />
                 <br />
-                <h3>Change Password</h3>
+                <h2>Change Password</h2>
               </div>
             </Form>
           </Card>
