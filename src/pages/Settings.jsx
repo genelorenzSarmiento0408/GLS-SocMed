@@ -5,6 +5,9 @@ import { AuthContext } from "../context/auth";
 
 export const Settings = () => {
   const { user } = useContext(AuthContext);
+  const [oldPassword, setoldPassword] = useState("");
+
+  const titleInputRef = useRef(null);
   let username = user.username;
   return (
     <Grid>
