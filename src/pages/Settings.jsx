@@ -36,6 +36,7 @@ export const Settings = () => {
                   placeholder="Username"
                   name="Comment"
                   value={oldPassword}
+                  onChange={(event) => setoldPassword(event.target.value)}
                 />
               </div>
             </Form>
