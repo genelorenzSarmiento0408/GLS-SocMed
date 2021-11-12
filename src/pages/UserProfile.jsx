@@ -6,9 +6,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth";
 
 const Profile = (args = {}) => {
-  const username = user.username;
   const { user } = useContext(AuthContext);
-
+  const username = user.username;
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
