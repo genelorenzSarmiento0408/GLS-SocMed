@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Form, Card, Grid } from "semantic-ui-react";
+import { Form, Card, Grid, Divider } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 
@@ -26,6 +26,7 @@ export const Settings = () => {
                 />
                 <br />
                 <h2>Change Password</h2>
+                <Divider />
               </div>
             </Form>
           </Card>
