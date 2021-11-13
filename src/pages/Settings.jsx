@@ -9,7 +9,8 @@ export const Settings = () => {
   const [newPassword, setnewPassword] = useState("");
 
   const passwordInputRef = useRef(null);
-  let username = user.username;
+  let username;
+{user ? username = user.username; : ""}
   let userSettings = (
     <Grid>
       <Grid.Row>
