@@ -10,7 +10,7 @@ export const Settings = () => {
 
   const passwordInputRef = useRef(null);
   let username = user.username;
-  let loggedinprof = (
+  let userSettings = (
     <Grid>
       <Grid.Row>
         <Grid.Column width={12}>
@@ -56,5 +56,5 @@ export const Settings = () => {
       </Grid.Row>
     </Grid>
   );
-  return loggedinprof;
+  return {};
 };
