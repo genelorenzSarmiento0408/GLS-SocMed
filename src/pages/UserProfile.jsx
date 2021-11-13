@@ -63,7 +63,12 @@ const UserProfile = (args = {}) => {
   }
 
   return userMarkup;
-  if (!user) return <></>;
+  if (!user)
+    return (
+      <>
+        <h1>lol</h1>
+      </>
+    );
 };
 
 const FETCH_USER_QUERY = gql`
