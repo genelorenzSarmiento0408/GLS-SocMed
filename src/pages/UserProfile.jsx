@@ -7,7 +7,7 @@ import { AuthContext } from "../context/auth";
 
 const UserProfile = (args = {}) => {
   const { user } = useContext(AuthContext);
-  const username = user.username;
+  if (user) const username = user.username;
 
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
