@@ -56,5 +56,5 @@ export const Settings = () => {
       </Grid.Row>
     </Grid>
   );
-  return {user ? userSettings: <h1>SD</h1>};
+  return <>{user ? userSettings : <h1>SD</h1>}</>;
 };
