@@ -31,10 +31,10 @@ function App() {
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
-            <Route exact path="/profile" component={UserProfile} />
+            <AuthRoute exact path="/profile" component={UserProfile} />
           </Container>
         </AuthProvider>
-        <AuthRoute component={PageNotFound} />
+        <Route component={PageNotFound} />
       </Switch>
     </Router>
   );
