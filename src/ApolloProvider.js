@@ -7,6 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+import { createUploadLink } from "apollo-upload-link";
 
 const httpLink = createHttpLink({
   uri: "https://lorenz-react-app-server.herokuapp.com/",
