@@ -36,7 +36,7 @@ function App() {
             {user ? (
               <Route exact path="/profile" component={UserProfile} />
             ) : (
-              { PageNotFound }
+              <PageNotFound />
             )}
           </Container>
         </AuthProvider>
