@@ -6,7 +6,7 @@ import { AuthContext } from "../context/auth";
 export const Settings = () => {
   const { user } = useContext(AuthContext);
   const [oldPassword, setoldPassword] = useState("");
-  const [oldPassword, setoldPassword] = useState("");
+  const [newPassword, setnewPassword] = useState("");
 
   const passwordInputRef = useRef(null);
   let username = user.username;
@@ -38,6 +38,15 @@ export const Settings = () => {
                   name="Comment"
                   value={oldPassword}
                   onChange={(event) => setoldPassword(event.target.value)}
+                  ref={passwordInputRef}
+                />
+                New Password:
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="Comment"
+                  value={newPassword}
+                  onChange={(event) => setnewPassword(event.target.value)}
                   ref={passwordInputRef}
                 />
               </div>
