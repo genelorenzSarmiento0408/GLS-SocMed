@@ -32,7 +32,7 @@ function App() {
             <AuthRoute exact path="/login" component={Login} />
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={Profile} />
-            <Route exact path="/settings" component={Settings} />
+            {<Route exact path="/settings" component={Settings} />}
             {user ? (
               <Route path="/profile" component={UserProfile} />
             ) : (
