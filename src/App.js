@@ -8,7 +8,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import SinglePost from "./pages/SinglePost";
 
-import { AuthContext } from "../context/auth";
+import { AuthContext } from "./context/auth";
 import { AuthProvider } from "./context/auth";
 import AuthRoute from "./util/AuthRoute";
 
