@@ -35,7 +35,7 @@ export const Settings = () => {
                 Old Password:
                 <input
                   type="text"
-                  placeholder="Username"
+                  placeholder="New Password"
                   name="Comment"
                   value={oldPassword}
                   onChange={(event) => setoldPassword(event.target.value)}
@@ -44,7 +44,7 @@ export const Settings = () => {
                 New Password:
                 <input
                   type="text"
-                  placeholder="Username"
+                  placeholder="New Password"
                   name="Comment"
                   value={newPassword}
                   onChange={(event) => setnewPassword(event.target.value)}
