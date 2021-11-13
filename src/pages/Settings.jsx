@@ -1,7 +1,6 @@
 import React, { useContext, useState, useRef } from "react";
 import { Form, Card, Grid, Divider } from "semantic-ui-react";
 
-import PageNotFound from "../pages/PageNotFound";
 import { AuthContext } from "../context/auth";
 
 export const Settings = () => {
@@ -12,7 +11,6 @@ export const Settings = () => {
   const passwordInputRef = useRef(null);
   let username;
   if (user) username = user.username;
-
   let userSettings = (
     <Grid>
       <Grid.Row>
