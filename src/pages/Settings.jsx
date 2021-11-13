@@ -57,5 +57,5 @@ export const Settings = () => {
       </Grid.Row>
     </Grid>
   );
-  return <>{user ? userSettings : ""}</>;
+  return userSettings;
 };
