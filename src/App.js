@@ -34,9 +34,9 @@ function App() {
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
             {user ? (
-              <Route exact path="/profile" component={UserProfile} />
+              <Route path="/profile" component={UserProfile} />
             ) : (
-              <Route component={PageNotFound} />
+              <Route exact path="/profile" component={PageNotFound} />
             )}
           </Container>
         </AuthProvider>
