@@ -1,6 +1,7 @@
 import React, { useContext, useState, useRef } from "react";
 import { Form, Card, Grid, Divider } from "semantic-ui-react";
 
+import PageNotFound from "../pages/PageNotFound";
 import { AuthContext } from "../context/auth";
 
 export const Settings = () => {
