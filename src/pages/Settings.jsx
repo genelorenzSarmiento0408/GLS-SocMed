@@ -37,6 +37,7 @@ export const Settings = () => {
                   name="Comment"
                   value={oldPassword}
                   onChange={(event) => setoldPassword(event.target.value)}
+                  ref={passwordInputRef}
                 />
               </div>
             </Form>
