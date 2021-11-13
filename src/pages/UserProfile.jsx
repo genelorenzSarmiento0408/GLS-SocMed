@@ -7,12 +7,6 @@ import { AuthContext } from "../context/auth";
 
 const UserProfile = (args = {}) => {
   const { user } = useContext(AuthContext);
-  if (!user)
-    return (
-      <>
-        <h1>lol</h1>
-      </>
-    );
   const username = user.username;
 
   let userMarkup;
