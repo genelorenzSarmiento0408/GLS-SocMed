@@ -64,7 +64,7 @@ const Profile = (props, args = {}) => {
     );
   }
 
-  return userMarkup;
+  return (<>{user ? userMarkup : ""}</>);
 };
 
 const FETCH_USER_QUERY = gql`
