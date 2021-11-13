@@ -31,7 +31,7 @@ function App() {
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={Profile} />
             <Route exact path="/settings" component={Settings} />
-            <AuthRoute exact path="/profile" component={UserProfile} />
+            <Route exact path="/profile" component={UserProfile} />
           </Container>
         </AuthProvider>
         <Route component={PageNotFound} />
