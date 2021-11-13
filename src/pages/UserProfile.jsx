@@ -62,9 +62,8 @@ const UserProfile = (args = {}) => {
         </Grid>
       );
     }
-
-    return userMarkup;
   }
+  return userMarkup;
 };
 
 const FETCH_USER_QUERY = gql`
