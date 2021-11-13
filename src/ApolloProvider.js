@@ -26,7 +26,7 @@ const uploadLink = createUploadLink({
 });
 
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: authLink.concat(httpLink, uploadLink),
   cache: new InMemoryCache(),
 });
 
