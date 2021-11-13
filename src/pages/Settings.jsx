@@ -12,6 +12,7 @@ export const Settings = () => {
   const passwordInputRef = useRef(null);
   let username;
   if (user) username = user.username;
+
   let userSettings = (
     <Grid>
       <Grid.Row>
