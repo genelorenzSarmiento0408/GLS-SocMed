@@ -6,6 +6,7 @@ import { AuthContext } from "../context/auth";
 export const Settings = () => {
   const { user } = useContext(AuthContext);
   const [oldPassword, setoldPassword] = useState("");
+  const [oldPassword, setoldPassword] = useState("");
 
   const passwordInputRef = useRef(null);
   let username = user.username;
