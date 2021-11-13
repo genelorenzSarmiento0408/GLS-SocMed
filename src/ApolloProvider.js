@@ -10,7 +10,7 @@ import { setContext } from "@apollo/client/link/context";
 import { createUploadLink } from "apollo-upload-link";
 
 const httpLink = createHttpLink({
-  uri: "https://lorenz-react-app-server.herokuapp.com/",
+  uri: "",
 });
 const authLink = setContext(() => {
   const token = localStorage.getItem("jwtToken");
@@ -21,7 +21,9 @@ const authLink = setContext(() => {
   };
 });
 
-const uploadLink = createUploadLink;
+const uploadLink = createUploadLink({
+  uri: "https://lorenz-react-app-server.herokuapp.com/",
+});
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
