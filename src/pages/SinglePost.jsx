@@ -95,7 +95,6 @@ function SinglePost(props, args = {}) {
                   {edited ? (
                     <p>
                       Edited At {dateofedit}
-                      
                     </p><br />
                   ) : (
                     ""
