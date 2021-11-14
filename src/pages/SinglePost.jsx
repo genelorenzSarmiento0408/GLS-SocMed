@@ -93,9 +93,10 @@ function SinglePost(props, args = {}) {
               <Card.Content extra>
                 <p>
                   {edited ? (
-                    <p>
-                      Edited At {dateofedit}
-                    </p><br />
+                    <>
+                      <p>Edited At {dateofedit}</p>
+                      <br />
+                    </>
                   ) : (
                     ""
                   )}
