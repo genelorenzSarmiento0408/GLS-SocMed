@@ -34,7 +34,7 @@ export const Settings = () => {
                 <Divider />
                 Old Password:
                 <input
-                  type="text"
+                  type="password"
                   placeholder="New Password"
                   name="Comment"
                   value={oldPassword}
@@ -43,7 +43,7 @@ export const Settings = () => {
                 />
                 New Password:
                 <input
-                  type="text"
+                  type="password"
                   placeholder="New Password"
                   name="Comment"
                   value={newPassword}
