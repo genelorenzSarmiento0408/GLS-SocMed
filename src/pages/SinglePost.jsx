@@ -94,7 +94,7 @@ function SinglePost(props, args = {}) {
                 <p>
                   {edited ? (
                     <p>
-                      Edited At ${dateofedit}
+                      Edited At {dateofedit}
                       <br />
                     </p>
                   ) : (
