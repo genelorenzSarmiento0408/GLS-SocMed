@@ -26,9 +26,7 @@ const UserProfile = (args = {}) => {
     let isbionull = false;
     const { Bio, createdAt, username } = getUser;
     const datetostr = createdAt.substring(0, 10);
-    if (Bio === null) {
-      isbionull = true;
-    }
+    if (Bio === null) isbionull = true;
 
     userMarkup = (
       <Grid>
