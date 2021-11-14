@@ -51,7 +51,7 @@ const UserProfile = (args = {}) => {
               </Card.Content>
               <hr />
               <Card.Content extra>
-                <Button as={Link} to={"/settings"} color="facebook">
+                <Button as={Link} to={"/settings"} color="teal">
                   Settings
                 </Button>
               </Card.Content>
