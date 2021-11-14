@@ -99,7 +99,7 @@ function SinglePost(props, args = {}) {
                     </p>
                   ) : (
                     ""
-                  )}{" "}
+                  )}
                 </p>
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
                 <PopupGlobal content="Comment on Post">
