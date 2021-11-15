@@ -50,6 +50,16 @@ export const Settings = () => {
                   onChange={(event) => setnewPassword(event.target.value)}
                   ref={passwordInputRef}
                 />
+                <button
+                  type="submit"
+                  className="ui button teal"
+                  disabled={
+                    (oldPassword.trim() === "", newPassword.trim() === "")
+                  }
+                  // onClick={editBody}
+                >
+                  Submit
+                </button>
               </div>
             </Form>
           </Card>
