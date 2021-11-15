@@ -44,7 +44,7 @@ function App() {
             )}
           </Container>
         </AuthProvider>
-        <Route component={PageNotFound} />
+        <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>
   );
