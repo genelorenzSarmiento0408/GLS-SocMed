@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 
@@ -8,7 +8,6 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import SinglePost from "./pages/SinglePost";
 
-import { AuthContext } from "./context/auth";
 import { AuthProvider } from "./context/auth";
 import AuthRoute from "./util/AuthRoute";
 
