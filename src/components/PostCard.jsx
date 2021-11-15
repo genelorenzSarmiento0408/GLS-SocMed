@@ -66,7 +66,6 @@ export default function PostCard({
           <LikeButton user={user} post={{ id, likes, likeCount }} />
           <PopupGlobal content="Comment on post">
             <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
-              sd
               <Button color="red" basic>
                 {""}
                 <Icon name="comments" />
