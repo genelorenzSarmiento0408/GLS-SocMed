@@ -64,17 +64,16 @@ export default function PostCard({
         </Card.Content>
         <Card.Content extra>
           <LikeButton user={user} post={{ id, likes, likeCount }} />
-
-          <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
-            <PopupGlobal content="Comment on post">
+          <PopupGlobal content="Comment on post">
+            <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
               <Button color="red" basic>
                 <Icon name="comments" />
               </Button>
               <Label basic color="red" pointing="left">
                 {commentCount}
               </Label>
-            </PopupGlobal>
-          </Button>
+            </Button>
+          </PopupGlobal>
 
           {user && user.username === username && <DeleteButton postId={id} />}
         </Card.Content>
