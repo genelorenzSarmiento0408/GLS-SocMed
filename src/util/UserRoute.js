@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import { AuthContext } from "../context/auth";
 import PageNotFound from "../pages/PageNotFound";
 
-export default function userRoute({ component: Component, ...rest }) {
+function userRoute({ component: Component, ...rest }) {
   const { user } = useContext(AuthContext);
 
   return (
@@ -16,3 +16,4 @@ export default function userRoute({ component: Component, ...rest }) {
     />
   );
 }
+export default userRoute;
