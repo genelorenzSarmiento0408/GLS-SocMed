@@ -21,6 +21,7 @@ import UserProfile from "./pages/UserProfile";
 import UserRoute from "./util/UserRoute";
 
 function App() {
+  const { user } = useContext(AuthContext);
   return (
     <Router>
       <Switch>
@@ -35,7 +36,7 @@ function App() {
             <UserRoute exact path="/settings" component={Settings} />
             <UserRoute path="/profile" component={UserProfile} />
           </Container>
-          <Route component={PageNotFound} />
+          <Route path="*" component={PageNotFound} />
         </AuthProvider>
       </Switch>
     </Router>
