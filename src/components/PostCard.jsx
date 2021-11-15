@@ -72,7 +72,7 @@ export default function PostCard({
               </Button>
               <Label basic color="red" pointing="left">
                 {commentCount}
-              </Label>{" "}
+              </Label>
             </PopupGlobal>
           </Button>
 
