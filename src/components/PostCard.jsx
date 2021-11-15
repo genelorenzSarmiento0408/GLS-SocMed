@@ -68,6 +68,7 @@ export default function PostCard({
             <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
               sd
               <Button color="red" basic>
+                {""}
                 <Icon name="comments" />
               </Button>
               <Label basic color="red" pointing="left">
