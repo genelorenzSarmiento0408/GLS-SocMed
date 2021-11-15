@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
 import { useMutation, gql } from "@apollo/client";
-import { Button, Icon, Form, Modal, Header } from "semantic-ui-react";
+import { Icon, Form, Modal, Header } from "semantic-ui-react";
 
 import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
@@ -27,11 +27,9 @@ const EditButton = ({ postId }) => {
       closeIcon
       open={open}
       trigger={
-
-          <PopupGlobal content="Edit Title">
-            <Icon name="edit" color="teal" />
-          </PopupGlobal>
-
+        <PopupGlobal content="Edit Title">
+          <Icon name="edit" color="teal" />
+        </PopupGlobal>
       }
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
