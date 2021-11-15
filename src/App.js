@@ -15,7 +15,7 @@ import AuthRoute from "./util/AuthRoute";
 import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
 import Profile from "./pages/Profile";
-import PageNotFound from "/pages/PageNotFound";
+import PageNotFound from "./pages/PageNotFound";
 import { Settings } from "./pages/Settings";
 import UserProfile from "./pages/UserProfile";
 import userRoute from "./util/UserRoute";
