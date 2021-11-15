@@ -38,11 +38,9 @@ const EditBody = ({ postId }) => {
       closeIcon
       open={open}
       trigger={
-        <Button as="div" floated="right">
-          <PopupGlobal content="Edit Body">
-            <Icon name="edit" color="teal" />
-          </PopupGlobal>
-        </Button>
+        <PopupGlobal content="Edit Body">
+          <Icon name="edit" color="teal" />
+        </PopupGlobal>
       }
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
