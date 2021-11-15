@@ -1,6 +1,6 @@
 # Release Versions
 
----
+Version History
 
 ## Release 0.3.0
 
