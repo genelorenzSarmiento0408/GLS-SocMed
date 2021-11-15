@@ -24,10 +24,10 @@ function App() {
   const { user } = useContext(AuthContext);
   return (
     <Router>
-      <Switch>
-        <AuthProvider>
-          <Container>
-            <Navbar />
+      <AuthProvider>
+        <Container>
+          <Navbar />
+          <Switch>
             <Route exact path="/" component={Home} />
             <AuthRoute exact path="/register" component={Register} />
             <AuthRoute exact path="/login" component={Login} />
@@ -35,10 +35,10 @@ function App() {
             <Route exact path="/users/:username" component={Profile} />
             <UserRoute exact path="/settings" component={Settings} />
             <UserRoute path="/profile" component={UserProfile} />
-          </Container>
-          <Route path="*" component={PageNotFound} />
-        </AuthProvider>
-      </Switch>
+            <Route path="*" component={PageNotFound} />
+          </Switch>
+        </Container>
+      </AuthProvider>
     </Router>
   );
 }
