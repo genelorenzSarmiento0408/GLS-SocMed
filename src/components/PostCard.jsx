@@ -68,7 +68,6 @@ export default function PostCard({
           <PopupGlobal content="Comment on post">
             <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
               <Button color="red" basic>
-                {""}
                 <Icon name="comments" />
               </Button>
               <Label basic color="red" pointing="left">
