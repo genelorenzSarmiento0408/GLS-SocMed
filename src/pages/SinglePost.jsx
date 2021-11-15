@@ -91,16 +91,15 @@ function SinglePost(props, args = {}) {
               </Card.Content>
               <hr />
               <Card.Content extra>
-                <p>
-                  {edited ? (
-                    <>
-                      <p>Edited At {dateofedit}</p>
-                      <br />
-                    </>
-                  ) : (
-                    ""
-                  )}
-                </p>
+                {edited ? (
+                  <>
+                    <p>Edited At {dateofedit}</p>
+                    <br />
+                  </>
+                ) : (
+                  ""
+                )}
+
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
                 <PopupGlobal content="Comment on Post">
                   <Button as="div" labelPosition="right">
