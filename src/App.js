@@ -18,7 +18,7 @@ import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
 import { Settings } from "./pages/Settings";
 import UserProfile from "./pages/UserProfile";
-import { userRoute } from "./util/UserRoute";
+import userRoute from "./util/UserRoute";
 
 function App() {
   const { user } = useContext(AuthContext);
