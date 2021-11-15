@@ -21,7 +21,6 @@ import UserProfile from "./pages/UserProfile";
 import UserRoute from "./util/UserRoute";
 
 function App() {
-  const { user } = useContext(AuthContext);
   return (
     <Router>
       <Switch>
