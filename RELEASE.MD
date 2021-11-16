@@ -8,3 +8,4 @@ Version History
 - Added the functionality to edit posts, and edit passwords
 - Added AuthRoute (Route that is accesible if the user is logged in)
 - Added Settings
+- Added typescript
