@@ -24,6 +24,7 @@ export const Settings = () => {
       newPassword: newPassword,
     },
   });
+  let a: String;
   let userSettings = (
     <Grid>
       <Grid.Row>
