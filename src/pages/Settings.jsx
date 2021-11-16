@@ -1,5 +1,6 @@
 import React, { useContext, useState, useRef } from "react";
 import { Form, Card, Grid, Divider } from "semantic-ui-react";
+import { useMutation, gql } from "@apollo/client";
 
 import { AuthContext } from "../context/auth";
 
@@ -69,4 +70,4 @@ export const Settings = () => {
   );
   return userSettings;
 };
-const EDIT_PASSWORD_MUTATION = 
+const EDIT_PASSWORD_MUTATION;
