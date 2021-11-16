@@ -25,6 +25,7 @@ export const Settings = () => {
     },
   });
   let a: String;
+  a = "das";
   console.log(a);
   let userSettings = (
     <Grid>
