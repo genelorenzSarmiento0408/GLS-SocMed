@@ -38,6 +38,7 @@ const Profile = (props, args = {}) => {
               src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
               size="small"
               float="right"
+              alt="image profile "
             />
           </Grid.Column>
           <Grid.Column width={10}>
