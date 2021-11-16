@@ -12,7 +12,7 @@ export const Settings = () => {
   const passwordInputRef = useRef(null);
   let username;
   if (user) username = user.username;
-  const [editPass] = useMutation(EDIT_TITLE, {
+  const [editPass] = useMutation(EDIT_PASSWORD, {
     update() {
       setoldPassword("");
       setnewPassword("");
