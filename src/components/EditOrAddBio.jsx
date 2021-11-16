@@ -1,9 +1,11 @@
 import { useMutation, gql } from "@apollo/client";
-import React from "react";
+import React, { useContext } from "react";
 
 import { AuthContext } from "../context/auth";
 
 const EditOrAddBio = () => {
+  const { user } = useContext(AuthContext);
+
   return <div></div>;
 };
 
