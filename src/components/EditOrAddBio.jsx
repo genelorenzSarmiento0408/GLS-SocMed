@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import { useMutation, gql } from "@apollo/client";
 import React from "react";
 
 const EditOrAddBio = () => {
@@ -8,6 +8,5 @@ const EditOrAddBio = () => {
 const EDITORADDBIO = gql`
   mutation EDITORADDBIO($username: String!, $newBio: String!)
 `;
-gql;
 
 export default EditOrAddBio;
