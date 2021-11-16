@@ -7,12 +7,14 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@types/react": "^17.0.35",
+    "@types/react-dom": "^17.0.11",
     "apollo-upload-client": "^16.0.0",
-    "blockadblock": "^3.2.1",
     "bootstrap": "^5.1.3",
     "express": "^4.17.1",
     "graphql": "^15.6.1",
-    "jwt-decode": "^3.1.2",
     "moment": "^2.29.1",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
@@ -23,6 +25,7 @@
     "react-scripts": "4.0.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.4",
+    "typescript": "^4.4.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -49,5 +52,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://lorenz-react-app-server.herokuapp.com/"
+  "proxy": "https://lorenz-react-app-server.herokuapp.com/",
+  "devDependencies": {
+    "@types/moment": "^2.13.0"
+  }
 }
