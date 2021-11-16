@@ -71,7 +71,7 @@ export const Settings = () => {
                   }
                   onClick={editPass}
                 >
-                  Submit
+                  Change Password
                 </button>
               </div>
             </Form>
