@@ -69,3 +69,4 @@ export const Settings = () => {
   );
   return userSettings;
 };
+const EDIT_PASSWORD_MUTATION = 
