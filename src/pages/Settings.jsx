@@ -70,4 +70,4 @@ export const Settings = () => {
   );
   return userSettings;
 };
-const EDIT_PASSWORD_MUTATION;
+const EDIT_PASSWORD;
