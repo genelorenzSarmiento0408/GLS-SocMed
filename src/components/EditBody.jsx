@@ -14,19 +14,10 @@ const EditBody = ({ postId }) => {
   let render;
 
   const [editBody] = useMutation(EDIT_BODY, {
-    update(proxy, result) {
+    update() {
       setBody("");
       BodyInputRef.current.blur();
-      const data = proxy.readQuery({
-        query: FETCH_POSTS_QUERY,
-      });
-      proxy.writeQuery({
-        query: FETCH_POSTS_QUERY,
-        data: {
-          getPosts: [result.data.editBody, ...data.getPosts],
-        },
-      });
-      console.log(result);
+      window.location.reload(false);
     },
     variables: {
       postId,
