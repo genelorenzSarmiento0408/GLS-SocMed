@@ -24,7 +24,12 @@ const EditOrAddBio = () => {
 };
 
 const EDITORADDBIO = gql`
-  mutation EDITORADDBIO($username: String!, $newBio: String!)
+  mutation EDITORADDBIO($username: String!, $newBio: String!) {
+    editBio(username: $username, newBio: $newBio) {
+      id
+      username
+    }
+  }
 `;
 
 export default EditOrAddBio;
