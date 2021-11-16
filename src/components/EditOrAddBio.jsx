@@ -6,7 +6,7 @@ import { AuthContext } from "../context/auth";
 const EditOrAddBio = () => {
   const { user } = useContext(AuthContext);
   const Bio = user.Bio;
-  const editoraddbio = Bio != null ? "" : "";
+  const determinebio = Bio != null ? editBio : addBio;
   const editBio = (
     <>
       <p>Edit Bio</p>
@@ -17,7 +17,7 @@ const EditOrAddBio = () => {
       <button>Add Bio</button>
     </>
   );
-  return <div></div>;
+  return determinebio;
 };
 
 const EDITORADDBIO = gql`
