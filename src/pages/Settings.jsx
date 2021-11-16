@@ -12,6 +12,18 @@ export const Settings = () => {
   const passwordInputRef = useRef(null);
   let username;
   if (user) username = user.username;
+  const [editPass] = useMutation(EDIT_TITLE, {
+    update() {
+      setoldPassword("");
+      setnewPassword("");
+      passwordInputRef.current.blur();
+    },
+    variables: {
+      username: username,
+      password: oldPassword,
+      newpassword: newPassword,
+    },
+  });
   let userSettings = (
     <Grid>
       <Grid.Row>
@@ -57,7 +69,7 @@ export const Settings = () => {
                   disabled={
                     (oldPassword.trim() === "", newPassword.trim() === "")
                   }
-                  // onClick={editBody}
+                  onClick={editPass}
                 >
                   Submit
                 </button>
