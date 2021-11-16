@@ -9,6 +9,7 @@ const EditOrAddBio = () => {
   if (Bio == null) {
     return addBio;
   }
+
   const editBio = (
     <>
       <p>Edit Bio</p>
