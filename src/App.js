@@ -15,7 +15,7 @@ import "semantic-ui-css/semantic.min.css";
 import "./App.scss";
 import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
-import { Settings } from "./pages/Settings";
+import { Settings } from "./pages/Settings.tsx";
 import UserProfile from "./pages/UserProfile";
 import UserRoute from "./util/UserRoute";
 
