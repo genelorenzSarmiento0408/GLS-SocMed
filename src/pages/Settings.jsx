@@ -83,8 +83,16 @@ export const Settings = () => {
   return userSettings;
 };
 const EDIT_PASSWORD = gql`
-  mutation EDIT_PASSWORD($oldPassword: String!, $newPassword: String!) {
-    editpassword(password: $oldPassword, newPassword: $newPassword) {
+  mutation EDIT_PASSWORD(
+    $username: String
+    $oldPassword: String!
+    $newPassword: String!
+  ) {
+    editpassword(
+      username: $username
+      password: $oldPassword
+      newPassword: $newPassword
+    ) {
       id
       username
     }
