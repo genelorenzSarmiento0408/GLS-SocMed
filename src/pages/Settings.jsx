@@ -25,7 +25,7 @@ export const Settings = () => {
     },
   });
   let a: String;
-
+  console.log(a);
   let userSettings = (
     <Grid>
       <Grid.Row>
