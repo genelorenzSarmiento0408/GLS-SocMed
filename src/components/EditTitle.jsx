@@ -16,6 +16,7 @@ const EditButton = ({ postId }) => {
     update() {
       setTitle("");
       titleInputRef.current.blur();
+      window.location.reload(false);
     },
     variables: {
       postId,
