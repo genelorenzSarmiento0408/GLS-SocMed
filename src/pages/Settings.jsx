@@ -21,7 +21,7 @@ export const Settings = () => {
     variables: {
       username: username,
       password: oldPassword,
-      newpassword: newPassword,
+      newPassword: newPassword,
     },
   });
   let userSettings = (
