@@ -9,7 +9,7 @@ export const Settings = () => {
   const { user } = useContext(AuthContext);
   const [oldPassword, setoldPassword] = useState("");
   const [newPassword, setnewPassword] = useState("");
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState("");
 
   const passwordInputRef = useRef(null);
   let username;
