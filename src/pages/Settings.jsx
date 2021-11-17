@@ -82,9 +82,9 @@ export const Settings = () => {
                   Change Password
                 </button>
               </div>
-              <Divider />
-              <EditOrAddBio />
             </Form>{" "}
+            <Divider />
+            <EditOrAddBio />{" "}
             {Object.keys(errors).length > 0 && (
               <div className="ui error message">
                 <ul className="list">
