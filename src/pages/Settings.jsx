@@ -56,7 +56,7 @@ export const Settings = () => {
                 {errors ? (
                   <div className="ui error message">
                     <ul className="list">
-                      <li key={errors}>{errors}</li>
+                      <li>{errors}</li>
                     </ul>
                   </div>
                 ) : (
