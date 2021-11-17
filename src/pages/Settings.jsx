@@ -81,8 +81,7 @@ export const Settings = () => {
                 >
                   Change Password
                 </button>
-                {errors
-                  ? Object.keys(errors).length > 0 && (
+                {Object.keys(errors).length > 0 && (
                       <div className="ui error message">
                         <ul className="list">
                           {Object.values(errors).map((value) => (
@@ -91,7 +90,7 @@ export const Settings = () => {
                         </ul>
                       </div>
                     )
-                  : ""}
+                  :}
               </div>
               <Divider />
               <EditOrAddBio />
