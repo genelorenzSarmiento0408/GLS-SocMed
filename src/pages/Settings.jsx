@@ -83,8 +83,6 @@ export const Settings = () => {
                 </button>
               </div>
             </Form>{" "}
-            <Divider />
-            <EditOrAddBio />{" "}
             {Object.keys(errors).length > 0 && (
               <div className="ui error message">
                 <ul className="list">
@@ -93,7 +91,9 @@ export const Settings = () => {
                   ))}
                 </ul>
               </div>
-            )}
+            )}{" "}
+            <Divider />
+            <EditOrAddBio />
           </Card>
         </Grid.Column>
       </Grid.Row>
