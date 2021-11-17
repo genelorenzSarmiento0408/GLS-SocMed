@@ -3,6 +3,7 @@ import { Form, Card, Grid, Divider } from "semantic-ui-react";
 import { useMutation, gql } from "@apollo/client";
 
 import { AuthContext } from "../context/auth";
+import EditOrAddBio from "../components/EditOrAddBio";
 
 export const Settings = () => {
   const { user } = useContext(AuthContext);
@@ -75,6 +76,8 @@ export const Settings = () => {
                   Change Password
                 </button>
               </div>
+              <Divider />
+              <EditOrAddBio />
             </Form>
           </Card>
         </Grid.Column>
