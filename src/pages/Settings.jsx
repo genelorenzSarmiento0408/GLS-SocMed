@@ -22,6 +22,7 @@ export const Settings = () => {
     },
     onError(err) {
       console.log(err.graphQLErrors[0].extensions.errors);
+      let errs = err.graphQLErrors[0].extensions.errors;
       setErrors(err.graphQLErrors[0].extensions.errors);
     },
     variables: {
@@ -80,6 +81,7 @@ export const Settings = () => {
                 >
                   Change Password
                 </button>
+                {errors ? errs : ""}
                 {Object.keys(errors).length > 0 && (
                   <div className="ui error message">
                     <ul className="list">
