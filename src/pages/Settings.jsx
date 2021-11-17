@@ -53,7 +53,7 @@ export const Settings = () => {
                 <h2>Change Password</h2>
                 <Divider />
                 Old Password:
-                {errors ? (
+                {/* {errors ? (
                   <div className="ui error message">
                     <ul className="list">
                       <li>{errors}</li>
@@ -61,7 +61,7 @@ export const Settings = () => {
                   </div>
                 ) : (
                   ""
-                )}
+                )} */}
                 <input
                   type="password"
                   placeholder="New Password"
