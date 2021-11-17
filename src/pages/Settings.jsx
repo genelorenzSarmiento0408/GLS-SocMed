@@ -53,15 +53,6 @@ export const Settings = () => {
                 <h2>Change Password</h2>
                 <Divider />
                 Old Password:
-                {
-                  <div className="ui error message">
-                    <ul className="list">
-                      {Object.values(errors).map((value) => (
-                        <li key={value}>{value}</li>
-                      ))}
-                    </ul>
-                  </div>
-                }
                 <input
                   type="password"
                   placeholder="New Password"
@@ -89,6 +80,15 @@ export const Settings = () => {
                 >
                   Change Password
                 </button>
+                {Object.keys(errors).length > 0 && (
+                  <div className="ui error message">
+                    <ul className="list">
+                      {Object.values(errors).map((value) => (
+                        <li key={value}>{value}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
               <Divider />
               <EditOrAddBio />
