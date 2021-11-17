@@ -55,7 +55,7 @@ export const Settings = () => {
                 Old Password:
                 {errors ? (
                   <div className="ui error message">
-                    <li>{errors}</li>
+                    <li>{errors}</li>s
                   </div>
                 ) : (
                   ""
