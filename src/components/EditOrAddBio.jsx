@@ -6,9 +6,6 @@ import { AuthContext } from "../context/auth";
 const EditOrAddBio = () => {
   const { user } = useContext(AuthContext);
   const Bio = user.Bio;
-  if (Bio == null) {
-    return addBio;
-  }
 
   const editBio = (
     <>
@@ -20,6 +17,9 @@ const EditOrAddBio = () => {
       <button>Add Bio</button>
     </>
   );
+  if (Bio == null) {
+    return addBio;
+  }
   return editBio;
 };
 
