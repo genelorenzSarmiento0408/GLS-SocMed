@@ -22,7 +22,7 @@ export const Settings = () => {
     },
     onError(err) {
       console.log(err.graphQLErrors[0].extensions.errors);
-
+      const errs = err.graphQLErrors[0].extensions.errors;
       setErrors(err.graphQLErrors[0].extensions.errors);
     },
     variables: {
@@ -31,7 +31,7 @@ export const Settings = () => {
       newPassword: newPassword,
     },
   });
-  let errs = err.graphQLErrors[0].extensions.errors;
+
   let userSettings = (
     <Grid>
       <Grid.Row>
