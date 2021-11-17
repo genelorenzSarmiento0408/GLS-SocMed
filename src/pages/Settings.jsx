@@ -99,7 +99,3 @@ const EDIT_PASSWORD = gql`
     }
   }
 `;
-
-const EDITORADDBIO = gql`
-  mutation EDITORADDBIO($username: String!, $newBio: String!)
-`;
