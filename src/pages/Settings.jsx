@@ -53,13 +53,15 @@ export const Settings = () => {
                 <h2>Change Password</h2>
                 <Divider />
                 Old Password:
-                {errors ? (
+                {
                   <div className="ui error message">
-                    <li>{errors}</li>s
+                    <ul className="list">
+                      {Object.values(errors).map((value) => (
+                        <li key={value}>{value}</li>
+                      ))}
+                    </ul>
                   </div>
-                ) : (
-                  ""
-                )}
+                }
                 <input
                   type="password"
                   placeholder="New Password"
