@@ -4,7 +4,6 @@ import { Icon, Form, Modal, Header } from "semantic-ui-react";
 
 import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
-import { FETCH_POSTS_QUERY } from "../util/graphql";
 
 const EditBody = ({ postId }) => {
   const { user } = useContext(AuthContext);
