@@ -92,8 +92,10 @@ export const Settings = () => {
                 </ul>
               </div>
             )}{" "}
-            <Divider />
-            <EditOrAddBio />
+            <Form>
+              <Divider />
+              <EditOrAddBio />
+            </Form>
           </Card>
         </Grid.Column>
       </Grid.Row>
