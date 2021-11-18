@@ -7,12 +7,12 @@ import { AuthContext } from "../context/auth";
 const EditOrAddBio = () => {
   const { user } = useContext(AuthContext);
   const Bio = user.Bio;
-
+  console.log(Bio);
   const editBio = (
     <>
-      <h2>Edit Bio{Bio}</h2>
+      <h2>Edit Bio</h2>
       <p></p>
-
+      {Bio}
       <Button color="teal">Edit Bio</Button>
     </>
   );
