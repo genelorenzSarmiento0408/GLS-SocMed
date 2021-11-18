@@ -7,19 +7,19 @@ import { AuthContext } from "../context/auth";
 const EditOrAddBio = (args = {}) => {
   const { user } = useContext(AuthContext);
   let username = user.username;
-  let Bio = user.Bio;
+  const Bio = user.Bio;
   const { data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
       username,
       Bio,
     },
   });
-
+  console.info(getUser.username);
   const editBio = (
     <>
       <h2>Edit Bio</h2>
       <p></p>
-      {getUser.Bio}
+      {Bio}
       <Button color="teal">Edit Bio</Button>
     </>
   );
