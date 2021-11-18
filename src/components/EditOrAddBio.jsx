@@ -11,7 +11,6 @@ const EditOrAddBio = (args = {}) => {
   const { data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
       username,
-      Bio,
     },
   });
   if (!getUser) {
