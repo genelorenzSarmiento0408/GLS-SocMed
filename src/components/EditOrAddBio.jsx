@@ -7,7 +7,7 @@ import { AuthContext } from "../context/auth";
 const EditOrAddBio = () => {
   const { user } = useContext(AuthContext);
   const Bio = user.Bio;
-  console.log(user.Bio);
+  console.log(user);
   const editBio = (
     <>
       <h2>Edit Bio</h2>
