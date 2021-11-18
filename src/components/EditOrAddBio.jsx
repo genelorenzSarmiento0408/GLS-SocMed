@@ -31,7 +31,7 @@ const EditOrAddBio = (args = {}) => {
       <Button color="teal">Add Bio</Button>
     </>
   );
-  if (Bio === null) return addBio;
+  if (Bio == null) return addBio;
 
   return editBio;
 };
