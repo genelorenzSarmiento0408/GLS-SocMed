@@ -14,7 +14,7 @@ const EditOrAddBio = (args = {}) => {
       Bio,
     },
   });
-
+  const bio = getUser.Bio;
   console.log(getUser);
   const editBio = (
     <>
