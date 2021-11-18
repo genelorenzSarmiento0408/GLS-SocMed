@@ -1,5 +1,6 @@
 import { useMutation, gql } from "@apollo/client";
 import React, { useContext } from "react";
+import { Button } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 
@@ -10,11 +11,12 @@ const EditOrAddBio = () => {
   const editBio = (
     <>
       <p>Edit Bio</p>
+      <Button></Button>
     </>
   );
   const addBio = (
     <>
-      <button>Add Bio</button>
+      <Button color="teal">Add Bio</Button>
     </>
   );
   if (Bio == null) {
