@@ -4,6 +4,7 @@ import { Card, Grid, Image, Loader, Dimmer, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
+import EditOrAddBio from "../components/EditOrAddBio";
 
 const UserProfile = (args = {}) => {
   const { user } = useContext(AuthContext);
@@ -44,7 +45,7 @@ const UserProfile = (args = {}) => {
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>
-                  <EditOrAddBio />
+                <EditOrAddBio  
                 </Card.Description>
               </Card.Content>
               <hr />
