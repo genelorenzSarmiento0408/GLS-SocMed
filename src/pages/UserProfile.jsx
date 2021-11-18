@@ -24,7 +24,6 @@ const UserProfile = (args = {}) => {
       </Dimmer>
     );
   } else {
-    let isbionull = false;
     const { Bio, createdAt, username } = getUser;
     const datetostr = createdAt.substring(0, 10);
 
