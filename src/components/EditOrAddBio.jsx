@@ -49,9 +49,10 @@ const FETCH_USER_QUERY = gql`
   query ($username: String!) {
     getUser(username: $username) {
       id
-      username
       createdAt
       Bio
+      email
+      username
     }
   }
 `;
