@@ -16,24 +16,25 @@ const EditOrAddBio = (args = {}) => {
   });
   if (!getUser) {
     console.log("lol");
-  }
-  const { Bio, createdAt, username } = getUser;
-  const editBio = (
-    <>
-      <h2>Edit Bio</h2>
-      <p></p>
-      {Bio}
-      <Button color="teal">Edit Bio</Button>
-    </>
-  );
-  const addBio = (
-    <>
-      <Button color="teal">Add Bio</Button>
-    </>
-  );
+  } else {
+    const { Bio, createdAt, username } = getUser;
+    const editBio = (
+      <>
+        <h2>Edit Bio</h2>
+        <p></p>
+        {Bio}
+        <Button color="teal">Edit Bio</Button>
+      </>
+    );
+    const addBio = (
+      <>
+        <Button color="teal">Add Bio</Button>
+      </>
+    );
 
-  if (Bio == null) return addBio;
-  if (Bio != null) return editBio;
+    if (Bio == null) return addBio;
+    if (Bio != null) return editBio;
+  }
 };
 
 const EDITORADDBIO = gql`
