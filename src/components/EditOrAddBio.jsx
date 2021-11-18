@@ -16,8 +16,6 @@ const EditOrAddBio = (args = {}) => {
     },
   });
 
-  console.log(getUser);
-
   const editBio = (
     <>
       <h2>Edit Bio</h2>
@@ -37,6 +35,7 @@ const EditOrAddBio = (args = {}) => {
   } catch (err) {
     return err;
   }
+  console.log(getUser);
 };
 
 const EDITORADDBIO = gql`
