@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useQuery, gql } from "@apollo/client";
-import { Button, Dimmer, Loader } from "semantic-ui-react";
+import { Button, , Loader } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 
@@ -17,7 +17,7 @@ const EditOrAddBio = (args = {}) => {
     let userMarkup = loading && <Loader content="Loading Information..." />;
     return userMarkup;
   } else {
-    const { Bio, createdAt, username } = getUser;
+    const { Bio,  } = getUser;
     const editBio = (
       <>
         <h2>Edit Bio</h2>
