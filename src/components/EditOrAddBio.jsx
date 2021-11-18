@@ -1,5 +1,5 @@
-import { useMutation, gql } from "@apollo/client";
 import React, { useContext } from "react";
+import { useQuery, gql } from "@apollo/client";
 import { Button } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
@@ -31,6 +31,17 @@ const EDITORADDBIO = gql`
     editBio(username: $username, newBio: $newBio) {
       id
       username
+    }
+  }
+`;
+
+const FETCH_USER_QUERY = gql`
+  query ($username: String!) {
+    getUser(username: $username) {
+      id
+      username
+      createdAt
+      Bio
     }
   }
 `;
