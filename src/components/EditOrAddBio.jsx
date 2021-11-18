@@ -33,8 +33,7 @@ const EditOrAddBio = (args = {}) => {
   );
   try {
     if (Bio == null) return addBio;
-
-    return editBio;
+    else return editBio;
   } catch (err) {
     return err;
   }
