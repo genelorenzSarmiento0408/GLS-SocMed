@@ -10,7 +10,7 @@ export const Settings = () => {
   const [oldPassword, setoldPassword] = useState("");
   const [newPassword, setnewPassword] = useState("");
   const [errors, setErrors] = useState("");
-
+  console.info(user);
   const passwordInputRef = useRef(null);
   let username;
   if (user) username = user.username;
