@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useQuery, gql } from "@apollo/client";
-import { Button, Dimmer, Loader } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 
@@ -9,7 +9,7 @@ const EditOrAddBio = (args = {}) => {
   let username = user.username;
   const Bio = user.Bio;
 
-  const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
+  const { data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
       username,
       Bio,
