@@ -4,8 +4,16 @@ import { Button } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 
-const EditOrAddBio = () => {
+const EditOrAddBio = (props, args = {}) => {
+  const username = props.match.params.username;
   const { user } = useContext(AuthContext);
+
+  let userMarkup;
+  const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
+    variables: {
+      username,
+    },
+  });
   const Bio = user.Bio;
   console.log(user);
   const editBio = (
