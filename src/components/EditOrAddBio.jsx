@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useQuery, gql } from "@apollo/client";
-import { Button, , Loader } from "semantic-ui-react";
+import { Button, Loader } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 
