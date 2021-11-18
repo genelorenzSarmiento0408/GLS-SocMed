@@ -5,7 +5,6 @@ import { Button } from "semantic-ui-react";
 import { AuthContext } from "../context/auth";
 
 const EditOrAddBio = (props, args = {}) => {
-  const username = props.match.params.username;
   const { user } = useContext(AuthContext);
 
   let userMarkup;
