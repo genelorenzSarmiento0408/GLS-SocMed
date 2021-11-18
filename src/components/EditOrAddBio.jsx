@@ -14,10 +14,7 @@ const EditOrAddBio = (args = {}) => {
       Bio,
     },
   });
-  console.info(getUser);
-  if (getUser !== undefined) {
-    console.debug("sd");
-  }
+  const { Bio, createdAt, username } = getUser;
   const editBio = (
     <>
       <h2>Edit Bio</h2>
