@@ -8,6 +8,7 @@ const EditOrAddBio = (args = {}) => {
   const { user } = useContext(AuthContext);
   let username = user.username;
   const Bio = user.Bio;
+
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
       username,
