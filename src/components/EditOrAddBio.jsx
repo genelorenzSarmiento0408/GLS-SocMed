@@ -15,7 +15,7 @@ const EditOrAddBio = (args = {}) => {
     },
   });
   console.info(getUser);
-  if (getUser != undefined) {
+  if (getUser !== undefined) {
     console.debug("sd");
   }
   const editBio = (
