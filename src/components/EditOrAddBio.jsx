@@ -14,11 +14,7 @@ const EditOrAddBio = (args = {}) => {
     },
   });
   if (!getUser) {
-    let userMarkup = loading && (
-      <Dimmer active>
-        <Loader content="Loading user..." />
-      </Dimmer>
-    );
+    let userMarkup = loading && <Loader content="Loading Information..." />;
     return userMarkup;
   } else {
     const { Bio, createdAt, username } = getUser;
