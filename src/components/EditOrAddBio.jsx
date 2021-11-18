@@ -7,7 +7,7 @@ import { AuthContext } from "../context/auth";
 const EditOrAddBio = (args = {}) => {
   const { user } = useContext(AuthContext);
   let username = user.username;
-  const Bio = user.Bio;
+  const Bio = getUser.Bio;
 
   const { data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
@@ -15,7 +15,7 @@ const EditOrAddBio = (args = {}) => {
       Bio,
     },
   });
-
+  console.log(getUser);
   const editBio = (
     <>
       <h2>Edit Bio</h2>
@@ -35,7 +35,6 @@ const EditOrAddBio = (args = {}) => {
   } catch (err) {
     return err;
   }
-  console.log(getUser);
 };
 
 const EDITORADDBIO = gql`
