@@ -17,7 +17,7 @@ const EditOrAddBio = (args = {}) => {
     let userMarkup = loading && <Loader content="Loading Information..." />;
     return userMarkup;
   } else {
-    const { Bio,  } = getUser;
+    const { Bio } = getUser;
     const editBio = (
       <>
         <h2>Edit Bio</h2>
