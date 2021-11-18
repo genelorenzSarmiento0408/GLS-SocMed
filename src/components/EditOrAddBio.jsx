@@ -14,12 +14,12 @@ const EditOrAddBio = (args = {}) => {
       Bio,
     },
   });
-  console.info(getUser.Bio);
+
   const editBio = (
     <>
       <h2>Edit Bio</h2>
       <p></p>
-      {Bio}
+      {getUser.Bio}
       <Button color="teal">Edit Bio</Button>
     </>
   );
