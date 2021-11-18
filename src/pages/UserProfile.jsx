@@ -44,7 +44,7 @@ const UserProfile = (args = {}) => {
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>
-                  {isbionull ? "No Bio added" : Bio}
+                  <EditOrAddBio />
                 </Card.Description>
               </Card.Content>
               <hr />
