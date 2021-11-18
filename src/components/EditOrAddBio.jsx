@@ -8,7 +8,6 @@ const EditOrAddBio = (args = {}) => {
   const { user } = useContext(AuthContext);
   let username = user.username;
 
-  let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
     variables: {
       username,
@@ -16,13 +15,7 @@ const EditOrAddBio = (args = {}) => {
   });
   const Bio = user.Bio;
   console.log(user);
-  if (!getUser) {
-    userMarkup = loading && (
-      <Dimmer active>
-        <Loader content="Loading user..." />
-      </Dimmer>
-    );
-  }
+
   const editBio = (
     <>
       <h2>Edit Bio</h2>
