@@ -31,12 +31,9 @@ const EditOrAddBio = (args = {}) => {
       <Button color="teal">Add Bio</Button>
     </>
   );
-  try {
-    if (Bio == null) return addBio;
-    if (Bio != null) return editBio;
-  } catch (err) {
-    return err;
-  }
+
+  if (Bio == null) return addBio;
+  if (Bio != null) return editBio;
 };
 
 const EDITORADDBIO = gql`
