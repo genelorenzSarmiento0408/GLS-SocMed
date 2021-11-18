@@ -11,7 +11,7 @@ const EditOrAddBio = () => {
   const editBio = (
     <>
       <h2>Edit Bio</h2>
-      <p>{Bio}</p>
+      <p>{user.Bio}</p>
       <Button color="teal">Edit Bio</Button>
     </>
   );
