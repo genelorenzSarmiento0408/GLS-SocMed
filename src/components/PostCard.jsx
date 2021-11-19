@@ -61,6 +61,7 @@ export default function PostCard({
           <Card.Description>
             <h3>{title}</h3>
             {user && user.username === username && <EditButton postId={id} />}
+
             <p> {body}</p>
             {user && user.username === username && <EditBody postId={id} />}
           </Card.Description>
