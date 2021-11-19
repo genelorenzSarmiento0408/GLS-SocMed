@@ -1,12 +1,8 @@
-import React, { useState, useContext, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useMutation, gql } from "@apollo/client";
 import { Icon, Form, Modal, Header } from "semantic-ui-react";
 
-import PopupGlobal from "../util/PopupGlobal";
-import { AuthContext } from "../context/auth";
-
 const EditButton = ({ postId }) => {
-  const { user } = useContext(AuthContext);
   const [Title, setTitle] = useState("");
   const [open, setOpen] = useState(false);
   const titleInputRef = useRef(null);
@@ -27,39 +23,33 @@ const EditButton = ({ postId }) => {
     <Modal
       closeIcon
       open={open}
-      trigger={
-        <PopupGlobal content="Edit Title">
-          <Icon name="edit" color="teal" />
-        </PopupGlobal>
-      }
+      trigger={<Icon name="edit" color="teal" />}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
     >
-      {user && (
-        <>
-          <Header icon="edit" content="Edit Title" />
-          <Form>
-            <div className="ui action input fluid">
-              <input
-                type="text"
-                placeholder="New Title"
-                name="Comment"
-                value={Title}
-                onChange={(event) => setTitle(event.target.value)}
-                ref={titleInputRef}
-              />
-              <button
-                type="submit"
-                className="ui button teal"
-                disabled={Title.trim() === ""}
-                onClick={editTitle}
-              >
-                Submit
-              </button>
-            </div>
-          </Form>
-        </>
-      )}
+      <>
+        <Header icon="edit" content="Edit Title" />
+        <Form>
+          <div className="ui action input fluid">
+            <input
+              type="text"
+              placeholder="New Title"
+              name="Comment"
+              value={Title}
+              onChange={(event) => setTitle(event.target.value)}
+              ref={titleInputRef}
+            />
+            <button
+              type="submit"
+              className="ui button teal"
+              disabled={Title.trim() === ""}
+              onClick={editTitle}
+            >
+              Submit
+            </button>
+          </div>
+        </Form>
+      </>
     </Modal>
   );
 

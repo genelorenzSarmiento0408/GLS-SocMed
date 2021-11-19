@@ -24,7 +24,7 @@ const UserProfile = (args = {}) => {
       </Dimmer>
     );
   } else {
-    const { createdAt, username } = getUser;
+    const { createdAt, username, Bio } = getUser;
     const datetostr = createdAt.substring(0, 10);
 
     userMarkup = (
@@ -43,6 +43,7 @@ const UserProfile = (args = {}) => {
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>
+                  <p> {Bio}</p>
                   <EditOrAddBio />
                 </Card.Description>
               </Card.Content>

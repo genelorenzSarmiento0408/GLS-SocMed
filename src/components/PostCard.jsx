@@ -29,7 +29,7 @@ export default function PostCard({
   return (
     <Grid>
       <Grid.Column width={16} className="ui centered card">
-        <Card.Content as={Link} to={`/posts/${id}`}>
+        <Card.Content>
           <Image
             floated="left"
             size="large"
@@ -37,8 +37,8 @@ export default function PostCard({
             avatar
           />
 
-          <Card.Header as={Link} to={`/posts/${id}`}>
-            {title}
+          <Card.Header as={Link} to={`/users/${username}`}>
+            {username}
           </Card.Header>
 
           <PopupGlobal
@@ -54,7 +54,7 @@ export default function PostCard({
             header={username}
           >
             <Card.Meta as={Link} to={`/users/${username}`}>
-              {moment(createdAt).fromNow(true)} ago • by {username}{" "}
+              {moment(createdAt).fromNow(true)} ago
               {edited ? `• Edited` : ""}
             </Card.Meta>
           </PopupGlobal>

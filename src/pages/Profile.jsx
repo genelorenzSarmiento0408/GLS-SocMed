@@ -4,6 +4,7 @@ import { Card, Grid, Image, Loader, Dimmer, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
+import EditOrAddBio from "../components/EditOrAddBio";
 
 const Profile = (props, args = {}) => {
   const username = props.match.params.username;
@@ -23,11 +24,12 @@ const Profile = (props, args = {}) => {
       </Dimmer>
     );
   } else {
-    let isbionull = false;
+    console.log(getUser);
+    let userBio;
     const { Bio, createdAt, username } = getUser;
     const datetostr = createdAt.substring(0, 10);
-    if (Bio === null) {
-      isbionull = true;
+    if (Bio != null) {
+      userBio = true;
     }
 
     userMarkup = (
@@ -47,13 +49,13 @@ const Profile = (props, args = {}) => {
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>
-                  {isbionull ? "No Bio added" : Bio}
+                  {user && user.username === username && <EditOrAddBio />}
                 </Card.Description>
               </Card.Content>
               <hr />
               <Card.Content extra>
                 {user && user.username === username && (
-                  <Button as={Link} to={"/settings"} color="facebook">
+                  <Button as={Link} to={"/settings"} color="teal">
                     Settings
                   </Button>
                 )}

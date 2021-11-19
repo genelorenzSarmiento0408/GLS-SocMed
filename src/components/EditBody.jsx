@@ -2,7 +2,6 @@ import React, { useState, useContext, useRef } from "react";
 import { useMutation, gql } from "@apollo/client";
 import { Icon, Form, Modal, Header } from "semantic-ui-react";
 
-import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
 
 const EditBody = ({ postId }) => {
@@ -27,11 +26,7 @@ const EditBody = ({ postId }) => {
     <Modal
       closeIcon
       open={open}
-      trigger={
-        <PopupGlobal content="Edit Body">
-          <Icon name="edit" color="teal" />
-        </PopupGlobal>
-      }
+      trigger={<Icon name="edit" color="teal" />}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
     >
