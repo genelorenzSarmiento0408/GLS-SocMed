@@ -27,9 +27,9 @@ export default function PostCard({
   const { user } = useContext(AuthContext);
 
   return (
-    <Grid as={Link} to={`/posts/${id}`}>
+    <Grid>
       <Grid.Column width={16} className="ui centered card">
-        <Card.Content>
+        <Card.Content as={Link} to={`/posts/${id}`}>
           <Image
             floated="left"
             size="large"
