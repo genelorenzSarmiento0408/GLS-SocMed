@@ -37,9 +37,7 @@ export default function PostCard({
             avatar
           />
 
-          <Card.Header as={Link} to={`/posts/${id}`}>
-            {title}
-          </Card.Header>
+          <Card.Header /*as={Link} to={`/posts/${id}`}*/>{title}</Card.Header>
 
           <PopupGlobal
             content={
