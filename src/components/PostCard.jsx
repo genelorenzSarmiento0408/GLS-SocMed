@@ -61,8 +61,11 @@ export default function PostCard({
           </PopupGlobal>
           <Card.Description>
             <h3>{title}</h3>
-            <p> {body}</p>
-            {user && user.username === username && <EditBody postId={id} />}
+            <p>
+              {" "}
+              {body}
+              {user && user.username === username && <EditBody postId={id} />}
+            </p>
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
