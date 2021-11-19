@@ -27,9 +27,9 @@ export default function PostCard({
   const { user } = useContext(AuthContext);
 
   return (
-    <Grid>
+    <Grid as={Link} to={`/posts/${id}`}>
       <Grid.Column width={16} className="ui centered card">
-        <Card.Content as={Link} to={`/posts/${id}`}>
+        <Card.Content>
           <Image
             floated="left"
             size="large"
@@ -37,7 +37,9 @@ export default function PostCard({
             avatar
           />
 
-          <Card.Header /*as={Link} to={`/posts/${id}`}*/>{title}</Card.Header>
+          <Card.Header as={Link} to={`/posts/${id}`}>
+            {title}
+          </Card.Header>
 
           <PopupGlobal
             content={
