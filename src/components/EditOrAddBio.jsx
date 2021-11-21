@@ -40,10 +40,11 @@ const EditOrAddBio = (args = {}) => {
     const { Bio } = getUser;
 
     if (Bio != null) userBio = true;
+    const pathname = window.location.pathname; //returns the current url minus the domain name
 
     const userReturn = (
       <>
-        <p>{userBio ? Bio : "No Bio added"}</p>
+        <p>{pathname === "/settings" && userBio && Bio}</p>
         <Modal
           closeIcon
           open={open}

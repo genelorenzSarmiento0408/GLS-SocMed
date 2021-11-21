@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Menu } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
 
@@ -11,6 +11,11 @@ export default function NavBar() {
   const [activeItem, setActiveItem] = useState(path);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
+
+  function Logout() {
+    <Redirect to="/" />;
+    logout();
+  }
   const NavBar = user ? (
     <Menu pointing secondary size="large" color="teal" stackable>
       <Menu.Item
@@ -30,7 +35,7 @@ export default function NavBar() {
           as={Link}
           to="/profile"
         />
-        <Menu.Item name="logout" onClick={logout} />
+        <Menu.Item name="logout" onClick={Logout} />
       </Menu.Menu>
     </Menu>
   ) : (

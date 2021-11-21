@@ -24,7 +24,6 @@ const Profile = (props, args = {}) => {
       </Dimmer>
     );
   } else {
-    console.log(getUser);
     let userBio;
     const { Bio, createdAt, username } = getUser;
     const datetostr = createdAt.substring(0, 10);
@@ -49,6 +48,7 @@ const Profile = (props, args = {}) => {
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
                 <Card.Description>
+                  {username && userBio ? Bio : "No Bio found"}
                   {user && user.username === username && <EditOrAddBio />}
                 </Card.Description>
               </Card.Content>
