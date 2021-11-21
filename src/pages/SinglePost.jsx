@@ -83,22 +83,19 @@ function SinglePost(props, args = {}) {
           <Grid.Column width={10}>
             <Card fluid>
               <Card.Content>
-                <Card.Header>{title}</Card.Header>
+                <Card.Header>{username}</Card.Header>
                 <Card.Meta>
-                  {moment(createdAt).fromNow()} • by {username}
+                  {moment(createdAt).fromNow()}
+                  {edited ? `• Edited` : ""}
                 </Card.Meta>
-                <Card.Description>{body}</Card.Description>
+                <Card.Description>
+                  <h2> {title} </h2>
+                  <p>{body}</p>
+                </Card.Description>
               </Card.Content>
               <hr />
               <Card.Content extra>
-                {edited ? (
-                  <>
-                    <p>Edited At {dateofedit}</p>
-                    <br />
-                  </>
-                ) : (
-                  ""
-                )}
+                {edited ? <p>Edited At {dateofedit}</p> : ""}
 
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
                 <PopupGlobal content="Comment on Post">

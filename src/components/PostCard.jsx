@@ -36,11 +36,6 @@ export default function PostCard({
             src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
             avatar
           />
-
-          <Card.Header as={Link} to={`/users/${username}`}>
-            {username}
-          </Card.Header>
-
           <PopupGlobal
             content={
               <Image
@@ -53,11 +48,16 @@ export default function PostCard({
             }
             header={username}
           >
-            <Card.Meta as={Link} to={`/users/${username}`}>
-              {moment(createdAt).fromNow(true)} ago
-              {edited ? `• Edited` : ""}
-            </Card.Meta>
+            <Card.Header as={Link} to={`/users/${username}`}>
+              {username}
+            </Card.Header>
           </PopupGlobal>
+
+          <Card.Meta as={Link} to={`/posts/${id}`}>
+            {moment(createdAt).fromNow()}
+            {edited ? `• Edited` : ""}
+          </Card.Meta>
+
           <Card.Description>
             <h3>
               {title}
