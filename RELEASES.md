@@ -1,6 +1,6 @@
 # Release Versions
 
-Version History
+## Version History
 
 ## Release 0.3.0
 
@@ -8,6 +8,12 @@ Version History
 - Added the functionality to edit posts, and edit passwords
 - Added AuthRoute (Route that is accesible if the user is logged in)
 - Added Settings
+
+### Improvements:
+
+- Widen the posts
+- Changed the head to username from Title
+- Changed favicon.ico
 
 ## Future Releases
 
