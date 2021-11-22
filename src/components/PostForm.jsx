@@ -38,7 +38,7 @@ export default function PostForm() {
     <>
       <Grid mobile={16} tablet={8} computer={4}>
         <Grid.Column
-          width={15}
+          width={11}
           className="ui centered card"
           style={{ marginBottom: 30 }}
         >

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Grid } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Grid>
+        <Container fluid>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
@@ -35,7 +35,7 @@ function App() {
             <UserRoute path="/profile" component={UserProfile} />
             <Route path="*" component={PageNotFound} />
           </Switch>
-        </Grid>
+        </Container>
       </AuthProvider>
     </Router>
   );
