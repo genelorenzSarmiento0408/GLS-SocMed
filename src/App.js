@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Container textAlign="center">
+        <Container fluid>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
