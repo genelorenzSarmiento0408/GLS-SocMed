@@ -19,6 +19,7 @@
 
 - Ability to message user/s
 - Ability to change email
+- Changes in UI, especially extended navbar, and settings
 
 ## Future Releases
 
