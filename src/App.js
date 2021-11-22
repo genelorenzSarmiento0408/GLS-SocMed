@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Grid fluid>
+        <Grid>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
