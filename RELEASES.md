@@ -15,6 +15,11 @@
 - Changed the head to username from Title
 - Changed favicon.ico
 
+## Release 1.0.0
+
+- Ability to message user/s
+- Ability to change email
+
 ## Future Releases
 
 - Added typescript modules, will be using typescript on version 1.1
