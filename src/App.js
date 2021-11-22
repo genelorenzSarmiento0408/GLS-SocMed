@@ -18,6 +18,7 @@ import PageNotFound from "./pages/PageNotFound";
 import { Settings } from "./pages/Settings.jsx";
 import UserProfile from "./pages/UserProfile";
 import UserRoute from "./util/UserRoute";
+import Messages from "./pages/Messages";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/posts/:postId" component={SinglePost} />
             <Route exact path="/users/:username" component={Profile} />
             <UserRoute exact path="/settings" component={Settings} />
+            <UserRoute exact path="/Messages" component={Messages} />
             <UserRoute path="/profile" component={UserProfile} />
             <Route path="*" component={PageNotFound} />
           </Switch>

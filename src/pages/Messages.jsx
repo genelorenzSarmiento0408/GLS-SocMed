@@ -1,25 +1,16 @@
 import React from "react";
+// eslint-disable-next-line
 import { gql, useQuery } from "@apollo/client";
+// eslint-disable-next-line
+import { AuthContext } from "../context/auth";
+
+import { Container } from "semantic-ui-react";
 
 const Messages = () => {
-  const { data } = useQuery(GET_MESSAGES);
-  if (!data) return null;
+  //   const { user } = useContext(AuthContext);
+  //   const username = user.username;
 
-  return (
-    <div>
-      <p>{JSON.stringify(data)}</p>
-    </div>
-  );
+  return <Container></Container>;
 };
-
-const GET_MESSAGES = gql`
-  query {
-    messages {
-      id
-      content
-      user
-    }
-  }
-`;
 
 export default Messages;
