@@ -43,7 +43,7 @@ export default function LikeButton({ user, post: { id, likeCount, likes } }) {
         {likeButton}
       </PopupGlobal>
 
-      <Label basic color="teal" pointing="left">
+      <Label color="blue" pointing="left">
         {likeCount}
       </Label>
     </Button>

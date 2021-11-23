@@ -4,7 +4,13 @@
   font-size: 25rem;
   margin-top: 10px;
 }
+body {
+  background-color: #1b1c1d !important;
+}
 
+.ui.fluid.card {
+  background-color: #1b1c1d !important;
+}
 .form-container {
   width: 750px;
   margin: auto;

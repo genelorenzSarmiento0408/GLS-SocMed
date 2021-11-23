@@ -17,7 +17,7 @@ export default function NavBar() {
     logout();
   }
   const NavBar = user ? (
-    <Menu pointing secondary size="large" color="teal" stackable>
+    <Menu inverted size="large" color="teal">
       <Menu.Item
         name="home"
         onClick={handleItemClick}
@@ -39,7 +39,7 @@ export default function NavBar() {
       </Menu.Menu>
     </Menu>
   ) : (
-    <Menu pointing secondary color="teal">
+    <Menu inverted size="large" secondary color="teal">
       <Menu.Item
         name="home"
         active={activeItem === "home"}

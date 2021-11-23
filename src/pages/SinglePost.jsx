@@ -9,8 +9,8 @@ import {
   Label,
   Form,
   Loader,
-  Dimmer,
   Comment,
+  Segment,
 } from "semantic-ui-react";
 import moment from "moment";
 
@@ -18,6 +18,8 @@ import LikeButton from "../components/LikeButton";
 import { AuthContext } from "../context/auth";
 import DeleteButton from "../components/DeleteButton";
 import PopupGlobal from "../util/PopupGlobal";
+import EditButton from "../components/EditTitle";
+import EditBody from "../components/EditBody";
 
 function SinglePost(props, args = {}) {
   const postId = props.match.params.postId;
@@ -42,17 +44,13 @@ function SinglePost(props, args = {}) {
     },
   });
 
-  function deletePostCallbaxk() {
+  function deletePostCallback() {
     props.history.push("/");
   }
 
   let postMarkup;
   if (!getPost) {
-    postMarkup = loading && (
-      <Dimmer active>
-        <Loader content="Loading post..." />
-      </Dimmer>
-    );
+    postMarkup = loading && <Loader content="Loading post..." />;
   } else {
     const {
       id,
@@ -81,45 +79,63 @@ function SinglePost(props, args = {}) {
             />
           </Grid.Column>
           <Grid.Column width={10}>
-            <Card fluid>
-              <Card.Content>
-                <Card.Header>{username}</Card.Header>
-                <Card.Meta>
-                  {moment(createdAt).fromNow()}
-                  {edited ? `• Edited` : ""}
-                </Card.Meta>
-                <Card.Description>
-                  <h2> {title} </h2>
-                  <p>{body}</p>
-                </Card.Description>
-              </Card.Content>
-              <hr />
-              <Card.Content extra>
-                {edited ? <p>Edited At {dateofedit}</p> : ""}
+            <Segment inverted>
+              <Card fluid>
+                <Card.Content>
+                  <Card.Header style={{ color: "white" }}>
+                    {username}
+                  </Card.Header>
+                  <Card.Meta style={{ color: "white" }}>
+                    {moment(createdAt).fromNow()}
+                    {edited ? `• Edited` : ""}
+                  </Card.Meta>
+                  <Card.Description style={{ color: "white" }}>
+                    <h2>
+                      {title}
+                      {user && user.username === username && (
+                        <EditButton postId={id} />
+                      )}
+                    </h2>
+                    <p>
+                      {body}
+                      {user && user.username === username && (
+                        <EditBody postId={id} />
+                      )}
+                    </p>
+                  </Card.Description>
+                </Card.Content>
+                <hr />
+                <Card.Content extra>
+                  {edited ? (
+                    <p style={{ color: "white" }}>Edited At {dateofedit}</p>
+                  ) : (
+                    ""
+                  )}
 
-                <LikeButton user={user} post={{ id, likes, likeCount }} />
-                <PopupGlobal content="Comment on Post">
-                  <Button as="div" labelPosition="right">
-                    <Button color="blue" basic>
-                      <Icon name="comments" />
+                  <LikeButton user={user} post={{ id, likes, likeCount }} />
+                  <PopupGlobal content="Comment on Post">
+                    <Button as="div" labelPosition="right">
+                      <Button color="red" basic>
+                        <Icon name="comments" />
+                      </Button>
+                      <Label color="red" pointing="left">
+                        {commentCount}
+                      </Label>
                     </Button>
-                    <Label basic color="blue" pointing="left">
-                      {commentCount}
-                    </Label>
-                  </Button>
-                </PopupGlobal>
+                  </PopupGlobal>
 
-                {user && user.username === username && (
-                  <>
-                    <DeleteButton postId={id} callback={deletePostCallbaxk} />
-                  </>
-                )}
-              </Card.Content>
-            </Card>
+                  {user && user.username === username && (
+                    <>
+                      <DeleteButton postId={id} callback={deletePostCallback} />
+                    </>
+                  )}
+                </Card.Content>
+              </Card>
+            </Segment>
             {user && (
               <Card fluid>
                 <Card.Content>
-                  <p>Post a Comment</p>
+                  <p style={{ color: "white" }}>Post a Comment</p>
                   <Form>
                     <div className="ui action input fluid">
                       <input
@@ -152,11 +168,15 @@ function SinglePost(props, args = {}) {
                   <Card.Content>
                     <Comment>
                       <Comment.Avatar src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg" />
-                      <Comment.Author>{comment.username}</Comment.Author>
-                      <Comment.Metadata>
+                      <Comment.Author style={{ color: "white" }}>
+                        {comment.username}
+                      </Comment.Author>
+                      <Comment.Metadata style={{ color: "white" }}>
                         {moment(comment.createdAt).fromNow()}
                       </Comment.Metadata>
-                      <Comment.Text>{comment.body}</Comment.Text>{" "}
+                      <Comment.Text style={{ color: "white" }}>
+                        {comment.body}
+                      </Comment.Text>{" "}
                     </Comment>{" "}
                   </Card.Content>
                 </Card>

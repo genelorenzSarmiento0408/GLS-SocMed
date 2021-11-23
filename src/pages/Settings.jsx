@@ -1,5 +1,5 @@
 import React, { useContext, useState, useRef } from "react";
-import { Form, Grid, Divider } from "semantic-ui-react";
+import { Form, Grid, Divider, Segment } from "semantic-ui-react";
 import { useMutation, gql } from "@apollo/client";
 
 import { AuthContext } from "../context/auth";
@@ -33,11 +33,16 @@ export const Settings = () => {
 
   let userSettings = (
     <Grid>
-      <Grid.Row>
-        <Grid.Column className="ui centered card" width={12}>
+      <Grid.Column
+        style={{ background: "#1B1C1D" }}
+        className="ui centered card"
+        width={12}
+      >
+        <Segment inverted>
           <div className="page-title">
             <h1>Settings</h1>
           </div>
+
           <Form>
             <div className="ui action fluid">
               <h3>Username:</h3>
@@ -95,8 +100,8 @@ export const Settings = () => {
             <h2>Edit Bio</h2>
             <EditOrAddBio />
           </Form>
-        </Grid.Column>
-      </Grid.Row>
+        </Segment>
+      </Grid.Column>
     </Grid>
   );
   return userSettings;

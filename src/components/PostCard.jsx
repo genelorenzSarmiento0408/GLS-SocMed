@@ -28,7 +28,11 @@ export default function PostCard({
 
   return (
     <Grid>
-      <Grid.Column width={11} className="ui centered card">
+      <Grid.Column
+        width={11}
+        className="ui centered card"
+        style={{ background: "#1B1C1D" }}
+      >
         <Card.Content>
           <Image
             floated="left"
@@ -47,23 +51,26 @@ export default function PostCard({
               />
             }
             header={username}
+            style={{ background: "#1B1C1D" }}
           >
             <Card.Header as={Link} to={`/users/${username}`}>
-              {username}
+              <p style={{ color: "white" }}>{username} </p>
             </Card.Header>
           </PopupGlobal>
 
-          <Card.Meta as={Link} to={`/posts/${id}`}>
+          <Card.Meta as={Link} to={`/posts/${id}`} style={{ color: "white" }}>
             {moment(createdAt).fromNow()}
             {edited ? `• Edited` : ""}
           </Card.Meta>
 
-          <Card.Description>
-            <h3>
+          <Card.Description style={{ color: "white" }}>
+            <p> </p>
+            <h2 as={Link} to={`/posts/${id}`}>
               {title}
               {user && user.username === username && <EditButton postId={id} />}
-            </h3>
-            <p>
+            </h2>
+
+            <p as={Link} to={`/posts/${id}`}>
               {body}
               {user && user.username === username && <EditBody postId={id} />}
             </p>
@@ -76,7 +83,7 @@ export default function PostCard({
               <Button color="red" basic>
                 <Icon name="comments" />
               </Button>
-              <Label basic color="red" pointing="left">
+              <Label color="red" pointing="left">
                 {commentCount}
               </Label>
             </Button>

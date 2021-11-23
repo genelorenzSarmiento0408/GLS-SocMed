@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useQuery } from "@apollo/client";
-import { Grid, Transition } from "semantic-ui-react";
+import { Grid, Transition, Segment, Loader } from "semantic-ui-react";
 
 import { AuthContext } from "../context/auth";
 import PostCard from "../components/PostCard";
@@ -17,24 +17,29 @@ export default function Home() {
   };
   const [{ loading, data: { getPosts: posts } = {} }] = FETCH_ALL();
   return (
-    <Grid columns={3}>
+    <Grid inverted columns={3}>
       <Grid.Row>
         {user ? (
           <Grid.Column width={16}>
-            <PostForm />{" "}
-            <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
-              <h1>Recent Posts</h1>
-            </Grid.Row>
+            <PostForm style={{ background: "#1B1C1D" }} />{" "}
+            <Segment inverted>
+              <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
+                <h1>Recent Posts</h1>
+              </Grid.Row>{" "}
+            </Segment>
           </Grid.Column>
         ) : (
           <Grid.Column width={16}>
-            <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
-              <h1>Recent Posts</h1>
-            </Grid.Row>
+            <Segment inverted>
+              <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
+                <h1>Recent Posts</h1>
+              </Grid.Row>
+            </Segment>
           </Grid.Column>
         )}
+
         {}
-        {loading && <h1>Loading posts...</h1>}
+        {loading && <Loader content="Loading post..." />}
         {
           <Transition.Group>
             {posts &&

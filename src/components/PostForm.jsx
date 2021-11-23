@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, Grid } from "semantic-ui-react";
+import { Button, Form, Grid, Segment } from "semantic-ui-react";
 import { gql, useMutation } from "@apollo/client";
 
 import { useForm } from "../util/hooks";
@@ -36,34 +36,36 @@ export default function PostForm() {
   }
   return (
     <>
-      <Grid mobile={16} tablet={8} computer={4}>
+      <Grid inverted>
         <Grid.Column
           width={11}
           className="ui centered card"
-          style={{ marginBottom: 30 }}
+          style={{ marginBottom: 30, background: "#1B1C1D" }}
         >
-          <Form onSubmit={onSubmit}>
-            <h2>Create a Post</h2>
-            <Form.Field>
-              <Form.Input
-                placaholder="Hi World"
-                name="title"
-                onChange={onChange}
-                value={values.title}
-                error={error ? true : false}
-              />
-              <Form.Input
-                placaholder="Hi World"
-                name="body"
-                onChange={onChange}
-                value={values.body}
-                error={error ? true : false}
-              />
-              <Button type="submit" color="teal">
-                Post
-              </Button>
-            </Form.Field>
-          </Form>
+          <Segment inverted>
+            <Form onSubmit={onSubmit} inverted>
+              <h2>Create a Post</h2>
+              <Form.Field>
+                <Form.Input
+                  placaholder="Title"
+                  name="title"
+                  onChange={onChange}
+                  value={values.title}
+                  error={error ? true : false}
+                />
+                <Form.Input
+                  placaholder="Body"
+                  name="body"
+                  onChange={onChange}
+                  value={values.body}
+                  error={error ? true : false}
+                />
+                <Button type="submit" color="teal">
+                  Post
+                </Button>
+              </Form.Field>
+            </Form>
+          </Segment>
           {error && (
             <div className="ui error message" style={{ marginBottom: 20 }}>
               <ul className="list">

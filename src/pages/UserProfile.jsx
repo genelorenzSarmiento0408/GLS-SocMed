@@ -40,9 +40,11 @@ const UserProfile = (args = {}) => {
           <Grid.Column width={10}>
             <Card fluid>
               <Card.Content>
-                <Card.Header>{username}</Card.Header>
-                <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
-                <Card.Description>
+                <Card.Header style={{ color: "white" }}>{username}</Card.Header>
+                <Card.Meta
+                  style={{ color: "white" }}
+                >{`user created at: ${datetostr}`}</Card.Meta>
+                <Card.Description style={{ color: "white" }}>
                   <p> {Bio}</p>
                   <EditOrAddBio />
                 </Card.Description>

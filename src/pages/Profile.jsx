@@ -1,6 +1,14 @@
 import React, { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
-import { Card, Grid, Image, Loader, Dimmer, Button } from "semantic-ui-react";
+import {
+  Card,
+  Grid,
+  Image,
+  Loader,
+  Dimmer,
+  Button,
+  Segment,
+} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
@@ -43,24 +51,30 @@ const Profile = (props, args = {}) => {
             />
           </Grid.Column>
           <Grid.Column width={10}>
-            <Card fluid>
-              <Card.Content>
-                <Card.Header>{username}</Card.Header>
-                <Card.Meta>{`user created at: ${datetostr}`}</Card.Meta>
-                <Card.Description>
-                  {username && userBio ? Bio : "No Bio found"}
-                  {user && user.username === username && <EditOrAddBio />}
-                </Card.Description>
-              </Card.Content>
-              <hr />
-              <Card.Content extra>
-                {user && user.username === username && (
-                  <Button as={Link} to={"/settings"} color="teal">
-                    Settings
-                  </Button>
-                )}
-              </Card.Content>
-            </Card>
+            <Segment inverted>
+              <Card fluid className="ui centered card">
+                <Card.Content>
+                  <Card.Header style={{ color: "white" }}>
+                    {username}
+                  </Card.Header>
+                  <Card.Meta
+                    style={{ color: "white" }}
+                  >{`user created at: ${datetostr}`}</Card.Meta>
+                  <Card.Description style={{ color: "white" }}>
+                    {username && userBio ? Bio : "No Bio found"}
+                    {user && user.username === username && <EditOrAddBio />}
+                  </Card.Description>
+                </Card.Content>
+                <hr />
+                <Card.Content extra>
+                  {user && user.username === username && (
+                    <Button as={Link} to={"/settings"} color="teal">
+                      Settings
+                    </Button>
+                  )}
+                </Card.Content>
+              </Card>
+            </Segment>
           </Grid.Column>
         </Grid.Row>
       </Grid>
