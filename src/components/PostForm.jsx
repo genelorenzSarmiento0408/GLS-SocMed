@@ -22,7 +22,6 @@ export default function PostForm() {
           getPosts: [result.data.createPost, ...data.getPosts],
         },
       });
-      console.log(result);
       values.title = "";
       values.body = "";
     },
