@@ -1,11 +1,14 @@
+// @import "~bootstrap/scss/bootstrap";
+
 .page-title {
   display: block !important;
   text-align: center;
   font-size: 25rem;
   margin-top: 10px;
 }
+
 body {
-  background-color: #1b1c1d !important;
+  background: #1b1c1d !important;
 }
 
 .ui.fluid.card {

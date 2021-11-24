@@ -39,7 +39,7 @@ export default function PostForm() {
         <Grid.Column
           width={11}
           className="ui centered card"
-          style={{ marginBottom: 30, background: "#1B1C1D" }}
+          style={{ marginBottom: 30, background: "#1B1C1D", marginTop: 20 }}
         >
           <Segment inverted>
             <Form onSubmit={onSubmit} inverted>
