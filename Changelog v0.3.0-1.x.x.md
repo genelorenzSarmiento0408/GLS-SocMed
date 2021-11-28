@@ -2,6 +2,18 @@
 
 ## Version History
 
+## Release 1.0.0
+
+- Ability to upload pictures
+- Ability to message user/s
+- Ability to change email
+- Changes in UI, especially extended navbar, and settings
+
+### Improvements
+
+- Fix bugs in Settings
+- Hidden APILINK
+
 ## Release 0.3.0
 
 - Added 404 errors
@@ -14,12 +26,6 @@
 - Widen the posts
 - Changed the head to username from Title
 - Changed favicon.ico
-
-## Release 1.0.0
-
-- Ability to message user/s
-- Ability to change email
-- Changes in UI, especially extended navbar, and settings
 
 ## Future Releases
 

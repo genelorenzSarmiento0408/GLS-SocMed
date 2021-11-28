@@ -44,5 +44,6 @@ function App() {
     </Router>
   );
 }
+console.log(process.env.REACT_APP_APILINK);
 
 export default App;

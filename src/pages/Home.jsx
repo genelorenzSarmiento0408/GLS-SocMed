@@ -22,16 +22,20 @@ export default function Home() {
         {user ? (
           <Grid.Column width={16}>
             <PostForm style={{ background: "#1B1C1D" }} />{" "}
-            <Segment inverted>
-              <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
-                <h1>Recent Posts</h1>
-              </Grid.Row>{" "}
-            </Segment>
+            <Grid.Row
+              className="page-title"
+              style={{ marginBottom: 20, color: "white" }}
+            >
+              <h1>Recent Posts</h1>
+            </Grid.Row>{" "}
           </Grid.Column>
         ) : (
           <Grid.Column width={16}>
             <Segment inverted>
-              <Grid.Row className="page-title" style={{ marginBottom: 20 }}>
+              <Grid.Row
+                className="page-title"
+                style={{ marginBottom: 20, color: "white" }}
+              >
                 <h1>Recent Posts</h1>
               </Grid.Row>
             </Segment>
