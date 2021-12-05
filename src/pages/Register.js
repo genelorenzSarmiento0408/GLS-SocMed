@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Form, Button } from "semantic-ui-react";
+import { Form, Button } from "react-bootstrap";
 import { gql, useMutation } from "@apollo/client";
 import { AuthContext } from "../context/auth";
 import { useForm } from "../util/hooks";
@@ -33,14 +33,15 @@ export default function Register(props) {
 
   return (
     <div className="form-container">
-      <Form
-        inverted
-        onSubmit={onSubmit}
-        noValidate
-        className={loading ? "loading" : ""}
-      >
-        <h1 style={{ color: "white" }}>Register</h1>
-        <Form.Input
+      <Form onSubmit={onSubmit} noValidate className={loading ? "loading" : ""}>
+        <div style={{ color: "white" }} className="text-center h1">
+          Register
+        </div>
+        <br />
+        <div style={{ color: "white" }} className="h4">
+          Username
+        </div>
+        <Form.Control
           label="Username"
           placeholder="Username.."
           name="username"
@@ -49,7 +50,10 @@ export default function Register(props) {
           onChange={onChange}
           required
         />
-        <Form.Input
+        <div style={{ color: "white" }} className="h4">
+          Email
+        </div>
+        <Form.Control
           label="Email"
           placeholder="Email.."
           name="email"
@@ -58,7 +62,10 @@ export default function Register(props) {
           onChange={onChange}
           required
         />
-        <Form.Input
+        <div style={{ color: "white" }} className="h4">
+          Password
+        </div>
+        <Form.Control
           label="Password"
           placeholder="Password.."
           name="password"
@@ -67,21 +74,22 @@ export default function Register(props) {
           onChange={onChange}
           required
         />
-        <Form.Input
+        <div style={{ color: "white" }} className="h4">
+          Confirm Password
+        </div>
+        <Form.Control
           label="Confirm Password"
-          placeholder="Confirm Password.."
+          placeholder="Confirm Password..."
           name="confirmPassword"
           type="password"
           value={values.confirmPassword}
           onChange={onChange}
           required
         />
-        <Button type="submit" primary>
-          Register
-        </Button>
+        <Button type="submit">Register</Button>
       </Form>
       {Object.keys(errors).length > 0 && (
-        <div className="ui error message">
+        <div className="alert alert-danger">
           <ul className="list">
             {Object.values(errors).map((value) => (
               <li key={value}>{value}</li>

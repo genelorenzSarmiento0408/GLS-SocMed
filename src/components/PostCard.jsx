@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
-import { Card, Icon, Label, Image, Button, Grid } from "semantic-ui-react";
+// eslint-disable-next-line
+// import { Card, Icon, Label, Image, Button, Grid } from "semantic-ui-react";
+import { Card, Button, Badge, Col, Image } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import { AuthContext } from "../context/auth";
@@ -7,9 +11,7 @@ import { AuthContext } from "../context/auth";
 import LikeButton from "./LikeButton";
 import "../App.scss";
 import DeleteButton from "./DeleteButton";
-import PopupGlobal from "../util/PopupGlobal";
-import EditButton from "./EditTitle";
-import EditBody from "./EditBody";
+import EditPosts from "./EditPosts";
 
 export default function PostCard({
   post: {
@@ -27,71 +29,42 @@ export default function PostCard({
   const { user } = useContext(AuthContext);
 
   return (
-    <Grid>
-      <Grid.Column
-        width={11}
-        className="ui centered card"
-        style={{ background: "#1B1C1D" }}
-      >
-        <Card.Content>
-          <Image
-            floated="left"
-            size="large"
-            src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
-            avatar
-          />
-          <PopupGlobal
-            content={
-              <Image
-                floated="left"
-                size="mini"
-                src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
-                avatar
-                alt="It seems like it is a profile pic"
-              />
-            }
-            header={username}
-            style={{ background: "#1B1C1D" }}
-          >
-            <Card.Header as={Link} to={`/users/${username}`}>
-              <p style={{ color: "white" }}>{username} </p>
-            </Card.Header>
-          </PopupGlobal>
-
-          <Card.Meta as={Link} to={`/posts/${id}`} style={{ color: "white" }}>
+    <Col width={11}>
+      <Card bg="dark" text="white" className="mb-2">
+        <Card.Body>
+          <Card.Title>
+            <Image
+              src={"/default-profile-pic.jpg"}
+              roundedCircle
+              className="mr-2"
+              style={{ width: 40, height: 40, objectFit: "cover" }}
+              alt="Profile picture of user"
+            />
+            {` ${username}`}
+          </Card.Title>
+          <Card.Subtitle className="mb-2" style={{ color: "#9B9D9E" }}>
             {moment(createdAt).fromNow()}
-            {edited ? `• Edited` : ""}
-          </Card.Meta>
+            {edited ? ` • Edited` : ""}
+          </Card.Subtitle>
 
-          <Card.Description style={{ color: "white" }}>
-            <p> </p>
-            <h2 as={Link} to={`/posts/${id}`}>
-              {title}
-              {user && user.username === username && <EditButton postId={id} />}
-            </h2>
+          <h2>{title}</h2>
 
-            <p as={Link} to={`/posts/${id}`}>
-              {body}
-              {user && user.username === username && <EditBody postId={id} />}
-            </p>
-          </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
+          <Card.Text>{body}</Card.Text>
+          {user && user.username === username && <EditPosts postId={id} />}
           <LikeButton user={user} post={{ id, likes, likeCount }} />
-          <PopupGlobal content="Comment on post">
-            <Button labelPosition="right" as={Link} to={`/posts/${id}`}>
-              <Button color="red" basic>
-                <Icon name="comments" />
-              </Button>
-              <Label color="red" pointing="left">
-                {commentCount}
-              </Label>
-            </Button>
-          </PopupGlobal>
 
+          <Button
+            placement="right"
+            as={Link}
+            to={`/posts/${id}`}
+            variant="danger"
+          >
+            <FontAwesomeIcon icon={faComments} />
+            <Badge> {commentCount}</Badge>
+          </Button>
           {user && user.username === username && <DeleteButton postId={id} />}
-        </Card.Content>
-      </Grid.Column>
-    </Grid>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 }

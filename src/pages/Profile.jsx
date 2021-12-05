@@ -1,18 +1,11 @@
 import React, { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
-import {
-  Card,
-  Grid,
-  Image,
-  Loader,
-  Dimmer,
-  Button,
-  Segment,
-} from "semantic-ui-react";
+import { Card, Row, Image, Spinner, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
 import EditOrAddBio from "../components/EditOrAddBio";
+import UserProfile from "./UserProfile";
 
 const Profile = (props, args = {}) => {
   const username = props.match.params.username;
@@ -26,11 +19,7 @@ const Profile = (props, args = {}) => {
   });
 
   if (!getUser) {
-    userMarkup = loading && (
-      <Dimmer active>
-        <Loader content="Loading user..." />
-      </Dimmer>
-    );
+    userMarkup = loading && <Spinner content="Loading user..." />;
   } else {
     let userBio;
     const { Bio, createdAt, username } = getUser;
@@ -38,46 +27,46 @@ const Profile = (props, args = {}) => {
     if (Bio != null) {
       userBio = true;
     }
-
+    if (user.username === username) {
+      userMarkup = <UserProfile />;
+      return userMarkup;
+    }
+    console.info(`${user.username} + ${username}`);
     userMarkup = (
-      <Grid>
-        <Grid.Row>
-          <Grid.Column width={2}>
+      <>
+        <Row>
+          <Col width={1}>
             <Image
-              src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
-              size="small"
+              src="/default-profile-pic.jpg"
               float="right"
-              alt="image profile "
+              alt="image profile"
+              width="200.5rem"
             />
-          </Grid.Column>
-          <Grid.Column width={10}>
-            <Segment inverted>
-              <Card fluid className="ui centered card">
-                <Card.Content>
-                  <Card.Header style={{ color: "white" }}>
-                    {username}
-                  </Card.Header>
-                  <Card.Meta
-                    style={{ color: "white" }}
-                  >{`user created at: ${datetostr}`}</Card.Meta>
-                  <Card.Description style={{ color: "white" }}>
-                    {username && userBio ? Bio : "No Bio found"}
-                    {user && user.username === username && <EditOrAddBio />}
-                  </Card.Description>
-                </Card.Content>
-                <hr />
-                <Card.Content extra>
-                  {user && user.username === username && (
-                    <Button as={Link} to={"/settings"} color="teal">
-                      Settings
-                    </Button>
-                  )}
-                </Card.Content>
-              </Card>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+          </Col>
+          <Col width={2}>
+            <Card bg="dark" style={{ width: "65rem" }}>
+              <Card.Body>
+                <Card.Title style={{ color: "white" }}>{username}</Card.Title>
+                <Card.Subtitle
+                  style={{ color: "white" }}
+                >{`user created at: ${datetostr}`}</Card.Subtitle>
+                <Card.Body style={{ color: "white" }}>
+                  {username && userBio ? Bio : "No Bio found"}
+                  {user && user.username === username && <EditOrAddBio />}
+                </Card.Body>
+              </Card.Body>
+              <hr />
+              <Card.Body extra>
+                {user && user.username === username && (
+                  <Button as={Link} to={"/settings"} color="teal">
+                    Settings
+                  </Button>
+                )}
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </>
     );
   }
 

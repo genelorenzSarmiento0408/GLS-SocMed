@@ -1,8 +1,9 @@
 import React, { useContext, useState, useRef } from "react";
 import { useQuery, gql, useMutation } from "@apollo/client";
-import { Button, Loader, Modal, Header, Form } from "semantic-ui-react";
+import { Button, Spinner, Modal, Form } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserEdit, faPlus } from "@fortawesome/free-solid-svg-icons";
 
-// import PopupGlobal from "../util/PopupGlobal";
 import { AuthContext } from "../context/auth";
 
 const EditOrAddBio = (args = {}) => {
@@ -34,7 +35,7 @@ const EditOrAddBio = (args = {}) => {
   });
 
   if (!getUser) {
-    let userMarkup = loading && <Loader content="Loading Information..." />;
+    let userMarkup = loading && <Spinner content="Loading Information..." />;
     return userMarkup;
   } else {
     const { Bio } = getUser;
@@ -44,51 +45,51 @@ const EditOrAddBio = (args = {}) => {
 
     const userReturn = (
       <>
+        {userBio ? (
+          <Button color="teal" onClick={() => setOpen(true)}>
+            Edit Bio
+          </Button>
+        ) : (
+          <Button color="teal" onClick={() => setOpen(true)}>
+            Add Bio
+          </Button>
+        )}
         <p>{pathname === "/settings" && userBio && Bio}</p>
-        <Modal
-          closeIcon
-          open={open}
-          trigger={
-            userBio ? (
-              <Button color="teal">Edit Bio</Button>
-            ) : (
-              <Button color="teal">Add Bio</Button>
-            )
-          }
-          onClose={() => setOpen(false)}
-          onOpen={() => setOpen(true)}
-        >
-          {user && (
-            <>
-              <Header icon="edit" content={userBio ? "Edit Bio" : "Add Bio"} />
-              <Form>
-                <div className="ui action input fluid">
-                  <input
-                    type="text"
-                    placeholder={userBio ? "Edit Bio" : "Add Bio"}
-                    name="Comment"
-                    value={newBio}
-                    onChange={(event) => setBio(event.target.value)}
-                    ref={BioInputRef}
-                  />
-                  <button
-                    type="submit"
-                    className="ui button teal"
-                    disabled={newBio.trim() === ""}
-                    onClick={editandAddBio}
-                  >
-                    {userBio ? "Edit Bio" : "Add Bio"}
-                  </button>
-                </div>
-              </Form>
-            </>
-          )}
+        <Modal show={open} onHide={() => setOpen(false)}>
+          <Modal.Header>
+            <Modal.Title>
+              {userBio ? "Edit Bio" : "Add Bio"}
+              <FontAwesomeIcon icon={userBio ? faUserEdit : faPlus} />
+            </Modal.Title>
+          </Modal.Header>
 
-          <Modal.Actions>
-            <Button color="red" onClick={() => setOpen(false)}>
+          <Form>
+            <Form.Label className="h3">
+              {userBio ? "Edit Bio" : "Add Bio"}
+            </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder={userBio ? "Edit Bio" : "Add Bio"}
+              name="Bio"
+              value={newBio}
+              onChange={(event) => setBio(event.target.value)}
+              ref={BioInputRef}
+            />
+          </Form>
+
+          <Modal.Footer>
+            <Button variant="outline-danger" onClick={() => setOpen(false)}>
               Cancel
+            </Button>{" "}
+            <Button
+              type="submit"
+              className="ui button teal"
+              disabled={newBio.trim() === ""}
+              onClick={editandAddBio}
+            >
+              {userBio ? "Edit Bio" : "Add Bio"}
             </Button>
-          </Modal.Actions>
+          </Modal.Footer>
         </Modal>
       </>
     );

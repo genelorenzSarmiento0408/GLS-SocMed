@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
-import { Card, Grid, Image, Loader, Dimmer, Button } from "semantic-ui-react";
+import { Card, Image, Button, Col, Row, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../context/auth";
@@ -18,47 +18,42 @@ const UserProfile = (args = {}) => {
   });
 
   if (!getUser) {
-    userMarkup = loading && (
-      <Dimmer active>
-        <Loader content="Loading user..." />
-      </Dimmer>
-    );
+    userMarkup = loading && <Spinner content="Loading user..." />;
   } else {
     const { createdAt, username, Bio } = getUser;
     const datetostr = createdAt.substring(0, 10);
 
     userMarkup = (
-      <Grid>
-        <Grid.Row>
-          <Grid.Column width={2}>
+      <>
+        <Row>
+          <Col width={1}>
             <Image
-              src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
-              size="small"
+              src="/default-profile-pic.jpg"
               float="right"
+              alt="image profile"
+              width="150rem"
             />
-          </Grid.Column>
-          <Grid.Column width={10}>
-            <Card fluid>
-              <Card.Content>
-                <Card.Header style={{ color: "white" }}>{username}</Card.Header>
-                <Card.Meta
+          </Col>
+          <Col width={10}>
+            <Card bg="dark" style={{ width: "65rem" }}>
+              <Card.Body>
+                <Card.Title style={{ color: "white" }}>{username}</Card.Title>
+                <Card.Subtitle
                   style={{ color: "white" }}
-                >{`user created at: ${datetostr}`}</Card.Meta>
-                <Card.Description style={{ color: "white" }}>
-                  <p> {Bio}</p>
-                  <EditOrAddBio />
-                </Card.Description>
-              </Card.Content>
+                >{`user created at: ${datetostr}`}</Card.Subtitle>
+                <p style={{ color: "white" }}> {Bio}</p>
+                <EditOrAddBio />
+              </Card.Body>
               <hr />
-              <Card.Content extra>
+              <Card.Body>
                 <Button as={Link} to={"/settings"} color="teal">
                   Settings
                 </Button>
-              </Card.Content>
+              </Card.Body>
             </Card>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+          </Col>
+        </Row>
+      </>
     );
   }
 

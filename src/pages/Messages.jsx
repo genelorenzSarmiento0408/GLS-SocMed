@@ -1,10 +1,15 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState, useContext, Fragment } from "react";
 import { gql, useQuery, useLazyQuery } from "@apollo/client";
-import { Grid, Image } from "semantic-ui-react";
+import { Row, Col, Image } from "react-bootstrap";
 
+import { AuthContext } from "../context/auth";
+import "bootstrap/dist/css/bootstrap.min.css";
 const Messages = () => {
+  // eslint-disable-next-line
+  const user = useContext(AuthContext);
   const [selectedUser, setSelectedUser] = useState(null);
   const { loading, data, error } = useQuery(GET_USERS);
+
   const [getMessages, { data: messagesData }] = useLazyQuery(GET_MESSAGES);
   useEffect(() => {
     if (selectedUser) {
@@ -24,39 +29,44 @@ const Messages = () => {
   } else if (data.getUsers.length > 0) {
     usersMarkup = data.getUsers.map((user) => (
       <div
-        style={{ padding: "1rem" }}
+        role="button"
+        className="d-flex p-3"
         key={user.username}
         onClick={() => setSelectedUser(user.username)}
       >
         <Image
-          floated="left"
-          size="mini"
-          src="https://www.personality-insights.com/wp-content/uploads/2017/12/default-profile-pic-e1513291410505.jpg"
-          alt="default pfp"
-          avatar
+          src={"/default-profile-pic.jpg"}
+          roundedCircle
+          className="mr-2"
+          style={{ width: 50, height: 50, objectFit: "cover" }}
         />
-        <p style={{ color: "#00b5ad" }}>{user.username}</p>
-        <p>{user.latestMessage ? user.latestMessage.content : ""}</p>
+        <div>
+          <p className="text-success">{user.username}</p>
+          <p className="font-weight-light">
+            {user.latestMessage
+              ? user.latestMessage.content
+              : "You are now connected!"}
+          </p>
+        </div>
       </div>
     ));
   }
   return (
     <Fragment>
-      <Grid columns={4}>
-        <Grid.Row className="ui centered" style={{ color: "white" }}>
-          <Grid.Column>Messages</Grid.Column>
-          <Grid.Column className="bg-gray-black">{usersMarkup}</Grid.Column>
-          <Grid.Column>
-            {messagesData && messagesData.getMessages.length > 0 ? (
-              messagesData.getMessages.map((message) => (
-                <p key={message.id}>{message.content}</p>
-              ))
-            ) : (
-              <p>Messages</p>
-            )}
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Row className="bg-white">
+        <Col xs={4} className="p-0 bg-secondary">
+          {usersMarkup}
+        </Col>
+        <Col xs={8}>
+          {messagesData && messagesData.getMessages.length > 0 ? (
+            messagesData.getMessages.map((message) => (
+              <p key={message.uuid}>{message.content}</p>
+            ))
+          ) : (
+            <p>Messages</p>
+          )}
+        </Col>
+      </Row>
     </Fragment>
   );
 };

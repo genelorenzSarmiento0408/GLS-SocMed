@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Container } from "semantic-ui-react";
+import { Container } from "react-bootstrap";
 
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
@@ -11,7 +11,7 @@ import SinglePost from "./pages/SinglePost";
 import { AuthProvider } from "./context/auth";
 import AuthRoute from "./util/AuthRoute";
 
-import "semantic-ui-css/semantic.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
@@ -25,8 +25,8 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Container fluid>
-          <Navbar />
+        <Navbar />
+        <Container fluid="xl">
           <Switch>
             <Route exact path="/" component={Home} />
             <AuthRoute exact path="/register" component={Register} />

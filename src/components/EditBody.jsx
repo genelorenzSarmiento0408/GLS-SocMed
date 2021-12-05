@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
 import { useMutation, gql } from "@apollo/client";
-import { Icon, Form, Modal, Header } from "semantic-ui-react";
+import { Form, Modal, Button } from "react-bootstrap";
 
 import { AuthContext } from "../context/auth";
 
@@ -26,13 +26,13 @@ const EditBody = ({ postId }) => {
     <Modal
       closeIcon
       open={open}
-      trigger={<Icon name="edit" color="teal" />}
+      trigger={<Button name="edit" color="teal" />}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
     >
       {user && (
         <>
-          <Header icon="edit" content="Edit Body" />
+          <h1 icon="edit">Edit Body</h1>
           <Form>
             <div className="ui action input fluid">
               <input

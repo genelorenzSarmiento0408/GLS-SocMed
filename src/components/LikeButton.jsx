@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMutation, gql } from "@apollo/client";
-import { Button, Label, Icon } from "semantic-ui-react";
-
+import { Button, Badge } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import "../App.scss";
-import PopupGlobal from "../util/PopupGlobal";
 
 export default function LikeButton({ user, post: { id, likeCount, likes } }) {
   const [liked, setLiked] = useState(false);
@@ -23,30 +23,27 @@ export default function LikeButton({ user, post: { id, likeCount, likes } }) {
 
   const likeButton = user ? (
     liked ? (
-      <Button color="teal">
-        <Icon name="thumbs up outline" />
+      <Button onClick={likePost}>
+        <FontAwesomeIcon icon={faThumbsUp} />
+        <Badge bg="light">{likeCount}</Badge>
       </Button>
     ) : (
-      <Button color="teal" basic>
-        <Icon name="thumbs up outline" />
+      <Button variant="outline-primary" onClick={likePost}>
+        <FontAwesomeIcon icon={faThumbsUp} />
+        <Badge bg="light">{likeCount}</Badge>
       </Button>
     )
   ) : (
-    <Button as={Link} to="/login" color="teal" basic>
-      <Icon name="thumbs up outline" />
+    <Button variant="outline-primary" as={Link} to="/login">
+      <FontAwesomeIcon icon={faThumbsUp} />{" "}
+      <Badge bg="light">{likeCount}</Badge>
     </Button>
   );
 
   return (
-    <Button as="div" labelPosition="right" onClick={likePost}>
-      <PopupGlobal content={liked ? "Unlike" : "Like"}>
-        {likeButton}
-      </PopupGlobal>
-
-      <Label color="blue" pointing="left">
-        {likeCount}
-      </Label>
-    </Button>
+    // <Button variant="outline-primary" as="div" onClick={likePost}>
+    <>{likeButton}</>
+    // </Button>
   );
 }
 

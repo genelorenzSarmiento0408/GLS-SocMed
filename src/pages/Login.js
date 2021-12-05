@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Form, Button, Segment } from "semantic-ui-react";
+import { Form, Button, Col, Container, Spinner } from "react-bootstrap";
 import { gql, useMutation } from "@apollo/client";
 
 import { AuthContext } from "../context/auth";
@@ -28,52 +28,54 @@ export default function Login(props) {
   function loginUserCallback() {
     loginUser();
   }
-
+  if (loading) {
+    return <Spinner animation="border" role="status" />;
+  }
   return (
-    <Segment inverted>
-      {" "}
-      <div className="form-container">
-        <Form
-          onSubmit={onSubmit}
-          noValidate
-          className={loading ? "loading" : ""}
-          inverted
-        >
-          <h1>Login</h1>
-          <Form.Input
-            label="Username"
-            placeholder="Username.."
-            name="username"
-            type="text"
-            value={values.username}
-            onChange={onChange}
-            required
-          />
-          <Form.Input
-            label="Password"
-            placeholder="Password.."
-            name="password"
-            type="password"
-            value={values.password}
-            onChange={onChange}
-            required
-          />
-          <Button type="submit" primary>
-            Login
-          </Button>
-        </Form>
+    <div className="form-container mb-3 text-light bg-dark">
+      <Container>
+        <Col>
+          <Form onSubmit={onSubmit}>
+            <h1>Login</h1>
+            <Form.Group className="mb-3">
+              <Form.Label>Username</Form.Label>
+              <Form.Control
+                label="Username"
+                placeholder="Username.."
+                name="username"
+                type="text"
+                value={values.username}
+                onChange={onChange}
+                required
+              />
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                label="Password"
+                placeholder="Password.."
+                name="password"
+                type="password"
+                value={values.password}
+                onChange={onChange}
+                required
+              />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Login
+            </Button>
+          </Form>
+        </Col>
+      </Container>
 
-        {Object.keys(errors).length > 0 && (
-          <div className="ui error message">
-            <ul className="list">
-              {Object.values(errors).map((value) => (
-                <li key={value}>{value}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
-    </Segment>
+      {Object.keys(errors).length > 0 && (
+        <div className="alert alert-danger">
+          <ul className="list">
+            {Object.values(errors).map((value) => (
+              <li key={value}>{value}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
 $gray-black: #222;
-$black: #000;
+
 .page-title {
   display: block !important;
   text-align: center;
@@ -14,20 +14,18 @@ p {
   background-color: $gray-black;
 }
 body {
-  background: #1c2c3d !important;
+  background: $gray-black !important;
+}
+@media (max-width: 767px) {
+  .container {
+    width: auto;
+  }
 }
 
-.ui.fluid.card {
-  background-color: #1b1c1d !important;
-}
 .form-container {
   width: 750px;
   margin: auto;
 }
 .page-notfound {
   text-align: center;
-}
-.ui.teal.button:focus,
-.ui.teal.buttons .button:focus {
-  background-color: #00b5ad;
 }

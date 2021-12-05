@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { gql, useMutation } from "@apollo/client";
-import { Button, Confirm, Icon } from "semantic-ui-react";
-
-import PopupGlobal from "../util/PopupGlobal";
+import { Button, Modal } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function DeleteButton({ postId, callback, commentId }) {
   const [confirmOpen, setConfirmOpen] = useState(false);
@@ -24,22 +24,39 @@ export default function DeleteButton({ postId, callback, commentId }) {
   });
   return (
     <>
-      <PopupGlobal content={commentId ? "Delete comment" : "Delete post"}>
-        <Button
-          as="div"
-          color="red"
-          floated="right"
-          onClick={() => setConfirmOpen(true)}
-        >
-          <Icon name="trash" style={{ margin: 0 }} />
-        </Button>
-      </PopupGlobal>
+      {/* <PopupGlobal content={commentId ? "Delete comment" : "Delete post"}> */}
+      <Button
+        as="div"
+        className="float-end"
+        variant="danger"
+        floated="right"
+        onClick={() => setConfirmOpen(true)}
+      >
+        <FontAwesomeIcon icon={faTrash} />
+      </Button>
 
+      <Modal show={confirmOpen} onHide={() => setConfirmOpen(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Delete {commentId ? "comment" : "post"}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>You're deleting this post Are you sure?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setConfirmOpen(false)}>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={deletePostOrMutation}>
+            Yes, Delete
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* </PopupGlobal> */}
+      {/* 
       <Confirm
         open={confirmOpen}
         onCancel={() => setConfirmOpen(false)}
         onConfirm={deletePostOrMutation}
-      />
+      /> */}
     </>
   );
 }

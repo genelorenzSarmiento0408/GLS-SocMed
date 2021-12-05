@@ -7,11 +7,13 @@
 - Ability to upload pictures
 - Ability to message user/s
 - Ability to change email
-- Changes in UI, especially extended navbar, and settings
+- Changes in UI, especially extended & responsive navbar, and settings
+- A button for editing posts
+- Change from Semantic-UI to Bootstrap
 
 ### Improvements
 
-- Fix bugs in Settings
+- Fixed bugs in Settings and creating posts
 - Hidden APILINK
 
 ## Release 0.3.0
