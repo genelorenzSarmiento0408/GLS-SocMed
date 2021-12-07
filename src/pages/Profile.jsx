@@ -22,22 +22,29 @@ const Profile = (props, args = {}) => {
     userMarkup = loading && <Spinner content="Loading user..." />;
   } else {
     let userBio;
-    const { Bio, createdAt, username } = getUser;
+    const { Bio, createdAt, username, ProfileUrl } = getUser;
+    let profilepic;
+    if (ProfileUrl == null) profilepic = false;
+    else profilepic = true;
+    console.log(profilepic);
     const datetostr = createdAt.substring(0, 10);
     if (Bio != null) {
       userBio = true;
     }
-    if (user.username === username) {
+
+    if (user && user.username === username) {
       userMarkup = <UserProfile />;
       return userMarkup;
     }
-    console.info(`${user.username} + ${username}`);
+
     userMarkup = (
       <>
         <Row>
           <Col width={1}>
             <Image
-              src="/default-profile-pic.jpg"
+              src={
+                profilepic === true ? ProfileUrl : "/default-profile-pic.jpg"
+              }
               float="right"
               alt="image profile"
               width="200.5rem"
@@ -56,7 +63,7 @@ const Profile = (props, args = {}) => {
                 </Card.Body>
               </Card.Body>
               <hr />
-              <Card.Body extra>
+              <Card.Body>
                 {user && user.username === username && (
                   <Button as={Link} to={"/settings"} color="teal">
                     Settings
@@ -79,6 +86,7 @@ const FETCH_USER_QUERY = gql`
       id
       username
       createdAt
+      ProfileUrl
       Bio
     }
   }

@@ -102,9 +102,10 @@ const CREATE_POST_MUTATION = gql`
         username
         createdAt
       }
+      commentCount
       edited
       editedAt
-      commentCount
+      profileUrl
     }
   }
 `;

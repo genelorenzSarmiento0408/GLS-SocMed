@@ -17,6 +17,7 @@ export const FETCH_POSTS_QUERY = gql`
         id
         username
       }
+      profileUrl
       edited
       editedAt
     }
@@ -27,6 +28,7 @@ export const FETCH_USERS_QUERY = gql`
     getUsers {
       id
       Bio
+      profileUrl
       createdAt
       email
     }

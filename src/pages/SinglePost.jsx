@@ -80,11 +80,9 @@ function SinglePost(props, args = {}) {
                 <Card.Body style={{ color: "white" }}>
                   <h2>{title}</h2>
                   <Card.Text>{body}</Card.Text>
-                  {user && user.username === username && (
-                    <EditPosts postId={id} />
-                  )}
-                </Card.Body>
+                </Card.Body>{" "}
               </Card.Body>
+
               <br />
               <Card.Body>
                 {edited ? (
@@ -92,7 +90,9 @@ function SinglePost(props, args = {}) {
                 ) : (
                   ""
                 )}
-
+                {user && user.username === username && (
+                  <EditPosts postId={id} />
+                )}
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
 
                 <Button as="div" variant="danger">
@@ -138,9 +138,6 @@ function SinglePost(props, args = {}) {
             {/* --------------COMMENTS---------*/}
             {comments.map((comment) => (
               <Card bg="dark" key={comment.id}>
-                {user && user.username === comment.username && (
-                  <DeleteButton postId={id} commentId={comment.id} />
-                )}
                 <Card.Body>
                   <Card.Title style={{ color: "white" }}>
                     <Image
@@ -157,7 +154,10 @@ function SinglePost(props, args = {}) {
                   </Card.Subtitle>
                   <Card.Body style={{ color: "white" }}>
                     {comment.body}
-                  </Card.Body>{" "}
+                  </Card.Body>
+                  {user && user.username === comment.username && (
+                    <DeleteButton postId={id} commentId={comment.id} />
+                  )}
                 </Card.Body>
               </Card>
             ))}

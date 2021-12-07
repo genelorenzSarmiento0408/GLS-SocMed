@@ -10,10 +10,11 @@
 - Changes in UI, especially extended & responsive navbar, and settings
 - A button for editing posts
 - Change from Semantic-UI to Bootstrap
+- Can now change profile picture instead of the default
 
 ### Improvements
 
-- Fixed bugs in Settings and creating posts
+- Fixed bugs in Settings
 - Hidden APILINK
 
 ## Release 0.3.0

@@ -19,7 +19,6 @@ import { Settings } from "./pages/Settings.jsx";
 import UserProfile from "./pages/UserProfile";
 import UserRoute from "./util/UserRoute";
 import Messages from "./pages/Messages";
-import TestUploadForm from "./components/TestUploadForm";
 
 function App() {
   return (
@@ -35,7 +34,6 @@ function App() {
             <Route exact path="/users/:username" component={Profile} />
             <UserRoute exact path="/settings" component={Settings} />
             <UserRoute exact path="/Messages" component={Messages} />
-            <Route path="/test" component={TestUploadForm} />
             <UserRoute path="/profile" component={UserProfile} />
             <Route path="*" component={PageNotFound} />
           </Switch>

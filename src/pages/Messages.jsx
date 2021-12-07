@@ -1,12 +1,9 @@
-import React, { useEffect, useState, useContext, Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { gql, useQuery, useLazyQuery } from "@apollo/client";
 import { Row, Col, Image } from "react-bootstrap";
 
-import { AuthContext } from "../context/auth";
 import "bootstrap/dist/css/bootstrap.min.css";
 const Messages = () => {
-  // eslint-disable-next-line
-  const user = useContext(AuthContext);
   const [selectedUser, setSelectedUser] = useState(null);
   const { loading, data, error } = useQuery(GET_USERS);
 
@@ -19,7 +16,6 @@ const Messages = () => {
 
   if (error) {
     return error;
-    // debug console
   }
   let usersMarkup;
   if (!data || loading) {
@@ -35,7 +31,7 @@ const Messages = () => {
         onClick={() => setSelectedUser(user.username)}
       >
         <Image
-          src={"/default-profile-pic.jpg"}
+          src={user.ProfileUrl ? user.ProfileUrl : "/default-profile-pic.jpg"}
           roundedCircle
           className="mr-2"
           style={{ width: 50, height: 50, objectFit: "cover" }}
@@ -73,6 +69,7 @@ const Messages = () => {
 const GET_USERS = gql`
   query getUsers {
     getUsers {
+      ProfileUrl
       username
       latestMessage {
         id

@@ -22,6 +22,7 @@ export default function PostCard({
     username,
     likeCount,
     commentCount,
+    profileUrl,
     likes,
     edited,
   },
@@ -32,27 +33,28 @@ export default function PostCard({
     <Col width={11}>
       <Card bg="dark" text="white" className="mb-2">
         <Card.Body>
-          <Card.Title>
-            <Image
-              src={"/default-profile-pic.jpg"}
-              roundedCircle
-              className="mr-2"
-              style={{ width: 40, height: 40, objectFit: "cover" }}
-              alt="Profile picture of user"
-            />
-            {` ${username}`}
-          </Card.Title>
-          <Card.Subtitle className="mb-2" style={{ color: "#9B9D9E" }}>
-            {moment(createdAt).fromNow()}
-            {edited ? ` • Edited` : ""}
-          </Card.Subtitle>
-
-          <h2>{title}</h2>
-
-          <Card.Text>{body}</Card.Text>
+          <a href={`/users/${username}`} className="custom-card">
+            <Card.Title>
+              <Image
+                src={profileUrl ? profileUrl : "/default-profile-pic.jpg"}
+                roundedCircle
+                className="mr-2"
+                style={{ width: 40, height: 40, objectFit: "cover" }}
+                alt="Profile picture of user"
+              />
+              {` ${username}`}
+            </Card.Title>{" "}
+          </a>
+          <a href={`/posts/${id}`} className="custom-card">
+            <Card.Subtitle className="mb-2" style={{ color: "#9B9D9E" }}>
+              {moment(createdAt).fromNow()}
+              {edited ? ` • Edited` : ""}
+            </Card.Subtitle>
+            <h2>{title}</h2>
+            <Card.Text>{body}</Card.Text>
+          </a>
           {user && user.username === username && <EditPosts postId={id} />}
           <LikeButton user={user} post={{ id, likes, likeCount }} />
-
           <Button
             placement="right"
             as={Link}

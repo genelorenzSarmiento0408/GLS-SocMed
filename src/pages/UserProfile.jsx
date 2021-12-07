@@ -20,15 +20,19 @@ const UserProfile = (args = {}) => {
   if (!getUser) {
     userMarkup = loading && <Spinner content="Loading user..." />;
   } else {
-    const { createdAt, username, Bio } = getUser;
+    const { createdAt, username, Bio, ProfileUrl } = getUser;
     const datetostr = createdAt.substring(0, 10);
-
+    let profilepic;
+    if (ProfileUrl == null) profilepic = false;
+    else profilepic = true;
     userMarkup = (
       <>
         <Row>
           <Col width={1}>
             <Image
-              src="/default-profile-pic.jpg"
+              src={
+                profilepic === true ? ProfileUrl : "/default-profile-pic.jpg"
+              }
               float="right"
               alt="image profile"
               width="150rem"
@@ -39,7 +43,7 @@ const UserProfile = (args = {}) => {
               <Card.Body>
                 <Card.Title style={{ color: "white" }}>{username}</Card.Title>
                 <Card.Subtitle
-                  style={{ color: "white" }}
+                  style={{ color: "#9B9D9E" }}
                 >{`user created at: ${datetostr}`}</Card.Subtitle>
                 <p style={{ color: "white" }}> {Bio}</p>
                 <EditOrAddBio />
@@ -66,6 +70,7 @@ const FETCH_USER_QUERY = gql`
       id
       username
       createdAt
+      ProfileUrl
       Bio
     }
   }
