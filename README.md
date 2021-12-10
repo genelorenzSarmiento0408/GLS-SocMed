@@ -2,13 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `yarn start`
+### Website
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Gls Media](https://gls-media-socmed.netlify.app)
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 Inspired by: \
-https://github.com/hidjou/classsed-graphql-mern-apollo/ \
-https://github.com/hidjou/node-graphql-react-chat-app (using bootstrap)(modification)
+[Social Media Chat](https://github.com/hidjou/classsed-graphql-mern-apollo/) (using bootstrap)(modification) \
+[React chat](https://github.com/hidjou/node-graphql-react-chat-app)
