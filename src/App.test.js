@@ -20,7 +20,7 @@ const mocks = [
   },
 ];
 
-test("it should ...", () => {
+test("it should render", () => {
   let rendered;
   act(() => {
     rendered = render(
