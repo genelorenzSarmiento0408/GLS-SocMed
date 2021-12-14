@@ -11,8 +11,8 @@ export default function NavBar() {
       <Container>
         <Navbar.Brand href="/">
           <img
-            alt="Temp logo"
-            src="/templogo.svg"
+            alt="logo"
+            src="/Logo.svg"
             width="70"
             height="70"
             className="d-inline-block align-top"
@@ -38,8 +38,8 @@ export default function NavBar() {
       <Container>
         <Navbar.Brand href="/">
           <img
-            alt="Temp logo"
-            src="/templogo.svg"
+            alt="Logo"
+            src="/Logo.svg"
             width="70"
             height="70"
             className="d-inline-block align-top"
