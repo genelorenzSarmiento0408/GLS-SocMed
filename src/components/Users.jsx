@@ -40,6 +40,13 @@ export default function Users() {
   } else if (users.length > 0) {
     usersMarkup = users.map((user) => {
       const selected = selectedUser === user.username;
+      let picvalidator =
+        /([\d\w][-\d\w]{0,253}[\d\w]\.)+[\w]{2,63}(:[\d]+)?(?:jpg|gif|png|jfif|jpeg)?$/i;
+      let validator;
+      if (user.latestMessage) {
+        validator = picvalidator.test(user.latestMessage.content);
+      }
+
       return (
         <div
           role="button"
@@ -62,7 +69,9 @@ export default function Users() {
             <p className="text-success">{user.username}</p>
             <p className="font-weight-light">
               {user.latestMessage
-                ? user.latestMessage.content
+                ? user.latestMessage.content && validator
+                  ? `${user.username} sent a photo`
+                  : user.latestMessage.content
                 : "You are now connected!"}
             </p>
           </div>
