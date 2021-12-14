@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Col, Card } from "react-bootstrap";
 
-import { AuthContext } from "../context/auth";
+import { useAuthState } from "../context/auth";
 import ChangePassword from "../components/ChangePassword";
 import ChangeProfilePic from "../components/ChangeProfilePic";
+import EditEmail from "../components/EditEmail";
 
 export const Settings = () => {
-  const { user } = useContext(AuthContext);
+  const { user } = useAuthState();
 
   let username;
   if (user) username = user.username;
@@ -21,8 +22,9 @@ export const Settings = () => {
           <Card.Body>
             <ChangePassword />
             <ChangeProfilePic />
+            <EditEmail />
           </Card.Body>
-        </Card>{" "}
+        </Card>
       </Col>
     </>
   );

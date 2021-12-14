@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
 import { gql, useQuery } from "@apollo/client";
 import { Card, Row, Image, Spinner, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import { AuthContext } from "../context/auth";
+import { useAuthState } from "../context/auth";
 import EditOrAddBio from "../components/EditOrAddBio";
 import UserProfile from "./UserProfile";
 
 const Profile = (props, args = {}) => {
   const username = props.match.params.username;
-  const { user } = useContext(AuthContext);
+  const { user } = useAuthState();
 
   let userMarkup;
   const { loading, data: { getUser } = args } = useQuery(FETCH_USER_QUERY, {
