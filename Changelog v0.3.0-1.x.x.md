@@ -12,6 +12,7 @@
 - Change from Semantic-UI to Bootstrap
 - Can now change profile picture instead of the default
 - Now use a function for useContext
+- create a CI for Client
 
 ### Improvements
 

@@ -1,6 +1,10 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). \
+
+### CI
+
+[![CircleCI](https://circleci.com/gh/genelorenzSarmiento0408/react-social-media-app-client/tree/master.svg?style=shield)](https://circleci.com/gh/genelorenzSarmiento0408/react-social-media-app-client/tree/master)
 
 ### Website
 
