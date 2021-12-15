@@ -4,8 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Badges
 
-[![CircleCI](https://circleci.com/gh/genelorenzSarmiento0408/react-social-media-app-client/tree/master.svg?style=shield)](https://circleci.com/gh/genelorenzSarmiento0408/react-social-media-app-client/tree/master)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5338e346-5452-4ce1-a213-d1ac3c44a312/deploy-status)](https://app.netlify.com/sites/gls-media-socmed/deploys)
+[![CircleCI](https://circleci.com/gh/genelorenzSarmiento0408/react-social-media-app-client/tree/master.svg?style=shield)](https://circleci.com/gh/genelorenzSarmiento0408/GLS-SocMed/tree/master)
 
 ### Website
 
