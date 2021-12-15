@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Badges
 
-[![CircleCI](https://circleci.com/gh/genelorenzSarmiento0408/react-social-media-app-client/tree/master.svg?style=shield)](https://circleci.com/gh/genelorenzSarmiento0408/GLS-SocMed/tree/master)
+[![CircleCI](https://circleci.com/gh/genelorenzSarmiento0408/GLS-SocMed/tree/master.svg?style=shield)](https://circleci.com/gh/genelorenzSarmiento0408/GLS-SocMed/tree/master)
 
 ### Website
 
